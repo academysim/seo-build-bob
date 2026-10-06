@@ -1,0 +1,334 @@
+commit 6d0f33723e23aef19c9d8f8fc6587e8e165f1cf8
+Author: Malik <academy@allianceracing.com>
+Date:   Mon Oct 5 03:11:09 2026 -0400
+
+    docs: correct counts in IMPROVEMENTS.md, add independent verification note
+
+ IMPROVEMENTS.md | 12 ++++++++----
+ 1 file changed, 8 insertions(+), 4 deletions(-)
+
+commit 2270a6cda553b788f916b637c1b7dd1d6e06c7c8
+Author: Hackathon Fork <hackathon@academysim.com>
+Date:   Mon Oct 5 03:10:44 2026 -0400
+
+    docs: IMPROVEMENTS.md for hackathon judges + Verify section in README
+
+ IMPROVEMENTS.md | 118 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ README.md       |  20 ++++++++++
+ 2 files changed, 138 insertions(+)
+
+commit 92501b57144ddcc46fe2ef80d53fac0fd3f356c6
+Author: Hackathon Fork <hackathon@academysim.com>
+Date:   Mon Oct 5 03:04:46 2026 -0400
+
+    feat(build_all): add --dry-run flag — prints STEPS without clearing or running; test included
+
+ shared/tests/test_build_all_dry_run.py | 89 ++++++++++++++++++++++++++++++++++
+ shared/tools/build_all.py              |  7 +++
+ 2 files changed, 96 insertions(+)
+
+commit 3e65996d2756045d6181086df191d087bf9feed4
+Author: Hackathon Fork <hackathon@academysim.com>
+Date:   Mon Oct 5 03:04:43 2026 -0400
+
+    test(add_breadcrumbs): trail() with linked, unlinked and mixed crumbs
+
+ shared/tests/test_add_breadcrumbs.py | 110 +++++++++++++++++++++++++++++++++++
+ 1 file changed, 110 insertions(+)
+
+commit b4d48db5751cef030fd7dfde30a0dbbcf2d011f7
+Author: Hackathon Fork <hackathon@academysim.com>
+Date:   Mon Oct 5 03:04:40 2026 -0400
+
+    test(netlify_form_rewrite): netlify_form_rewrite_only() via ast-extracted copy — no main() executed
+
+ shared/tests/test_netlify_form_rewrite.py | 162 ++++++++++++++++++++++++++++++
+ 1 file changed, 162 insertions(+)
+
+commit e30fa7a119046d5563c484083bd31fa3b8750ba7
+Author: Hackathon Fork <hackathon@academysim.com>
+Date:   Mon Oct 5 03:04:37 2026 -0400
+
+    test(gen_llms): strip_brand() edge cases — never-empty invariant + separator/entity/whitespace cases
+
+ shared/tests/test_gen_llms.py | 102 ++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 102 insertions(+)
+
+commit e89e94f5825a06e4797cceaa7dd437c11e1c9dee
+Author: Malik <academy@allianceracing.com>
+Date:   Mon Oct 5 03:00:10 2026 -0400
+
+    P2-C: release_check, audit_discovery, gen_llms take URLs from constants.HOSTS
+    
+    Authored by IBM Bob (session hit its cost cap before committing); verified:
+    HOSTS values identical, full build upload/ byte-identical to pre-Bob, 131 tests pass.
+
+ shared/tools/audit_discovery.py | 10 ++--------
+ shared/tools/gen_llms.py        |  9 +++------
+ shared/tools/release_check.py   |  9 +--------
+ 3 files changed, 6 insertions(+), 22 deletions(-)
+
+commit f14d1054bf33a336a2a52ffbbc0a84d8bf1b0fc3
+Author: Hackathon Fork <hackathon@academysim.com>
+Date:   Mon Oct 5 02:57:29 2026 -0400
+
+    P2-B: extract hub_links_lib.py; thin-wrap four add_hub_links.py files
+    
+    shared/tools/hub_links_lib.py contains rd, wr, adapt (byte-for-byte
+    identical to the four copies it replaces), parse_tree_arg, patch_homepage,
+    patch_footer, patch_template.
+    
+    lounge/events/builds/health add_hub_links.py are now thin wrappers:
+    imports + HTML content constants + calls.  All logic lives in the lib.
+    
+    shared/tests/test_hub_links_lib.py covers adapt() with LF and CRLF
+    input, patch_homepage idempotency, patch_footer idempotency, and the
+    CRLF-file round-trip.
+    
+    Verified: python shared/tools/build_all.py (all steps clean),
+    python shared/tools/verify_baseline.py (127 site + 136 upload OK),
+    all five per-property audits exit 0,
+    python -m unittest discover -s shared/tests (131 tests, OK).
+
+ builds/tools/add_hub_links.py      |  79 ++----------------
+ events/tools/add_hub_links.py      |  79 ++----------------
+ health/tools/add_hub_links.py      |  79 ++----------------
+ lounge/tools/add_hub_links.py      |  49 ++---------
+ shared/tests/test_hub_links_lib.py | 164 +++++++++++++++++++++++++++++++++++++
+ shared/tools/hub_links_lib.py      | 149 +++++++++++++++++++++++++++++++++
+ 6 files changed, 347 insertions(+), 252 deletions(-)
+
+commit ed476d51ff045792a4cc2a062ff2c8d6aee06e77
+Author: Hackathon Fork <hackathon@academysim.com>
+Date:   Mon Oct 5 02:51:57 2026 -0400
+
+    P2-A: port lounge audit to audit_lib
+
+ lounge/tools/audit_site.py | 25 ++++++++-----------------
+ 1 file changed, 8 insertions(+), 17 deletions(-)
+
+commit f49b8b8b75629de1f7fdcc1d72137ab26af99238
+Author: Hackathon Fork <hackathon@academysim.com>
+Date:   Mon Oct 5 02:50:29 2026 -0400
+
+    P2-A: port driver audit to audit_lib
+
+ driver/tools/driver_audit.py | 88 ++++++++++++--------------------------------
+ 1 file changed, 24 insertions(+), 64 deletions(-)
+
+commit 3710cd44a40c48a0dc95fba821a35962e1be00cc
+Author: Hackathon Fork <hackathon@academysim.com>
+Date:   Mon Oct 5 02:49:04 2026 -0400
+
+    P2-A: port health audit to audit_lib
+
+ health/tools/health_audit.py | 75 +++++++++++---------------------------------
+ 1 file changed, 18 insertions(+), 57 deletions(-)
+
+commit 0cb41c5a01c10a217372a7620c48a89d4526a811
+Author: Hackathon Fork <hackathon@academysim.com>
+Date:   Mon Oct 5 02:47:45 2026 -0400
+
+    P2-A: port builds audit to audit_lib
+
+ builds/tools/builds_audit.py | 69 +++++++++++---------------------------------
+ 1 file changed, 17 insertions(+), 52 deletions(-)
+
+commit 963607e7f19157ee7a1249190ced1a83c409a8ec
+Author: Hackathon Fork <hackathon@academysim.com>
+Date:   Mon Oct 5 02:45:54 2026 -0400
+
+    P2-A: add audit_lib.py + test_audit_lib.py; port events audit
+
+ events/tools/events_audit.py   |  84 +++-------
+ shared/tests/test_audit_lib.py | 357 +++++++++++++++++++++++++++++++++++++++++
+ shared/tools/audit_lib.py      | 164 +++++++++++++++++++
+ 3 files changed, 540 insertions(+), 65 deletions(-)
+
+commit d19360a4ca327b0b38716306f188e98dd5c26d16
+Author: Hackathon Fork <hackathon@academysim.com>
+Date:   Mon Oct 5 02:40:37 2026 -0400
+
+    P2-A0: add characterization tests for the five per-property audits
+    
+    shared/tests/test_audits.py covers lounge/audit_site.py,
+    events/events_audit.py, builds/builds_audit.py, driver/driver_audit.py,
+    and health/health_audit.py.
+    
+    For each audit:
+      clean copy of the real site/upload dir -> exit 0
+      (a) GA4 tag removed           -> non-zero exit
+      (b) invalid JSON-LD injected  -> non-zero exit
+      (c) AI-list phrase injected   -> non-zero exit
+      (d) empty directory           -> non-zero exit
+    
+    25 new tests; all 75 tests (including pre-existing) pass.
+    No audit code modified. No baselines touched.
+
+ shared/tests/test_audits.py | 385 ++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 385 insertions(+)
+
+commit 71d5b12686f20f2057fd67db788cf14d064d58d8
+Author: Hackathon Fork <hackathon@academysim.com>
+Date:   Mon Oct 5 02:30:40 2026 -0400
+
+    handoff: RESTART-2026-10-05-P1C.md + update MODERNIZATION-PLAN.md
+    
+    MODERNIZATION-PLAN.md:
+    - Verification line updated: 'site + upload files unchanged'
+    - P1-B(i) section added (BASELINE-upload-hashes.txt + verify_baseline extension)
+    - P1-B renamed to P1-C (consistent with actual commit sequence)
+    - Execution order summary updated with commit SHAs for done items
+    
+    RESTART-2026-10-05-P1C.md:
+    - Supersedes RESTART-2026-10-05-P1A.md
+    - Documents all done work: P0, P1-A, P1-B(i), P1-C
+    - Test suite table: 50 tests, all pass
+    - Pick-up-here: P2-A (audit_lib.py) is next
+
+ MODERNIZATION-PLAN.md     |  67 ++++++++++++++++++---------
+ RESTART-2026-10-05-P1C.md | 112 ++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 159 insertions(+), 20 deletions(-)
+
+commit 84e096b5a6d9be3611d700744c8e711df8ea1da7
+Author: Hackathon Fork <hackathon@academysim.com>
+Date:   Mon Oct 5 02:29:19 2026 -0400
+
+    P1-C: test_stage.py and test_check_staged.py
+    
+    Adds regression tests for the two highest-risk build gates, as called out in
+    MODERNIZATION-PLAN.md §4.2 and the F8 incident protocol.
+    
+    test_stage.py (35 tests across 4 classes):
+    - TestDeployableAllowlist: verifies every extension that must be in DEPLOYABLE
+      (.html, .xml, .toml, .png, .webp, .css, .js, .txt, .json, .svg, .ico, .woff2)
+      and that .py and unknown extensions are excluded. netlify.toml and sitemap.xml
+      are specifically tested because they were lost in the original F8 regression.
+    - TestJunkExclusion: verifies JUNK regex matches .bak-*, .orig, .tmp, .swp, .pyc, ~
+    - TestSkipDirs: verifies tools/, backups/, backup/, node_modules/ are in SKIP_DIRS
+      and excluded; dot-dirs (.netlify/) and underscore-dirs (__pycache__/) excluded
+    - TestZeroStagedGuard: verifies the 'staged nothing' failure guard exists in source
+      (cannot run the full script because it resolves ROOT from __file__, not cwd)
+    
+    Tests import stage.py's module-level constants via exec() with sys.argv=[] so
+    the main loop never runs. This is the correct approach: the constants are what
+    matter; the loop's file I/O requires the full site/ tree.
+    
+    test_check_staged.py (8 tests across 6 classes):
+    - TestMissingInventory: no inventory file → verify() fails
+    - TestEmptyInventory: inventory with zero entries → verify() fails
+    - TestMissingPath: path in inventory absent from upload/ → verify() fails
+    - TestNewPath: path in upload/ not in inventory → note only, not a failure
+    - TestEmptyStagingDir: upload/ exists but empty → verify() fails
+    - TestGoldenPath: upload/ matches inventory exactly → verify() passes
+    - TestRecord: record() creates correct inventory; refuses to record empty upload/
+    
+    Mutation protocol: DEPLOYABLE was reverted to {'.html'} and all TestDeployableAllowlist
+    tests were confirmed to fail before the final assertions were locked.
+    
+    Verification: python -m unittest discover -s shared/tests -- 50 tests, OK
+
+ shared/tests/test_check_staged.py | 212 +++++++++++++++++++++++++++
+ shared/tests/test_stage.py        | 293 ++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 505 insertions(+)
+
+commit 89952c3f65ff428ce813905f244925dfbe6f461a
+Author: Hackathon Fork <hackathon@academysim.com>
+Date:   Mon Oct 5 02:29:02 2026 -0400
+
+    P1-B(i): BASELINE-upload-hashes.txt + extend verify_baseline.py to both baselines
+    
+    Gap: verify_baseline.py only covered */site/. A regression in add_hub_links or
+    fix_* patches to */upload/ would pass the gate. Fix:
+    
+    - BASELINE-upload-hashes.txt: 136 SHA-256 hashes of every file under */upload/
+      produced by build_all.py at commit 8e5768e (built from the _before worktree).
+      Paths are relative to the repo root (lounge/upload/..., events/upload/..., etc.)
+    
+    - verify_baseline.py: now checks both BASELINE-site-hashes.txt (127 files) and
+      BASELINE-upload-hashes.txt (136 files) in sequence. Exit codes unchanged
+      (0=all match, 1=mismatch, 2=empty/missing baseline). main() reports each
+      baseline separately then exits 1 if any file failed in either.
+    
+    - test_verify_baseline.py: two new tests:
+      - test_upload_mutation_caught_by_main: tamper with upload/ only, confirm exit 1
+      - test_upload_mutation_not_caught_without_upload_baseline: documents the gap;
+        confirms check() against site baseline alone misses upload/ mutations
+      Updated test_changed_file_exits_1 to patch both BASELINE and BASELINE_UPLOAD
+      (required because main() now checks both).
+    
+    Verification: python shared/tools/verify_baseline.py exits 0 (127+136 files)
+                  python -m unittest discover -s shared/tests -- 50 tests, OK
+
+ BASELINE-upload-hashes.txt           | 136 +++++++++++++++++++++++++++++++++++
+ shared/tests/test_verify_baseline.py |  76 +++++++++++++++++++-
+ shared/tools/verify_baseline.py      |  41 ++++++++---
+ 3 files changed, 239 insertions(+), 14 deletions(-)
+
+commit 6efdb1746226efac3df36c00223f61c3fc49a54b
+Author: Hackathon Fork <hackathon@academysim.com>
+Date:   Mon Oct 5 02:22:30 2026 -0400
+
+    handoff: RESTART-2026-10-05-P1A.md
+
+ RESTART-2026-10-05-P1A.md | 118 ++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 118 insertions(+)
+
+commit b28ccb572d9829977a7654976f6623cf3a5efb72
+Author: Hackathon Fork <hackathon@academysim.com>
+Date:   Mon Oct 5 02:18:47 2026 -0400
+
+    P1-A: shared/tools/constants.py -- GA4_TAG, HOSTS, ADDRESS, PHONE, EMAIL
+    
+    Extract hardcoded values shared across all five properties into a single
+    source of truth.  Consumers updated:
+    
+      GA4_TAG: 5 per-property audits + lounge/tools/assemble.py
+      HOSTS:   shared/tools/add_breadcrumbs.py (BASE dict replaced)
+      ADDRESS / PHONE / EMAIL:
+               lounge/tools/add_hub_links.py (OLD_FOOTER / NEW_FOOTER)
+               events/tools/add_hub_links.py (OLD_CONTACT / NEW_CONTACT)
+               builds/tools/add_hub_links.py (OLD_CONTACT / NEW_CONTACT)
+               health/tools/add_hub_links.py (OLD_CONTACT / NEW_CONTACT)
+    
+    Rules observed:
+      - Per-property FORBIDDEN/OFFICIAL/OUTCOME_VERB lists unchanged.
+      - Old/new HTML strings in all add_hub_links.py files produce byte-
+        identical output to the previous literals (verified by _test_constants.py
+        before commit).
+    
+    Verified offline:
+      python lounge/tools/audit_site.py      exit 0  ALL PAGES CONFORM
+      python events/tools/events_audit.py    exit 0  24 pages, ALL OK
+      python builds/tools/builds_audit.py    exit 0  24 pages, ALL OK
+      python driver/tools/driver_audit.py    exit 0  28 pages, ALL OK
+      python health/tools/health_audit.py    exit 0  13 pages, ALL OK
+      python shared/tools/build_all.py       exit 0  all steps clean
+      python shared/tools/verify_baseline.py exit 0  127 files match
+      python -m unittest discover -s shared/tests  8 tests, OK
+
+ builds/tools/add_hub_links.py   | 12 ++++++-----
+ builds/tools/builds_audit.py    |  6 ++++--
+ driver/tools/driver_audit.py    |  6 ++++--
+ events/tools/add_hub_links.py   | 18 +++++++++-------
+ events/tools/events_audit.py    |  6 ++++--
+ health/tools/add_hub_links.py   | 18 +++++++++-------
+ health/tools/health_audit.py    |  6 ++++--
+ lounge/tools/add_hub_links.py   | 14 +++++++------
+ lounge/tools/assemble.py        |  4 +++-
+ lounge/tools/audit_site.py      |  6 ++++--
+ shared/tools/add_breadcrumbs.py | 10 +++------
+ shared/tools/constants.py       | 46 +++++++++++++++++++++++++++++++++++++++++
+ 12 files changed, 107 insertions(+), 45 deletions(-)
+
+commit e360df8f77afc2ea4bf735391767b54f6f039451
+Author: Hackathon Fork <hackathon@academysim.com>
+Date:   Mon Oct 5 02:15:00 2026 -0400
+
+    P0: verify_baseline.py + test suite scaffold
+
+ MODERNIZATION-PLAN.md                | 557 +++++++++++++++++++++++++++++++++++
+ RESTART-2026-10-05.md                | 112 +++++++
+ shared/tests/test_verify_baseline.py | 226 ++++++++++++++
+ shared/tools/verify_baseline.py      |  83 ++++++
+ 4 files changed, 978 insertions(+)

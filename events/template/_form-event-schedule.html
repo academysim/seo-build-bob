@@ -1,0 +1,30 @@
+<form action='/success-schedule' class='qf-form' method='POST' name='event-schedule'>
+      <input type="hidden" name="form-name" value="event-schedule">
+      <p class="qf-hp"><label>Leave blank: <input name="bot-field"></label></p>
+      <div class="qf-grid">
+        <div class="qf-field"><label>Name <span class="req">*</span></label><input type="text" name="name" required></div>
+        <div class="qf-field"><label>Company / Organization</label><input type="text" name="company"></div>
+        <div class="qf-field"><label>Email <span class="req">*</span></label><input type="email" name="email" required></div>
+        <div class="qf-field"><label>Phone <span class="req">*</span></label><input type="tel" name="phone" required></div>
+        <div class="qf-field"><label>Requested Date <span class="req">*</span></label><input type="date" name="event_date" required></div>
+        <div class="qf-field"><label>Backup Date</label><input type="date" name="backup_date"></div>
+        <div class="qf-field"><label>Venue / City <span class="req">*</span></label><input type="text" name="venue" placeholder="e.g. Tampa, FL" required></div>
+        <div class="qf-field"><label>Event Type</label>
+          <select name="event_type">
+            <option value="">Select…</option>
+            <option>Corporate Event</option>
+            <option>Trade Show / Expo</option>
+            <option>Dealership Activation</option>
+            <option>Brand Launch / Activation</option>
+            <option>Private Party / Celebration</option>
+            <option>Race Watch Party</option>
+            <option>Public Safety / Community</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="qf-field full"><label>Anything else we should know?</label><textarea name="details" placeholder="Guest count estimate, number of sims, venue notes, etc."></textarea></div>
+      </div>
+      <div class="qf-submit" style="text-align:center;"><button type="submit" class="btn-amber" style="font-size:13px; padding:15px 30px;">CHECK AVAILABILITY →</button></div>
+      <div class="qf-note">We'll confirm availability within 1 business day · Or call (813) 355-9071</div>
+      <div class="qf-error" id="err-schedule">Something went wrong. Please call (813) 355-9071 or email info@academysim.com.</div>
+    </form>

@@ -1,0 +1,31 @@
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# ---------------------------------------------------------------------------
+# Consolidate the raw Netlify hostname onto the custom domain.
+# Both served byte-identical content, so every page existed at two addresses:
+# duplicate content for Google, and split sessions in GA4. The canonical tag
+# in index.html covers immutable deploy-preview URLs, which this cannot match.
+# ---------------------------------------------------------------------------
+[[redirects]]
+  from = "https://simlounge.netlify.app/*"
+  to = "https://lounge.academysim.com/:splat"
+  status = 301
+  force = true

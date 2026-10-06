@@ -1,0 +1,16 @@
+<!-- ============ TRACK GUIDES ============ -->
+<section class="section" style="border-top:1px solid rgba(255,255,255,0.08);">
+  <div class="section-head" style="text-align:center;">
+    <div class="eyebrow" style="display:inline-block;">Track Guides</div>
+    <h2 class="section-title">Running A Track Weekend?</h2>
+    <p class="section-intro" style="margin:0 auto;">Free corner-by-corner guides to the circuits our drivers run — plus how to prepare so your paid track time gets spent driving, not learning where the track goes.</p>
+  </div>
+  <div style="display:flex;justify-content:center;margin-top:22px;">
+    <a href="/tracks/sebring/" style="display:block;max-width:520px;border:1px solid rgba(251,191,36,0.35);background:#111113;padding:24px;text-decoration:none;transition:border-color .15s ease;" onmouseover="this.style.borderColor='#fbbf24'" onmouseout="this.style.borderColor='rgba(251,191,36,0.35)'">
+      <div class="mono amber" style="font-size:10px;letter-spacing:0.22em;margin-bottom:8px;">SEBRING INTERNATIONAL RACEWAY · 90 MIN AWAY</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:30px;letter-spacing:0.02em;color:#fafafa;margin-bottom:8px;">Sebring Track Guide</div>
+      <div style="font-size:13px;color:#d4d4d8;margin-bottom:14px;">The corners that decide your lap, who runs events there, and how to get the most out of your first track day.</div>
+      <div class="mono amber" style="font-size:10px;letter-spacing:0.2em;">READ THE GUIDE →</div>
+    </a>
+  </div>
+</section>

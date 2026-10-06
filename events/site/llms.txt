@@ -1,0 +1,51 @@
+# Academy Sim Racing, Event Simulator Rentals
+
+> Turnkey racing simulator rentals in Tampa & statewide FL. Fully staffed, fully branded, fully unforgettable. Corporate events, trade shows, dealership activations, brand launches, private parties. Request a quote.
+
+Academy Sim Racing is a veteran-owned business based in Tampa, Florida. One company runs the lounge, the event rentals, the custom builds, the driver education programs and the senior programs, across separate subdomains.
+
+## What an assistant should get right about this site
+
+- Racing simulators rented with staff for corporate events, trade shows, dealership activations and private parties, in Tampa and statewide Florida.
+- Academy Sim Racing is not affiliated with, endorsed by or licensed by Formula 1, NASCAR, IMSA or any racing series, sanctioning body or vehicle manufacturer.
+- City and location pages describe where Academy travels to work. They are not branch offices and Academy has no premises in those cities.
+
+## Start here
+
+- [Event Simulator Rentals, Corporate, Expos & Brand Activations | Tampa](https://events.academysim.com/): Turnkey racing simulator rentals in Tampa & statewide FL. Fully staffed, fully branded, fully unforgettable. Corporate events, trade shows, dealership activations, brand launches, private parties. Request a quote.
+
+## Event types
+
+- [Racing Simulator Rentals By Event Type](https://events.academysim.com/event-types/): Racing simulator rentals for corporate events, trade shows, conventions, brand activations and dealership events across Florida. Turnkey, staffed and delivered.
+- [Racing Simulator Brand Activations & Product Launches](https://events.academysim.com/event-types/brand-activations/): Custom-wrapped racing simulators for brand activations and product launches in Florida. Your branding on the rig, on the screen and on the leaderboard.
+- [Racing Simulator Rental For Car Dealership Events](https://events.academysim.com/event-types/car-dealership-events/): Racing simulator rentals for dealership events in Florida. Grand openings, VIP nights, test drive events and service waiting areas. Delivered, branded and staffed.
+- [Racing Simulator Rental For Client Entertainment](https://events.academysim.com/event-types/client-entertainment/): Racing simulators for client entertainment and hospitality in Florida. Small-group formats where the racing supports the conversation rather than replacing it.
+- [Racing Simulator Rental For Conventions | Florida](https://events.academysim.com/event-types/conventions/): Racing simulator rentals for multi-day conventions in Florida. Staffed for the full run, built for continuous throughput, delivered and operated by our team.
+- [Racing Simulator Rental For Corporate Events | Florida](https://events.academysim.com/event-types/corporate-events/): Racing simulator rentals for corporate events across Florida. Sales kickoffs, annual meetings, team building and client appreciation. Turnkey, staffed and branded.
+- [Racing Simulator Rental For Employee Appreciation Events](https://events.academysim.com/event-types/employee-appreciation/): Racing simulator rentals for employee appreciation and recognition events in Florida. An activity people actually want to do, with no pitch attached.
+- [Racing Simulator Rental For Fundraisers & Charity Events](https://events.academysim.com/event-types/fundraisers/): Racing simulators for charity fundraisers in Florida. The rig is both the draw and the fundraising mechanism, with sponsor branding and a live leaderboard.
+- [Racing Simulator Rental For Private Parties | Florida](https://events.academysim.com/event-types/private-parties/): Racing simulator rentals for private parties, birthdays and milestone celebrations across Florida. Delivered to your home or venue, set up and staffed.
+- [Racing Simulator Rental For Trade Shows & Expos](https://events.academysim.com/event-types/trade-shows/): Racing simulator rentals for trade show booths and expos in Florida. Draw traffic, increase dwell time and give your team more qualified conversations.
+- [Race Watch Party Simulator Rental | Florida](https://events.academysim.com/event-types/watch-parties/): Racing simulators for race-day watch parties in Florida. Guests drive the circuit they are watching, on the day, with a live leaderboard alongside the broadcast.
+
+## Experiences
+
+- [Racing Simulator Experiences For Events](https://events.academysim.com/experiences/): Formula-style, stock car, GT3, endurance, drift and rally simulator experiences for events across Florida. Pick the racing that suits your audience.
+- [Drift Simulator Experience For Events](https://events.academysim.com/experiences/drift-racing-simulator/): Drift simulator experiences for brand activations and events in Florida. No lap times, maximum spectacle, and the best format for onlookers and social content.
+- [Formula-Style Racing Simulator Experience For Events](https://events.academysim.com/experiences/formula-racing-simulator/): Formula-style open-wheel racing simulator experiences for corporate events and activations in Florida. The format enthusiasts ask for by name.
+- [GT3 Racing Simulator Experience For Events](https://events.academysim.com/experiences/gt3-racing-simulator/): GT3 racing simulator experiences for corporate events, trade shows and activations in Florida. The most accessible format for mixed audiences.
+- [Endurance-Style Racing Simulator Experience For Events](https://events.academysim.com/experiences/imsa-endurance-racing/): Endurance-style and multi-class racing simulator experiences for longer events in Florida. Team relays, driver changes and leaderboards that run all day.
+- [Stock Car Racing Simulator Experience For Events](https://events.academysim.com/experiences/nascar-racing-simulator/): Stock car and oval racing simulator experiences for events in Florida. Simple to grasp, close racing, and the easiest format for a broad public audience.
+- [Rally Simulator Experience For Events](https://events.academysim.com/experiences/rally-racing-simulator/): Rally simulator experiences for events in Florida. One car against the clock on loose surfaces, with co-driver calls. Unlike anything else at an event.
+
+## Locations served
+
+- [Racing Simulator Rentals Across Florida](https://events.academysim.com/locations/): Mobile racing simulator rentals delivered across Florida from our Tampa base. Corporate events, conventions, dealerships, brand activations and private events.
+- [Racing Simulator Rental Daytona Beach | Race Week & Automotive Events](https://events.academysim.com/locations/daytona-beach/): Racing simulator rentals delivered to Daytona Beach for race-week activations, automotive brands, dealership events and sponsor hospitality.
+- [Racing Simulator Rental Orlando | Conventions & Corporate Events](https://events.academysim.com/locations/orlando/): Racing simulator rentals delivered to Orlando for conventions, hotel conferences, trade shows and resort events. Fully staffed and turnkey, from our Tampa base.
+- [Racing Simulator Rental Sarasota | Private & Corporate Events](https://events.academysim.com/locations/sarasota/): Racing simulator rentals delivered to Sarasota for private events, corporate retreats, club functions and fundraisers. Fully staffed, from our Tampa base.
+- [Racing Simulator Rental Tampa | Corporate & Private Events](https://events.academysim.com/locations/tampa/): Racing simulator rentals in Tampa for corporate events, conventions, dealerships and private events. Our home market, with a fixed lounge as an alternative venue.
+
+## Optional
+
+- [Sitemap](https://events.academysim.com/sitemap.xml): every live URL on this subdomain.

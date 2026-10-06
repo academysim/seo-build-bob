@@ -1,0 +1,43 @@
+--- cta-card ---
+<div class="cta-card">
+<h3>Build One For Home</h3>
+<p>If you're running multiple events a season, owning a rig means unlimited repetition on your own schedule, the week of the event, the night before, whenever. We build custom simulators for track drivers, and you can try one in Tampa before you buy.</p>
+<a class="btn-ghost" href="https://builds.academysim.com">EXPLORE BUILDS →</a>
+</div>
+</div>
+<p class="note">Simulator practice is preparation, not a substitute for real-world instruction.
+
+--- note ---
+<p class="note">Braking points and gear selection are deliberately not listed here. They vary enormously by car, tires, aero and driver, and copying someone else's reference points is how people end up in the gravel. Learn the layout and the sequence first; your instructor sets your references on the day.</p>
+</section>
+<section class="section" id="orgs">
+<h2>Who Runs Events At Sebring</h2>
+<p>Sebring hosts HPDE and club racing throughout the year. Whichever organization you're registered with, the corners
+
+--- grid2 ---
+<div class="grid2">
+<div class="cta-card primary">
+<h3>Drive It At Our Tampa Lounge</h3>
+<p>Sebring on a full motion or triple-screen rig, about 90 minutes from the circuit itself. Book an hour, run laps, and get coaching from a certified HPDE instructor who races wheel-to-wheel. Ideal for the weeks before a Sebring weekend.</p>
+<a class="btn-amber" href="https://booking.academysim.com/?category=racing">BOOK A SESSION →</a>
+</div>
+<div class="cta-card">
+<h3>Build One For Home</h
+
+--- steps ---
+<ol class="steps">
+<li>
+<h3>Learn the layout before you arrive</h3>
+<p>This is the single highest-value thing you can do, and the easiest. If you already know that Turn 7 is a slow hairpin and that Bishop falls away from you, your brain has capacity left over for the things that actually need real-time attention: your instructor's input, mirrors, flags, and what the car is telling you.</p>
+</li>
+<li>
+<h3>Get your eyes up and looking far ahead</h3>
+<p>Novice drivers look at the 
+
+--- eyebrow ---
+<div class="eyebrow">Sebring International Raceway · Sebring, FL</div>
+<h1>Learn Sebring Before<br>You Pay For Track Time</h1>
+<p class="hero-sub">Sebring punishes drivers who arrive cold. Seventeen turns, a surface stitched together from WWII-era concrete and asphalt, and a final corner that decides your whole lap. This is what the circuit asks of you, and how to show up already knowing it.</p>
+<div class="hero-ctas">
+<a class="btn-amber" href="https://booking.academysim.com/?category=racing">DRIVE SEBRI
+

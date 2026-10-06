@@ -1,0 +1,44 @@
+<!-- ============ HOURS ============ -->
+<section class="section" id="hours">
+  <div class="section-head" style="text-align:center;">
+    <div class="eyebrow" style="display:inline-block;">Hours</div>
+    <h2 class="section-title">Hours &amp; How To Visit</h2>
+    <p class="section-intro" style="margin:0 auto;">Two ways to race with us. Friday and Saturday you can walk in. Sun, Mon, Wed &amp; Thu by appointment; closed to the public Tuesday. Book your time first so a rig is waiting.</p>
+  </div>
+
+  <div class="hours-wrap">
+    <div class="hours-card walkin">
+      <div class="hc-head"><span class="hc-dot"></span><span class="hc-title">Walk-In Welcome</span></div>
+      <div class="hc-sub">No reservation needed</div>
+      <div class="hc-day"><span class="d">Friday</span><span class="t">2:00 – 10:00 PM</span></div>
+      <div class="hc-day"><span class="d">Saturday</span><span class="t">2:00 – 10:00 PM</span></div>
+      <div class="hc-note">Come as you are. Rigs are first-come during these hours — booking ahead still guarantees your seat on busy nights.</div>
+    </div>
+
+    <div class="hours-card appt">
+      <div class="hc-head"><span class="hc-dot"></span><span class="hc-title">Book Ahead</span></div>
+      <div class="hc-sub">Reserve your time first</div>
+      <div class="hc-day"><span class="d">Sunday</span><span class="t">12:00 – 6:00 PM</span></div>
+      <div class="hc-day"><span class="d">Monday</span><span class="t">12:00 – 9:00 PM</span></div>
+      <div class="hc-day"><span class="d">Wednesday</span><span class="t">12:00 – 9:00 PM</span></div>
+      <div class="hc-day"><span class="d">Thursday</span><span class="t">12:00 – 9:00 PM</span></div>
+      <div class="hc-note">Reserve online and a rig is set up and ready when you arrive.</div>
+    </div>
+  </div>
+
+  <div class="hours-tuesday">
+    <span class="tue-tag">Tuesday</span>
+    <span>Closed.</span>
+  </div>
+
+  <div class="basics">
+    <div class="basic"><div class="b-t">No experience needed</div><div class="b-d">Staff set up first-timers and get you comfortable in minutes. Nothing to bring, nothing to know.</div></div>
+    <div class="basic"><div class="b-t">Sessions from 30 minutes (Fri &amp; Sat)</div><div class="b-d">30-minute sessions on Fridays and Saturdays; one-hour minimum Sunday, Monday, Wednesday and Thursday. Book up to 4 hours. First-timers usually pick an hour — long enough to settle in and actually improve.</div></div>
+    <div class="basic"><div class="b-t">Kids welcome</div><div class="b-d">Kids race regularly and birthday parties are one of our most popular bookings.</div></div>
+    <div class="basic"><div class="b-t">One rig per racer</div><div class="b-d">Everyone in your group drives at the same time — add a sim for each racer when you book.</div></div>
+  </div>
+
+  <div style="text-align:center; margin-top:24px;">
+    <a class="btn-amber" href="https://booking.academysim.com/?category=racing">BOOK YOUR SESSION →</a>
+  </div>
+</section>

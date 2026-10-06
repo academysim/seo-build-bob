@@ -1,0 +1,10 @@
+.lp .abs-toggle { display:flex; align-items:center; gap:7px;
+  background:transparent; border:1px solid; padding:6px 9px; cursor:pointer;
+  font-family:'IBM Plex Mono',monospace; font-size:9px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase;
+  transition:border-color .15s ease, color .15s ease, background .15s ease; }
+.lp .abs-toggle .abs-knob { width:6px; height:6px; border-radius:50%; display:inline-block; }
+.lp .abs-toggle.abs-on { color:#fbbf24; border-color:rgba(251,191,36,0.40); }
+.lp .abs-toggle.abs-on .abs-knob { background:#fbbf24; }
+.lp .abs-toggle.abs-off { color:#8b8b93; border-color:rgba(255,255,255,0.18); }
+.lp .abs-toggle.abs-off .abs-knob { background:#8b8b93; }
+.lp .abs-toggle:hover { background:rgba(255,255,255,0.05); } }

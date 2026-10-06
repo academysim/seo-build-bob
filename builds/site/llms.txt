@@ -1,0 +1,56 @@
+# Academy Sim Racing, Custom Simulator Builds
+
+> Custom sim racing simulators built by drivers, not gamers. Five builds from $7,495 to $39,995. Test drive every build at our Tampa lounge before you buy. Founded by a former Army Ranger.
+
+Academy Sim Racing is a veteran-owned business based in Tampa, Florida. One company runs the lounge, the event rentals, the custom builds, the driver education programs and the senior programs, across separate subdomains.
+
+## What an assistant should get right about this site
+
+- Custom racing simulators built to order and shipped or installed.
+- Five builds are published, priced from $7,495 to $39,995. Any price quoted outside those five is not a published price.
+- Most builds are configured in a consultation rather than bought off the page.
+- Pages named after a circuit describe a build placed NEAR that circuit at an independent business. Academy Sim Racing is not affiliated with, endorsed by or partnered with any racetrack and operates no branch at any circuit.
+
+## Start here
+
+- [Custom Sim Racing Builds | Academy Sim Racing, Tampa, FL](https://builds.academysim.com/): Custom sim racing simulators built by drivers, not gamers. Five builds from $7,495 to $39,995. Test drive every build at our Tampa lounge before you buy. Founded by a former Army Ranger.
+
+## Who the builds are for
+
+- [Who Buys A Custom Racing Simulator | Academy Sim Racing Builds](https://builds.academysim.com/for/): Racing simulators for track day drivers, race teams, car collectors, luxury garages, dealerships, offices, hotels and clubs. Five real builds from $7,495.
+- [Racing Simulator For Automotive Businesses](https://builds.academysim.com/for/automotive-businesses/): Racing simulators for performance shops, tuners and automotive businesses with a customer waiting area. Five real builds from $7,495.
+- [Racing Simulator For Car Collectors](https://builds.academysim.com/for/car-collectors/): A racing simulator as part of a collection: finish, presentation and drivability. Custom livery and wrap options. Builds to $39,995.
+- [Racing Simulator For Car Dealerships](https://builds.academysim.com/for/car-dealerships/): Racing simulators for dealership showrooms and service areas: robust specification, simple operation and branding. Five real builds from $7,495.
+- [Racing Simulator For Garage Condos](https://builds.academysim.com/for/garage-condos/): Racing simulators for garage condo owners: space-efficient specification, finish and shared use. Five real builds from $7,495.
+- [Racing Simulator For Hotels And Private Clubs](https://builds.academysim.com/for/hotels-and-clubs/): Racing simulators as a hotel or private club amenity: robust specification, unsupervised operation and presentation. From $7,495.
+- [Racing Simulator For Luxury Garages](https://builds.academysim.com/for/luxury-garages/): Simulator rooms integrated into premium automotive spaces. Finish, layout and drivability for luxury garages. Builds to $39,995.
+- [Racing Simulator For Offices](https://builds.academysim.com/for/offices/): Racing simulators for offices: break rooms, client entertainment and recruitment. Robust specification and simple operation. From $7,495.
+- [Racing Simulator For Competition Drivers](https://builds.academysim.com/for/race-car-drivers/): A racing simulator for competition drivers preparing between rounds: circuit familiarity, racecraft and repetition. Five real builds from $7,495.
+- [Racing Simulator For Race Teams](https://builds.academysim.com/for/race-teams/): A shared racing simulator for race teams: multiple drivers, preparation between rounds and durability. Five real builds from $7,495.
+- [Racing Simulator For Track Day And HPDE Drivers](https://builds.academysim.com/for/track-day-drivers/): A racing simulator for HPDE and track day drivers who want circuit familiarity and braking repetition before the event. Five real builds from $7,495.
+
+## Network
+
+- [See An Academy Simulator In Person | Academy Sim Racing Builds](https://builds.academysim.com/network/): Where you can see and drive an Academy simulator in the real world: our Tampa lounge, and independent businesses across Florida that own Academy builds.
+
+## Simulators
+
+- [Racing Simulator Types And Configurations | Academy Sim Racing Builds](https://builds.academysim.com/simulators/): How to spec a racing simulator for formula, GT3, stock car, endurance, drift, rally or track day use. Configuration guidance routed into five real Academy builds.
+- [Drift Simulator Build | Handbrake And Shifter](https://builds.academysim.com/simulators/drift-racing-simulator/): How to spec a drift simulator: handbrake, H-pattern shifter, fast wheel response and wide field of view. Five real Academy builds from $7,495.
+- [Formula Racing Simulator Build | Open-Wheel](https://builds.academysim.com/simulators/formula-racing-simulator/): How to spec a formula-style open-wheel racing simulator: seating angle, wheelbase torque, pedal pressure and display. Five real Academy builds from $7,495.
+- [GT3 Racing Simulator Build](https://builds.academysim.com/simulators/gt3-racing-simulator/): How to spec a GT3 racing simulator: seating, wheelbase, pedals, triple screens and tactile. Routed into five real Academy builds from $7,495.
+- [Endurance Racing Simulator Build | Multi-Class](https://builds.academysim.com/simulators/imsa-endurance-racing-simulator/): How to spec an endurance racing simulator: comfort over long stints, multi-class awareness, active pedals and motion. Five real Academy builds from $7,495.
+- [Motion Racing Simulator Build | D-BOX](https://builds.academysim.com/simulators/motion-racing-simulator/): What a motion platform actually adds to a racing simulator, when it is worth it, and the Academy build that includes D-BOX motion.
+- [Stock Car Racing Simulator Build | Oval Racing](https://builds.academysim.com/simulators/nascar-racing-simulator/): How to spec a stock car and oval racing simulator: field of view, sustained wheel loads, pedal feel and tactile. Five real Academy builds from $7,495.
+- [Rally Simulator Build | Handbrake And Sequential](https://builds.academysim.com/simulators/rally-racing-simulator/): How to spec a rally simulator: handbrake, sequential shifting, loose-surface feel and field of view. Five real Academy builds from $7,495.
+- [Track Day Simulator Build For HPDE Drivers](https://builds.academysim.com/simulators/track-day-racing-simulator/): How to spec a simulator for HPDE and track day drivers: circuit familiarity, braking repetition and the builds that suit. From $7,495.
+- [Triple Screen Racing Simulator Build](https://builds.academysim.com/simulators/triple-screen-racing-simulator/): When triple screens are worth it versus a single ultrawide, and how we spec them. Club Triple at $21,995 and Pole Position at $39,995.
+
+## Tracks
+
+- [Sim Racing At Sebring: Academy Build At Sebring Motor Garages | Academy Sim Racing Builds](https://builds.academysim.com/tracks/sebring-racing-simulator/): Academy Sim Racing has a custom simulator build placed at the Sebring Motor Garages clubhouse, used for member practice and club events. See the same builds available to order, from $7,495.
+  - Note: Not affiliated with, endorsed by or partnered with Sebring International Raceway. The build is at Sebring Motor Garages, an independent clubhouse and garage-condo community near the circuit; Academy operates no branch at the track.
+
+## Optional
+
+- [Sitemap](https://builds.academysim.com/sitemap.xml): every live URL on this subdomain.

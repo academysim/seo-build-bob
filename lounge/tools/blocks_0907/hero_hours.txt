@@ -1,0 +1,6 @@
+<div class="hero-price">SESSIONS FROM <strong>$40/HR</strong></div>
+  <div class="hero-hours">
+    <div class="hh-row hh-walk"><span class="hh-tag">WALK-IN</span><span class="hh-days">Fri &amp; Sat · 2–10PM</span></div>
+    <div class="hh-row hh-appt"><span class="hh-tag">APPT ONLY</span><span class="hh-days">Sun · Mon · Wed · Thu</span></div>
+    <a class="hh-link" href="https://booking.academysim.com">Hours &amp; availability at booking.academysim.com →</a>
+  </div>

@@ -1,0 +1,20 @@
+__pycache__/
+*.pyc
+*.log
+.DS_Store
+Thumbs.db
+upload/
+.audit-cache/
+
+# local timestamped backups from in-session edits
+*.bak-*
+
+# Search Console credentials - never commit
+.gsc/
+builds_new/
+
+# transient deploy hold-out dirs (files moved aside during a scoped deploy,
+# then moved back). A concurrent session had one open on 2026-08-31 and a
+# `git add -A` swept 24 of its in-flight files into a commit.
+.hold/
+.hold_*/

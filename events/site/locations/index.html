@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SQL40ZS59K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SQL40ZS59K');
+</script>
+<title>Racing Simulator Rentals Across Florida | Academy Sim Racing</title>
+<meta name="description" content="Mobile racing simulator rentals delivered across Florida from our Tampa base. Corporate events, conventions, dealerships, brand activations and private events.">
+<link rel="canonical" href="https://events.academysim.com/locations/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://events.academysim.com/locations/">
+<meta property="og:title" content="Racing Simulator Rentals Across Florida | Academy Sim Racing">
+<meta property="og:description" content="Mobile racing simulator rentals delivered across Florida from our Tampa base. Corporate events, conventions, dealerships, brand activations and private events.">
+<meta property="og:image" content="https://events.academysim.com/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Racing Simulator Rentals Across Florida | Academy Sim Racing">
+<meta name="twitter:description" content="Mobile racing simulator rentals delivered across Florida from our Tampa base. Corporate events, conventions, dealerships, brand activations and private events.">
+<meta name="twitter:image" content="https://events.academysim.com/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg?v=3">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#FAF7F2">
+<style>
+/* ============================================================
+   ACADEMY EVENTS — FESTIVE LIGHT PALETTE
+   Base: warm off-white / cream   Text: deep ink
+   Brand through-line: champagne gold  #C3B496 (deepened to #A8915E for contrast)
+   Festive pops: electric teal #0FB5BA · warm coral #FF6B5A
+   ============================================================ */
+:root {
+  --bg:#FAF7F2;            /* warm off-white base */
+  --bg-tint:#F3EEE6;       /* soft cream panel */
+  --bg-tint2:#FFF9F0;      /* lighter warm panel */
+  --surface:#FFFFFF;       /* card surface */
+  --ink:#1A1714;           /* deep near-black text */
+  --ink-soft:#5C534A;      /* muted body text */
+  --ink-faint:#938A7E;     /* labels / captions */
+  --line:rgba(26,23,20,0.10);
+  --line-soft:rgba(26,23,20,0.07);
+  --gold:#A8915E;          /* champagne gold, contrast-safe on light */
+  --gold-bright:#C3B496;   /* brand gold for fills/glows */
+  --gold-soft:rgba(195,180,150,0.18);
+  --teal:#0FB5BA;          /* electric teal pop */
+  --teal-soft:rgba(15,181,186,0.12);
+  --coral:#FF6B5A;         /* warm coral pop */
+  --coral-soft:rgba(255,107,90,0.12);
+  --shadow:0 4px 18px rgba(26,23,20,0.08), 0 1px 3px rgba(26,23,20,0.06);
+  --shadow-lift:0 10px 30px rgba(26,23,20,0.12);
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--bg); }
+a { text-decoration:none; color:inherit; }
+.lp { background:var(--bg); color:var(--ink); font-family:'Inter',sans-serif; overflow:hidden; font-size:14px; line-height:1.5; max-width:1100px; margin:0 auto; }
+.lp .mono { font-family:'IBM Plex Mono',monospace; letter-spacing:0.15em; text-transform:uppercase; }
+.lp .eyebrow { font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:var(--teal); margin-bottom:0.75rem; }
+.lp .amber { color:var(--gold); }
+.lp .dim { color:var(--ink-soft); }
+
+.lp .nav { display:flex; justify-content:space-between; align-items:center; padding:14px 20px; background:rgba(250,247,242,0.88); border-bottom:1px solid var(--line); position:sticky; top:0; z-index:50; backdrop-filter:blur(10px); }
+.lp .brand-lockup { display:flex; flex-direction:column; gap:3px; line-height:1; cursor:pointer; transition:opacity 0.15s; }
+.lp .brand-lockup:hover { opacity:0.75; }
+.lp .brand-eyebrow { font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.3em; text-transform:uppercase; color:var(--coral); display:flex; align-items:center; gap:7px; }
+.lp .brand-dot { width:6px; height:6px; border-radius:50%; background:var(--coral); display:inline-block; box-shadow:0 0 8px rgba(255,107,90,0.6); animation:brandBlink 1.6s ease-in-out infinite; }
+.lp .brand-name { font-family:'Bebas Neue',sans-serif; font-size:24px; letter-spacing:0.04em; color:var(--ink); }
+@keyframes brandBlink { 0%,45%{opacity:1;} 55%,90%{opacity:0.2;} 100%{opacity:1;} }
+
+.lp .btn-amber { background:linear-gradient(135deg,var(--coral) 0%,#FF8A5B 100%); color:#fff; font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; padding:11px 17px; display:inline-block; transition:transform 0.15s, box-shadow 0.15s; cursor:pointer; border:none; box-shadow:0 4px 14px rgba(255,107,90,0.28); }
+.lp .btn-amber:hover { transform:translateY(-2px); box-shadow:0 8px 22px rgba(255,107,90,0.4); }
+.lp .btn-ghost { background:var(--surface); color:var(--ink); font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; padding:11px 17px; border:1px solid var(--line); display:inline-block; transition:border-color 0.15s, color 0.15s, transform 0.15s; cursor:pointer; box-shadow:var(--shadow); }
+.lp .btn-ghost:hover { border-color:var(--teal); color:var(--teal); transform:translateY(-1px); }
+
+.lp .hero { background:linear-gradient(160deg,#FFF9F0 0%,#FAF1E4 45%,#F3EEE6 100%); padding:84px 24px 64px; position:relative; overflow:hidden; isolation:isolate; }
+.lp .hero-bg { position:absolute; inset:0; z-index:-3; opacity:0.9; }
+.lp .hero-bg img, .lp .hero-bg video { width:100%; height:100%; object-fit:cover; object-position:center; }
+.lp .hero-scrim { position:absolute; inset:0; z-index:-2; background:linear-gradient(90deg, rgba(255,249,240,0.95) 0%, rgba(255,249,240,0.80) 38%, rgba(255,249,240,0.30) 62%, rgba(255,249,240,0.12) 82%, rgba(255,249,240,0.20) 100%), linear-gradient(180deg, rgba(255,249,240,0.35) 0%, rgba(255,249,240,0.05) 45%, rgba(250,241,228,0.55) 100%); }
+.lp .hero-glow { position:absolute; inset:0; z-index:-1; pointer-events:none; background:radial-gradient(55% 70% at 88% 18%, rgba(15,181,186,0.16) 0%, transparent 60%), radial-gradient(50% 60% at 8% 88%, rgba(255,107,90,0.14) 0%, transparent 60%); }
+.lp .hero::before { content:''; position:absolute; inset:0; z-index:-1; background-image:linear-gradient(rgba(26,23,20,0.035) 1px,transparent 1px),linear-gradient(90deg,rgba(26,23,20,0.035) 1px,transparent 1px); background-size:30px 30px; pointer-events:none; mask-image:linear-gradient(180deg, transparent 0%, black 40%); }
+.lp .hero::after { content:''; position:absolute; left:0; right:0; bottom:0; height:3px; z-index:0; background:linear-gradient(90deg, var(--coral) 0%, var(--gold-bright) 40%, var(--teal) 80%, transparent 100%); }
+.lp .h1 { font-family:'Bebas Neue',sans-serif; font-size:64px; line-height:0.92; margin-bottom:14px; position:relative; color:var(--ink); }
+.lp .hero-sub { font-size:14px; color:var(--ink-soft); max-width:460px; margin-bottom:24px; position:relative; }
+.lp .hero-rotator { font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.15em; text-transform:uppercase; color:var(--teal); margin-bottom:18px; position:relative; min-height:16px; font-weight:600; }
+.lp .hero-ctas { display:flex; gap:10px; position:relative; margin-bottom:18px; flex-wrap:wrap; }
+.lp .hero-credit { font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:var(--ink-faint); position:relative; }
+.lp .hero-credit .amber-dot { color:var(--gold); }
+.lp .hero-credit-line { display:flex; align-items:center; gap:6px; margin-bottom:5px; }
+
+.lp .trust { display:grid; grid-template-columns:repeat(5,1fr); gap:14px; padding:20px; background:var(--surface); border-top:1px solid var(--line); border-bottom:1px solid var(--line); box-shadow:var(--shadow); }
+.lp .trust-item { text-align:center; }
+.lp .trust-label { font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.25em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:4px; }
+.lp .trust-val { font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink); }
+
+.lp .section { padding:48px 24px; }
+.lp .section-head { margin-bottom:28px; }
+.lp .h2 { font-family:'Bebas Neue',sans-serif; font-size:38px; line-height:0.95; margin-bottom:10px; color:var(--ink); }
+.lp .section-intro { font-size:13px; color:var(--ink-soft); max-width:560px; line-height:1.55; }
+
+/* CLIENTS */
+.lp .clients-section { background:var(--bg-tint); }
+.lp .clients-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-bottom:24px; }
+.lp .client-card { background:var(--surface); border:1px solid var(--line-soft); border-radius:14px; padding:20px; display:flex; flex-direction:column; box-shadow:var(--shadow); transition:transform 0.15s, box-shadow 0.15s; }
+.lp .client-card:hover { transform:translateY(-3px); box-shadow:var(--shadow-lift); }
+.lp .client-card:nth-child(1) { border-top:3px solid var(--coral); }
+.lp .client-card:nth-child(2) { border-top:3px solid var(--gold-bright); }
+.lp .client-card:nth-child(3) { border-top:3px solid var(--teal); }
+.lp .client-label { font-family:'IBM Plex Mono',monospace; font-size:8px; letter-spacing:0.3em; color:var(--gold); text-transform:uppercase; margin-bottom:12px; }
+.lp .client-stats { display:flex; gap:18px; margin-bottom:12px; }
+.lp .client-stat { display:flex; flex-direction:column; }
+.lp .client-stat-big { font-family:'Bebas Neue',sans-serif; font-size:26px; line-height:1; color:var(--ink); }
+.lp .client-stat-small { font-family:'IBM Plex Mono',monospace; font-size:8px; letter-spacing:0.15em; color:var(--ink-faint); text-transform:uppercase; margin-top:3px; }
+.lp .client-text { font-size:12px; color:var(--ink-soft); line-height:1.5; }
+.lp .client-roster { background:var(--surface); border:1px solid var(--line-soft); border-radius:14px; padding:20px; box-shadow:var(--shadow); }
+.lp .client-roster-label { font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.25em; color:var(--teal); text-transform:uppercase; margin-bottom:12px; }
+.lp .client-logos { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:12px; }
+.lp .client-chip { font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink); background:var(--bg-tint2); padding:6px 11px; border:1px solid var(--line-soft); border-radius:20px; }
+.lp .client-nda { font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.15em; color:var(--ink-faint); text-transform:uppercase; }
+
+/* EVENT TYPES */
+.lp .types-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+.lp .type-card { background:var(--surface); border:1px solid var(--line-soft); border-radius:14px; padding:20px; display:flex; flex-direction:column; box-shadow:var(--shadow); transition:transform 0.15s, box-shadow 0.15s; position:relative; overflow:hidden; }
+.lp .type-card::before { content:''; position:absolute; top:0; left:0; width:100%; height:3px; background:var(--gold-bright); transform:scaleX(0); transform-origin:left; transition:transform 0.2s; }
+.lp .type-card:hover { transform:translateY(-3px); box-shadow:var(--shadow-lift); }
+.lp .type-card:hover::before { transform:scaleX(1); }
+.lp .type-card:nth-child(3n+1):hover::before { background:var(--coral); }
+.lp .type-card:nth-child(3n+2):hover::before { background:var(--teal); }
+.lp .type-num { font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.25em; color:var(--teal); text-transform:uppercase; margin-bottom:10px; }
+.lp .type-name { font-family:'Bebas Neue',sans-serif; font-size:24px; line-height:1; margin-bottom:8px; color:var(--ink); }
+.lp .type-desc { font-size:12px; color:var(--ink-soft); line-height:1.5; }
+
+/* INCLUDED */
+.lp .included-section { background:var(--bg-tint2); }
+.lp .included-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+.lp .inc-card { background:var(--surface); border:1px solid var(--line-soft); border-radius:14px; padding:18px; box-shadow:var(--shadow); transition:transform 0.15s; }
+.lp .inc-card:hover { transform:translateY(-2px); }
+.lp .inc-icon { width:34px; height:34px; border-radius:9px; background:var(--teal-soft); display:flex; align-items:center; justify-content:center; color:var(--teal); font-size:16px; margin-bottom:12px; }
+.lp .inc-card:nth-child(4n+1) .inc-icon { background:var(--coral-soft); color:var(--coral); }
+.lp .inc-card:nth-child(4n+3) .inc-icon { background:var(--gold-soft); color:var(--gold); }
+.lp .inc-name { font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.1em; color:var(--ink); text-transform:uppercase; margin-bottom:6px; }
+.lp .inc-desc { font-size:11.5px; color:var(--ink-soft); line-height:1.45; }
+
+/* WHY IT WORKS */
+.lp .why-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+
+/* PROOF STRIP */
+.lp .proof-strip { display:grid; grid-template-columns:220px 1fr; gap:18px; align-items:center; margin-top:18px; background:var(--surface); border:1px solid var(--line-soft); border-radius:14px; padding:16px; box-shadow:var(--shadow); }
+.lp .proof-strip img { width:100%; height:150px; object-fit:cover; object-position:center top; border-radius:10px; display:block; }
+.lp .proof-strip .proof-text { font-size:13px; color:var(--ink-soft); line-height:1.55; }
+.lp .proof-strip .proof-text strong { color:var(--ink); }
+.lp .proof-tag { font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.2em; text-transform:uppercase; color:var(--teal); margin-bottom:6px; }
+@media (max-width:720px){ .lp .proof-strip { grid-template-columns:1fr; } .lp .proof-strip img { height:200px; } }
+
+/* GALLERY */
+.lp .gallery-section { background:var(--bg-tint2); }
+.lp .gallery-grid { display:grid; grid-template-columns:repeat(6, 1fr); grid-auto-rows:150px; gap:10px; }
+.lp .g-item { overflow:hidden; border-radius:12px; box-shadow:var(--shadow); position:relative; }
+.lp .g-item img { width:100%; height:100%; object-fit:cover; object-position:center top; display:block; transition:transform 0.4s ease; }
+.lp .g-item:hover img { transform:scale(1.06); }
+.lp .g-item .g-cap { position:absolute; left:0; right:0; bottom:0; padding:16px 12px 10px; font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.15em; text-transform:uppercase; color:#fff; background:linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.75) 100%); opacity:0; transition:opacity 0.2s; }
+.lp .g-item:hover .g-cap { opacity:1; }
+/* feature layout: clean 2 rows of 3 equal tiles */
+.lp .g-a { grid-column:span 2; grid-row:span 2; }
+.lp .g-b { grid-column:span 2; grid-row:span 2; }
+.lp .g-c { grid-column:span 2; grid-row:span 2; }
+.lp .g-d { grid-column:span 2; grid-row:span 2; }
+.lp .g-e { grid-column:span 2; grid-row:span 2; }
+.lp .g-f { grid-column:span 2; grid-row:span 2; }
+/* leaderboard: show the FULL frame (contain), dark backdrop fills the letterbox */
+.lp .g-d { background:#14110e; }
+.lp .g-d img { object-fit:contain; object-position:center; }
+@media (max-width:720px){
+  .lp .gallery-grid { grid-template-columns:repeat(2,1fr); grid-auto-rows:130px; }
+  .lp .g-a,.lp .g-b,.lp .g-c,.lp .g-d,.lp .g-e,.lp .g-f { grid-column:span 1; grid-row:span 1; }
+  .lp .g-a,.lp .g-b { grid-column:span 2; grid-row:span 2; }
+}
+.lp .why-card { background:var(--surface); border:1px solid var(--line-soft); border-radius:14px; padding:20px; box-shadow:var(--shadow); }
+.lp .why-card:nth-child(1) { background:linear-gradient(165deg,#fff 60%,var(--coral-soft) 100%); }
+.lp .why-card:nth-child(2) { background:linear-gradient(165deg,#fff 60%,var(--teal-soft) 100%); }
+.lp .why-card:nth-child(3) { background:linear-gradient(165deg,#fff 60%,var(--gold-soft) 100%); }
+.lp .why-card:nth-child(4) { background:linear-gradient(165deg,#fff 60%,var(--coral-soft) 100%); }
+.lp .why-num { font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.2em; color:var(--gold); margin-bottom:10px; }
+.lp .why-name { font-family:'Bebas Neue',sans-serif; font-size:22px; line-height:1; margin-bottom:8px; color:var(--ink); }
+.lp .why-desc { font-size:12px; color:var(--ink-soft); line-height:1.5; }
+
+/* PROCESS */
+.lp .process-section { background:var(--bg-tint); }
+.lp .process-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-bottom:24px; }
+.lp .step-card { position:relative; background:var(--surface); border:1px solid var(--line-soft); border-radius:14px; padding:20px; box-shadow:var(--shadow); }
+.lp .step-num { font-family:'Bebas Neue',sans-serif; font-size:36px; line-height:1; color:var(--coral); margin-bottom:8px; opacity:0.85; }
+.lp .step-card:nth-child(2) .step-num { color:var(--gold); }
+.lp .step-card:nth-child(3) .step-num { color:var(--teal); }
+.lp .step-card:nth-child(4) .step-num { color:var(--coral); }
+.lp .step-name { font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.1em; color:var(--ink); text-transform:uppercase; margin-bottom:6px; }
+.lp .step-desc { font-size:12px; color:var(--ink-soft); line-height:1.5; }
+
+/* AERIAL BAND */
+.lp .aerial-band { position:relative; min-height:340px; display:flex; align-items:center; justify-content:center; overflow:hidden; background:#1A1714; }
+.lp .aerial-band img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center center; }
+.lp .aerial-band .aerial-scrim { position:absolute; inset:0; background:linear-gradient(180deg, rgba(26,23,20,0.32) 0%, rgba(26,23,20,0.14) 45%, rgba(26,23,20,0.48) 100%); }
+.lp .aerial-band .aerial-content { position:relative; text-align:center; padding:34px 40px; max-width:600px; border-radius:18px; background:radial-gradient(ellipse 85% 92% at 50% 50%, rgba(6,5,4,0.78) 0%, rgba(6,5,4,0.70) 50%, rgba(6,5,4,0.40) 78%, transparent 100%); }
+.lp .aerial-band .aerial-eyebrow { font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.3em; text-transform:uppercase; color:#fff; margin-bottom:14px; display:inline-flex; align-items:center; gap:8px; }
+.lp .aerial-band .aerial-eyebrow::before { content:''; width:20px; height:1px; background:var(--coral); }
+.lp .aerial-band .aerial-eyebrow::after { content:''; width:20px; height:1px; background:var(--teal); }
+.lp .aerial-band h2 { font-family:'Bebas Neue',sans-serif; font-size:44px; line-height:0.95; color:#fff; margin:0 0 12px; text-shadow:0 2px 20px rgba(0,0,0,0.5); }
+.lp .aerial-band h2 .amber { color:var(--gold-bright); }
+.lp .aerial-band p { font-size:13px; color:rgba(255,255,255,0.9); line-height:1.55; margin:0 auto; max-width:480px; text-shadow:0 1px 10px rgba(0,0,0,0.6); }
+.lp .aerial-band .aerial-stats { display:flex; gap:28px; justify-content:center; margin-top:22px; flex-wrap:wrap; }
+.lp .aerial-band .aerial-stat { display:flex; flex-direction:column; align-items:center; }
+.lp .aerial-band .aerial-stat-big { font-family:'Bebas Neue',sans-serif; font-size:34px; line-height:1; color:#fff; }
+.lp .aerial-band .aerial-stat-small { font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(255,255,255,0.7); margin-top:4px; }
+
+/* FORMS */
+.lp .forms-section { background:linear-gradient(180deg,#FFF9F0 0%,#F3EEE6 100%); border-top:1px solid var(--line); }
+.lp .quote-cta-card { background:var(--surface); border:1px solid var(--line-soft); border-radius:18px; padding:48px 40px; box-shadow:var(--shadow-lift); text-align:center; max-width:680px; margin:0 auto; position:relative; overflow:hidden; }
+.lp .quote-cta-card::before { content:''; position:absolute; top:0; left:0; right:0; height:4px; background:linear-gradient(90deg,var(--coral) 0%,var(--gold-bright) 50%,var(--teal) 100%); }
+.lp .quote-cta-eyebrow { font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:var(--teal); margin-bottom:14px; }
+.lp .quote-cta-h2 { font-family:'Bebas Neue',sans-serif; font-size:42px; line-height:0.95; color:var(--ink); margin:0 0 14px; }
+.lp .quote-cta-intro { font-size:14px; color:var(--ink-soft); line-height:1.6; max-width:480px; margin:0 auto 28px; }
+.lp .quote-cta-actions { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+.lp .quote-cta-btn { font-size:13px !important; padding:15px 28px !important; }
+.lp .quote-cta-note { font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-faint); margin-top:20px; }
+@media (max-width:720px){ .lp .quote-cta-card{ padding:32px 22px; } .lp .quote-cta-h2{ font-size:34px; } }
+
+/* QUOTE FORM */
+.lp .qf-tabs { display:flex; gap:0; max-width:480px; margin:0 auto 24px; border-radius:12px; overflow:hidden; box-shadow:var(--shadow); }
+.lp .qf-tab { flex:1; font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; padding:14px 10px; text-align:center; cursor:pointer; color:var(--ink-soft); background:var(--surface); border:none; transition:background 0.15s,color 0.15s; }
+.lp .qf-tab.active { background:linear-gradient(135deg,var(--teal) 0%,#13C7CC 100%); color:#fff; }
+.lp .qf-tab:not(.active):hover { background:var(--bg-tint2); color:var(--ink); }
+.lp .qf-panel { display:none; }
+.lp .qf-panel.active { display:block; }
+.lp .qf-form { background:var(--surface); border:1px solid var(--line-soft); border-radius:16px; padding:26px; box-shadow:var(--shadow); max-width:640px; margin:0 auto; text-align:left; }
+.lp .qf-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.lp .qf-field { display:flex; flex-direction:column; }
+.lp .qf-field.full { grid-column:1 / -1; }
+.lp .qf-field label { font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.15em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:6px; }
+.lp .qf-field label .req { color:var(--coral); }
+.lp .qf-field input, .lp .qf-field select, .lp .qf-field textarea { background:var(--bg); border:1px solid var(--line); color:var(--ink); font-family:'Inter',sans-serif; font-size:14px; padding:11px 12px; border-radius:8px; transition:border-color 0.15s,box-shadow 0.15s; width:100%; }
+.lp .qf-field input:focus, .lp .qf-field select:focus, .lp .qf-field textarea:focus { outline:none; border-color:var(--teal); box-shadow:0 0 0 3px var(--teal-soft); }
+.lp .qf-field textarea { resize:vertical; min-height:88px; }
+.lp .qf-field select { appearance:none; background-image:url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2210%22%20height%3D%226%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M0%200l5%206%205-6z%22%20fill%3D%22%230FB5BA%22%2F%3E%3C%2Fsvg%3E"); background-repeat:no-repeat; background-position:right 12px center; padding-right:32px; }
+.lp .qf-submit { margin-top:20px; }
+.lp .qf-note { font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.1em; color:var(--ink-faint); text-transform:uppercase; margin-top:14px; text-align:center; }
+.lp .qf-success { display:none; background:linear-gradient(135deg,var(--teal-soft),var(--gold-soft)); border:1px solid var(--teal); border-radius:14px; padding:26px; text-align:center; }
+.lp .qf-success.show { display:block; }
+.lp .qf-success h3 { font-family:'Bebas Neue',sans-serif; font-size:30px; margin:0 0 8px; color:var(--ink); }
+.lp .qf-success p { font-size:13px; color:var(--ink-soft); margin:0; line-height:1.55; }
+.lp .qf-error { display:none; color:#C0392B; font-size:12px; margin-top:12px; text-align:center; }
+.lp .qf-error.show { display:block; }
+.lp .qf-hp { position:absolute; left:-9999px; }
+@media (max-width:720px){ .lp .qf-grid { grid-template-columns:1fr; } .lp .qf-form { padding:18px; } }
+.lp .form-tabs { display:flex; gap:0; margin-bottom:24px; border-radius:12px; overflow:hidden; max-width:520px; box-shadow:var(--shadow); }
+.lp .form-tab { flex:1; font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; padding:15px 12px; text-align:center; cursor:pointer; color:var(--ink-soft); background:var(--surface); border:none; transition:background 0.15s, color 0.15s; }
+.lp .form-tab.active { background:linear-gradient(135deg,var(--teal) 0%,#13C7CC 100%); color:#fff; }
+.lp .form-tab:not(.active):hover { background:var(--bg-tint2); color:var(--ink); }
+.lp .form-panel { display:none; max-width:660px; }
+.lp .form-panel.active { display:block; }
+.lp .form-intro { font-size:13px; color:var(--ink-soft); margin-bottom:20px; line-height:1.55; }
+.lp .form-card { background:var(--surface); border:1px solid var(--line-soft); border-radius:16px; padding:26px; box-shadow:var(--shadow); }
+.lp .form-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.lp .field { display:flex; flex-direction:column; }
+.lp .field.full { grid-column:1 / -1; }
+.lp .field label { font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.15em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:6px; }
+.lp .field label .req { color:var(--coral); }
+.lp .field input, .lp .field select, .lp .field textarea { background:var(--bg); border:1px solid var(--line); color:var(--ink); font-family:'Inter',sans-serif; font-size:14px; padding:11px 12px; border-radius:8px; transition:border-color 0.15s, box-shadow 0.15s; }
+.lp .field input:focus, .lp .field select:focus, .lp .field textarea:focus { outline:none; border-color:var(--teal); box-shadow:0 0 0 3px var(--teal-soft); }
+.lp .field textarea { resize:vertical; min-height:90px; }
+.lp .field select { appearance:none; background-image:url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2210%22%20height%3D%226%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M0%200l5%206%205-6z%22%20fill%3D%22%230FB5BA%22%2F%3E%3C%2Fsvg%3E"); background-repeat:no-repeat; background-position:right 12px center; padding-right:32px; }
+.lp .form-submit { margin-top:20px; }
+.lp .form-note { font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.1em; color:var(--ink-faint); text-transform:uppercase; margin-top:14px; }
+.lp .form-success { display:none; background:linear-gradient(135deg,var(--teal-soft),var(--gold-soft)); border:1px solid var(--teal); border-radius:14px; padding:26px; margin-top:8px; }
+.lp .form-success.show { display:block; }
+.lp .form-success h3 { font-family:'Bebas Neue',sans-serif; font-size:30px; margin:0 0 8px; color:var(--ink); }
+.lp .form-success p { font-size:13px; color:var(--ink-soft); margin:0; line-height:1.55; }
+.lp .form-error { display:none; color:#C0392B; font-size:12px; margin-top:12px; }
+.lp .form-error.show { display:block; }
+
+/* FAQ */
+.lp .faq { background:var(--bg-tint2); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.lp .faq-list { max-width:580px; margin:0 auto; }
+.lp .faq-item { border-bottom:1px solid var(--line); }
+.lp .faq-q { font-family:'Bebas Neue',sans-serif; font-size:18px; letter-spacing:0.02em; display:flex; justify-content:space-between; align-items:center; padding:15px 0; cursor:pointer; width:100%; background:none; border:none; color:var(--ink); text-align:left; }
+.lp .faq-q .plus { color:var(--coral); font-family:'IBM Plex Mono',monospace; font-size:20px; transition:transform 0.2s; flex-shrink:0; margin-left:12px; }
+.lp .faq-item.open .faq-q .plus { transform:rotate(45deg); }
+.lp .faq-a { max-height:0; overflow:hidden; transition:max-height 0.25s ease; font-size:13px; color:var(--ink-soft); line-height:1.55; }
+.lp .faq-item.open .faq-a { max-height:260px; }
+.lp .faq-a-inner { padding:0 0 16px; }
+
+.lp .final { text-align:center; padding:60px 24px; background:linear-gradient(135deg,#FFF4E8 0%,#FDEBE2 50%,#E8F7F7 100%); position:relative; }
+.lp .final h2 { font-family:'Bebas Neue',sans-serif; font-size:48px; line-height:0.95; margin-bottom:12px; color:var(--ink); }
+.lp .final p { font-size:13px; color:var(--ink-soft); margin-bottom:24px; max-width:520px; margin-left:auto; margin-right:auto; }
+.lp .final-ctas { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; }
+
+.lp .footer { padding:36px 24px 24px; background:var(--bg-tint); }
+.lp .foot-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:24px; margin-bottom:20px; }
+.lp .logo { font-family:'Bebas Neue',sans-serif; color:var(--ink); }
+.lp .foot-tag { color:var(--ink-soft); font-size:11px; line-height:1.5; margin-bottom:10px; }
+.lp .foot-credit { font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.2em; text-transform:uppercase; color:var(--ink-faint); }
+.lp .foot-col h4 { font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.25em; color:var(--ink-faint); text-transform:uppercase; margin:0 0 8px; }
+.lp .foot-col ul { margin:0; padding:0; }
+.lp .foot-col li { font-size:11px; color:var(--ink-soft); margin-bottom:4px; list-style:none; }
+.lp .foot-col li a:hover { color:var(--teal); }
+.lp .foot-bottom { border-top:1px solid var(--line); padding-top:12px; font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.25em; color:var(--ink-faint); text-align:center; }
+
+.lp .mobile-cta { display:none; gap:8px; padding:10px 12px; background:var(--surface); border-top:1px solid var(--line); position:fixed; bottom:0; left:0; right:0; z-index:60; box-shadow:0 -4px 18px rgba(26,23,20,0.08); }
+.lp .mobile-cta .phone { background:var(--bg-tint2); color:var(--coral); padding:12px 14px; border:1px solid var(--line); border-radius:8px; font-size:14px; display:flex; align-items:center; }
+.lp .mobile-cta .book { flex:1; background:linear-gradient(135deg,var(--coral) 0%,#FF8A5B 100%); color:#fff; font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; padding:12px; text-align:center; border-radius:8px; }
+
+@media (max-width:720px) {
+  .lp .hero { padding:64px 20px 48px; }
+  .lp .h1 { font-size:46px; }
+  .lp .hero-sub { max-width:none; }
+  .lp .trust { grid-template-columns:1fr 1fr; gap:16px; }
+  .lp .clients-grid { grid-template-columns:1fr; }
+  .lp .types-grid { grid-template-columns:1fr; }
+  .lp .included-grid { grid-template-columns:1fr 1fr; }
+  .lp .why-grid { grid-template-columns:1fr 1fr; }
+  .lp .process-grid { grid-template-columns:1fr 1fr; }
+  .lp .form-grid { grid-template-columns:1fr; }
+  .lp .form-card { padding:18px; }
+  .lp .nav .nav-phone { display:none; }
+  .lp .brand-name { font-size:19px; }
+  .lp .brand-eyebrow { font-size:9px; letter-spacing:0.25em; }
+  .lp .foot-grid { grid-template-columns:1fr 1fr; }
+  .lp .final h2 { font-size:38px; }
+  .lp .mobile-cta { display:flex; }
+  .lp .pad-mobile { padding-bottom:64px; }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  * { scroll-behavior:auto !important; transition:none !important; }
+  .lp .brand-dot { animation:none !important; }
+}
+
+/* new-page helpers, built from the existing token set */
+.lp .page-hero{background:linear-gradient(160deg,#FFF9F0 0%,#FAF1E4 45%,#F3EEE6 100%);padding:72px 24px 56px;border-bottom:1px solid var(--line-soft);}
+.lp .page-hero .eyebrow{margin-bottom:10px;}
+.lp .page-hero h1{margin:0 0 14px;}
+.lp .page-hero p{color:var(--ink-soft);max-width:660px;margin:0 0 22px;font-size:15px;}
+.lp .crumbs{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);padding:16px 24px 0;}
+.lp .crumbs a{color:var(--ink-faint);text-decoration:none;}
+.lp .crumbs a:hover{color:var(--gold);}
+.lp .prose{max-width:720px;}
+.lp .prose p{color:var(--ink-soft);margin:0 0 14px;font-size:14.5px;line-height:1.65;}
+.lp .prose h3{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:.02em;margin:26px 0 8px;color:var(--ink);}
+.lp .prose ul{margin:0 0 16px;padding-left:20px;color:var(--ink-soft);font-size:14.5px;line-height:1.7;}
+.lp .prose a:link,.lp .prose a:visited{color:var(--gold);text-decoration:underline;text-underline-offset:2px;}
+.lp .prose a:hover{color:var(--ink);}
+.lp .note-band{background:var(--bg-tint);border:1px solid var(--line-soft);border-radius:12px;padding:18px 20px;margin:24px 0;max-width:720px;}
+.lp .note-band p{margin:0;font-size:13px;color:var(--ink-soft);}
+.lp .linkgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin-top:20px;}
+.lp .linkcard{background:var(--surface);border:1px solid var(--line-soft);border-radius:12px;padding:18px;box-shadow:var(--shadow);text-decoration:none;display:block;transition:transform .15s,box-shadow .15s;}
+.lp .linkcard:hover{transform:translateY(-2px);box-shadow:var(--shadow-lift);}
+.lp .linkcard .lc-name{font-family:'Bebas Neue',sans-serif;font-size:19px;letter-spacing:.02em;color:var(--ink);margin-bottom:5px;}
+.lp .linkcard .lc-desc{font-size:13px;color:var(--ink-soft);line-height:1.55;}
+@media (max-width:760px){.lp .page-hero{padding:52px 20px 40px;}}
+
+
+.lp .media-band{padding:28px 24px 0;}
+.lp .media-band figure{margin:0 auto;max-width:1100px;}
+.lp .media-band img{display:block;width:100%;height:auto;max-height:520px;object-fit:cover;border-radius:10px;box-shadow:0 14px 40px rgba(26,23,20,.14);}
+.lp .media-band figcaption{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#7a6f63;margin-top:10px;}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Events",
+      "item": "https://events.academysim.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Locations",
+      "item": "https://events.academysim.com/locations/"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="lp">
+
+<nav class="nav">
+  <a class="brand-lockup" href="https://academysim.com" aria-label="Academy Sim Racing home">
+    <div class="brand-eyebrow"><span class="brand-dot"></span>EVENTS &amp; ACTIVATIONS</div>
+    <div class="brand-name">ACADEMY SIM RACING</div>
+  </a>
+  <div style="display:flex; gap:14px; align-items:center;">
+    <a class="mono dim nav-phone" style="font-size:11px;" href="tel:+18133559071">(813) 355-9071</a>
+    <a class="btn-amber" href="https://events.academysim.com/?ref=locations#quote">REQUEST A QUOTE →</a>
+  </div>
+</nav>
+
+<div class="crumbs"><a href="/">Events</a> / Locations</div>
+
+<section class="page-hero">
+  <div class="eyebrow">Florida Service Area</div>
+  <h1 class="h1">RACING SIMULATOR RENTALS<br>ACROSS FLORIDA</h1>
+  <p>Academy Sim Racing is based in Tampa and delivers fully staffed, turnkey simulator events throughout the state. We bring the rigs to your venue, run the activation, and take it all away again.</p>
+  <div class="hero-ctas">
+    <a class="btn-amber" href="https://events.academysim.com/?ref=locations#quote">REQUEST A QUOTE &rarr;</a>
+    <a class="btn-ghost" href="/?ref=locations#quote">CHECK YOUR DATE</a>
+  </div>
+</section>
+<section class="section media-band">
+  <figure>
+    <img src="/images/rockway-gallery.jpg" alt="Attendees around a simulator at a Florida convention" width="1100" height="520" loading="lazy" decoding="async">
+    <figcaption>Delivered anywhere in Florida</figcaption>
+  </figure>
+</section>
+
+
+<section class="section">
+  <div class="section-head">
+    <div class="eyebrow">How It Works</div>
+    <h2 class="h2">ONE BASE, THE WHOLE STATE</h2>
+  </div>
+  <div class="prose">
+    <p>We operate from one place. Everything we bring to an event in Orlando, Daytona Beach or Sarasota leaves from our Tampa facility, arrives with our staff, and goes back the same way.</p>
+    <p>That is worth being clear about, because service-area pages often imply a branch network that does not exist. <strong>Academy has one location. Everywhere else on this page is somewhere we deliver to, not somewhere we have an office.</strong></p>
+    <p>Practically it means two things. Travel and staffing are quoted per event rather than baked into a list price, and lead time matters more the further you are from Tampa, particularly for multi-day installs.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div class="eyebrow">Florida Markets</div>
+    <h2 class="h2">WHERE WE DELIVER MOST</h2>
+    <p class="section-intro">Each of these has a different event economy, so the guidance is different.</p>
+  </div>
+  <div class="linkgrid">
+    <a class="linkcard" href="/locations/tampa/">
+      <div class="lc-name">TAMPA</div>
+      <div class="lc-desc">Our home market. The only city where coming to us is also an option.</div>
+    </a>
+    <a class="linkcard" href="/locations/orlando/">
+      <div class="lc-name">ORLANDO</div>
+      <div class="lc-desc">Conventions, hotel conferences, resort events and trade shows.</div>
+    </a>
+    <a class="linkcard" href="/locations/daytona-beach/">
+      <div class="lc-name">DAYTONA BEACH</div>
+      <div class="lc-desc">Motorsports, race-week activations, automotive brands and sponsor events.</div>
+    </a>
+    <a class="linkcard" href="/locations/sarasota/">
+      <div class="lc-name">SARASOTA</div>
+      <div class="lc-desc">Private events, corporate retreats and club functions south of Tampa Bay.</div>
+    </a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div class="eyebrow">Elsewhere</div>
+    <h2 class="h2">THE REST OF FLORIDA</h2>
+  </div>
+  <div class="prose">
+    <p>We take bookings across the state, including St. Petersburg, Clearwater, Wesley Chapel, Bradenton, Lakeland, Ocala, Jacksonville, Fort Myers, Naples and the South Florida markets. Those do not have their own pages yet, which is deliberate. We would rather write a genuinely useful page for a market once we have enough to say about it than publish a page that is this one with the city name swapped out.</p>
+    <p>If your event is somewhere not listed, ask. The answer is usually yes.</p>
+    <div class="note-band"><p>Academy Sim Racing operates from 1421 Massaro Blvd, Tampa, FL 33619. We do not have offices, showrooms or branches in any other city. Every other market listed here is served by mobile delivery from Tampa.</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div class="eyebrow">What Is Included</div>
+    <h2 class="h2">FULLY TURNKEY</h2>
+    <p class="section-intro">Everything from the truck leaving Tampa to the room being clear at the end.</p>
+  </div>
+  <div class="types-grid">
+    <div class="type-card">
+      <div class="type-num">01 / Transport</div>
+      <div class="type-name">TRANSPORT AND DELIVERY</div>
+      <div class="type-desc">We bring the simulators, screens, seating and power distribution to your venue.</div>
+    </div>
+    <div class="type-card">
+      <div class="type-num">02 / Install</div>
+      <div class="type-name">SETUP AND CALIBRATION</div>
+      <div class="type-desc">Installed, wired and calibrated before doors, inside your load-in window.</div>
+    </div>
+    <div class="type-card">
+      <div class="type-num">03 / Staff</div>
+      <div class="type-name">STAFFING</div>
+      <div class="type-desc">Our team runs the activation for the duration. Nobody on your side has to learn the software.</div>
+    </div>
+    <div class="type-card">
+      <div class="type-num">04 / Guests</div>
+      <div class="type-name">GUEST ONBOARDING</div>
+      <div class="type-desc">Each driver is seated, set up and briefed before they start, so first-time drivers are not left to work it out in front of an audience.</div>
+    </div>
+    <div class="type-card">
+      <div class="type-num">05 / Running</div>
+      <div class="type-name">EVENT OPERATION</div>
+      <div class="type-desc">Sessions, queue management and timing, with a live leaderboard if you want one.</div>
+    </div>
+    <div class="type-card">
+      <div class="type-num">06 / Out</div>
+      <div class="type-name">TEARDOWN</div>
+      <div class="type-desc">Removed inside your load-out window, leaving the space as we found it.</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head"><div class="eyebrow">Elsewhere at Academy</div><h2 class="h2">TWO OTHER WAYS TO RACE</h2></div>
+  <div class="linkgrid">
+    <a class="linkcard" href="https://lounge.academysim.com">
+      <div class="lc-name">DRIVE AT OUR TAMPA LOUNGE</div>
+      <div class="lc-desc">Eight simulators at 1421 Massaro Blvd. Book an hour, bring a group, or take the whole room.</div>
+    </a>
+    <a class="linkcard" href="https://builds.academysim.com">
+      <div class="lc-name">WANT A PERMANENT SYSTEM?</div>
+      <div class="lc-desc">Academy builds custom simulators for offices, showrooms and private clients.</div>
+    </a>
+  </div>
+</section>
+
+<section class="section faq">
+  <div class="section-head"><div class="eyebrow">Questions</div><h2 class="h2">WHAT PLANNERS ASK</h2></div>
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-q">Do you have locations outside Tampa?</div>
+      <div class="faq-a"><div class="faq-a-inner">No. We have one facility, in Tampa. Everywhere else in Florida is served by mobile delivery from there, with our own staff traveling to the event.</div></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How far will you travel?</div>
+      <div class="faq-a"><div class="faq-a-inner">Throughout Florida. Travel and staffing are quoted per event based on distance and duration.</div></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Is staff included?</div>
+      <div class="faq-a"><div class="faq-a-inner">Yes, always. Delivery, setup, calibration, staffing and teardown are typically included, and your quote sets out exactly what is covered and for how many hours.</div></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How much does a simulator rental cost?</div>
+      <div class="faq-a"><div class="faq-a-inner">It depends on the number of rigs, the length of the event, the venue and the distance, so we quote rather than list. Send us the details and you will get a real number.</div></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How much space does a simulator need?</div>
+      <div class="faq-a"><div class="faq-a-inner">The frame is 26 inches wide and 57 inches long, and the widest point is the 49 inch ultrawide display. In practice, allow around 10 feet by 10 feet per simulator once you include the driver getting in and out and somebody waiting. Send us your floor plan or booth dimensions and we will confirm exactly what fits.</div></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Can we use several simulators at one event?</div>
+      <div class="faq-a"><div class="faq-a-inner">Yes. Multi-rig setups are common, and they are what you need if you want everyone through in a defined window.</div></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How far ahead should we book?</div>
+      <div class="faq-a"><div class="faq-a-inner">The earlier the better, especially for branded wraps, multi-day installs, race weekends and dates in the lead-up to the holidays.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <h2>TELL US WHERE<br><span class="amber">AND WHEN.</span></h2>
+  <p>Send the venue, the city, the date and your guest count. We will tell you what it takes.</p>
+  <div class="final-ctas">
+    <a class="btn-amber" style="font-size:13px; padding:14px 24px;" href="https://events.academysim.com/?ref=locations#quote">REQUEST A QUOTE &rarr;</a>
+    <a class="btn-ghost" style="font-size:13px; padding:14px 24px;" href="tel:+18133559071">CALL (813) 355-9071</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="foot-grid">
+    <div>
+      <div class="logo" style="font-size:18px; margin-bottom:6px;">ACADEMY<span class="amber">.</span></div>
+      <div class="foot-tag">Turnkey racing simulator rentals for corporate events, expos, dealerships, brand launches, and private parties. Tampa &amp; statewide Florida.</div>
+      <div class="foot-credit">Founded by a former Army Ranger</div>
+      <div class="foot-credit" style="margin-top:4px;">Veteran-Owned &amp; Operated · Service-Disabled Veteran-Owned Business</div>
+    </div>
+    <div class="foot-col">
+      <h4>Contact</h4>
+      <ul>
+        <li>1421 Massaro Blvd</li>
+        <li>Tampa, FL 33619</li>
+        <li><a href="tel:+18133559071">(813) 355-9071</a></li>
+        <li><a href="mailto:info@academysim.com">info@academysim.com</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Events</h4>
+      <ul>
+        <li><a href="#quote">Request a Quote</a></li>
+        <li><a href="#quote">Check a Date</a></li>
+        <li><a href="#clients">Our Clients</a></li>
+        <li><a href="#quote">Corporate</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>More</h4>
+      <ul>
+        <li><a href="https://academysim.com">Store</a></li>
+        <li><a href="https://booking.academysim.com/?category=racing">Book the Lounge</a></li>
+        <li><a href="https://instagram.com/academysimracing" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://academysimulation.com">Government</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">© 2026 ACADEMY SIM RACING · TAMPA, FL · ESTABLISHED 2023 · ALL RIGHTS RESERVED</div>
+</footer>
+</div>
+
+<script>
+(function () {
+  if (typeof gtag !== 'function') return;
+  gtag('event', 'content_view', { content_type: 'location_hub', content_id: 'locations' });
+  document.querySelectorAll('a[href*="#quote"]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      gtag('event', 'quote_cta', { content_type: 'location_hub', content_id: 'locations',
+        cta_location: (a.textContent || '').trim().slice(0, 40) || 'quote' });
+    });
+  });
+  document.querySelectorAll('a[href^="tel:"]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      gtag('event', 'phone_click', { content_type: 'location_hub', content_id: 'locations' });
+    });
+  });
+  document.querySelectorAll('a[href*="lounge.academysim.com"]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      gtag('event', 'cross_domain_lounge', { content_type: 'location_hub', content_id: 'locations' });
+    });
+  });
+  document.querySelectorAll('a[href*="builds.academysim.com"]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      gtag('event', 'cross_domain_builds', { content_type: 'location_hub', content_id: 'locations' });
+    });
+  });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Racing Simulator Rentals Across Florida",
+  "description": "Mobile racing simulator rentals delivered across Florida from a Tampa base, fully staffed and turnkey.",
+  "url": "https://events.academysim.com/locations/",
+  "isPartOf": { "@type": "WebSite", "name": "Academy Sim Racing Events", "url": "https://events.academysim.com/" },
+  "provider": {
+    "@type": "Organization",
+    "name": "Academy Sim Racing",
+    "telephone": "+1-813-355-9071",
+    "areaServed": { "@type": "State", "name": "Florida" },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1421 Massaro Blvd",
+      "addressLocality": "Tampa",
+      "addressRegion": "FL",
+      "postalCode": "33619",
+      "addressCountry": "US"
+    }
+  }
+}
+</script>
+
+</body>
+</html>

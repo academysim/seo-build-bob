@@ -1,0 +1,118 @@
+[
+ {
+  "path": "/tracks/sebring/index.html",
+  "sha": "46e90a2518ab04ef3f4bb33645897ca514abe148"
+ },
+ {
+  "path": "/tracks/index.html",
+  "sha": "dd01278c4410bdb1b5b7038d2c3ae13edb5401f9"
+ },
+ {
+  "path": "/tracks/daytona/index.html",
+  "sha": "f9e6d2cecc9b6689d9baaabf5575cf6a190e7cd3"
+ },
+ {
+  "path": "/things-to-do-in-tampa/index.html",
+  "sha": "3db9d08554d20d45f0a2d82fc41089022fceba63"
+ },
+ {
+  "path": "/sitemap.xml",
+  "sha": "b7c2db54e7ccdb32c863992c0ff652814ee8fcb0"
+ },
+ {
+  "path": "/robots.txt",
+  "sha": "7d4e5e5b1d8842ba92e1bf209735aff51d124b16"
+ },
+ {
+  "path": "/racing/rally-simulator-tampa/index.html",
+  "sha": "2ea7b9a612b590337669ce2e178da10f684cc3c7"
+ },
+ {
+  "path": "/racing/nascar-simulator-tampa/index.html",
+  "sha": "e4b5d73ef134f537b595312334e6b237c614b82c"
+ },
+ {
+  "path": "/racing/manual-transmission-simulator-tampa/index.html",
+  "sha": "792a49411c294eb31f3f0e54878df46871fbbddb"
+ },
+ {
+  "path": "/racing/index.html",
+  "sha": "16f2b4987abcccf6b514bcbb49c858217cee1ac0"
+ },
+ {
+  "path": "/racing/imsa-endurance-simulator-tampa/index.html",
+  "sha": "19f5c41becd82d264d0fcbc9ccf00f737fa9fe13"
+ },
+ {
+  "path": "/racing/gt3-simulator-tampa/index.html",
+  "sha": "efe52f1abce4256ed91041a39517eff34e943a4c"
+ },
+ {
+  "path": "/racing/formula-simulator-tampa/index.html",
+  "sha": "4d5ffdeb813cb3f31656e45989698734a402c6bd"
+ },
+ {
+  "path": "/racing/drift-simulator-tampa/index.html",
+  "sha": "ed2f9679794695b131a951741ab648974250c00a"
+ },
+ {
+  "path": "/og-image.jpg",
+  "sha": "683e4f5f1c4e5fcdf8bffbbd11428211d2c69531"
+ },
+ {
+  "path": "/netlify.toml",
+  "sha": "f3ae658077ffa4ecf2e50e9b994550f4521e2367"
+ },
+ {
+  "path": "/index.html",
+  "sha": "47b20fa5ae59e06d7c4ac8b6ae6e15c787702536"
+ },
+ {
+  "path": "/images/reviews-bg.jpg",
+  "sha": "d35bfd4e7c4fe6d785de102f880344da92969a40"
+ },
+ {
+  "path": "/images/cta-bg.jpg",
+  "sha": "a27beca5dfc49c187ad124729dd9be5c5e689a35"
+ },
+ {
+  "path": "/favicon.svg",
+  "sha": "3af9f614cbc14cb2f8a9813ed52421ac3ebab8d7"
+ },
+ {
+  "path": "/favicon.ico",
+  "sha": "282200136a2a643827f0e76aaa7d14003a934b47"
+ },
+ {
+  "path": "/favicon-512.png",
+  "sha": "625ca8c50fe3a29e4f27445835a623576e0705b4"
+ },
+ {
+  "path": "/favicon-32.png",
+  "sha": "76382c385461f5584605ba8310aa931a382cb141"
+ },
+ {
+  "path": "/cars-and-tracks/index.html",
+  "sha": "9247bf0f3563d00dd4a86ce305a1ccdc0244a87d"
+ },
+ {
+  "path": "/cars/index.html",
+  "sha": "4233953a50da652b2a9d1d47edd693188024cb3e"
+ },
+ {
+  "path": "/cars/classic-race-cars/index.html",
+  "sha": "1e9b753977251d1883e43abcf9bec988d50363df"
+ },
+ {
+  "path": "/apple-touch-icon.png",
+  "sha": "f5eec0bc3a8c2cdf5b70eb6f537659cf6e8a041a"
+ },
+ {
+  "path": "/llms.txt",
+  "sha": "a988d0f7fd3f12481a3e82c66834d7270c3d4c30"
+ },
+ {
+  "path": "/membership/index.html",
+  "sha": "fabb77bba185c13171868db492fd2ef8bb93e496"
+ }
+]

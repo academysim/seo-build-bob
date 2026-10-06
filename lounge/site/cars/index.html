@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Race Car Classes Explained: GT3 vs Formula vs Prototype | Academy Sim Racing</title>
+<meta name="description" content="GT3, formula, prototype, stock car, rally, drift or classic. What separates the racing car classes, which is hardest, and which one to pick for a first session in Tampa.">
+<link rel="canonical" href="https://lounge.academysim.com/cars/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lounge.academysim.com/cars/">
+<meta property="og:title" content="Race Car Classes Explained | Academy Sim Racing">
+<meta property="og:description" content="What separates GT3, formula, prototype, stock car, rally, drift and classic racing cars, and which one to pick for a first session.">
+<meta property="og:image" content="https://lounge.academysim.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Race Car Classes Explained | Academy Sim Racing">
+<meta name="twitter:description" content="What separates GT3, formula, prototype, stock car, rally, drift and classic racing cars, and which one to pick first.">
+<meta name="twitter:image" content="https://lounge.academysim.com/og-image.jpg">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SQL40ZS59K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SQL40ZS59K');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+.lp{background:#0a0a0a;color:#fafafa;font-family:'Inter',sans-serif;overflow-x:hidden;font-size:14px;line-height:1.5;}
+.lp .nav,.lp .hero,.lp .section,.lp .footer{padding-left:max(24px,calc(50% - 550px));padding-right:max(24px,calc(50% - 550px));}
+
+.lp .nav{display:flex;justify-content:space-between;align-items:center;padding-top:14px;padding-bottom:14px;background:rgba(10,10,10,0.9);border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:0;z-index:50;backdrop-filter:blur(8px);gap:12px;}
+.lp .brand-lockup{display:flex;flex-direction:column;gap:3px;line-height:1;text-decoration:none;color:inherit;transition:opacity .15s ease;}
+.lp a.brand-lockup:hover{opacity:.82;}
+.lp .brand-eyebrow{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:#fbbf24;display:flex;align-items:center;gap:7px;white-space:nowrap;}
+.lp .brand-dot{width:6px;height:6px;border-radius:50%;background:#fbbf24;display:inline-block;animation:brandBlink 1.6s ease-in-out infinite;}
+@keyframes brandBlink{0%,45%{opacity:1;}55%,90%{opacity:.25;}100%{opacity:1;}}
+.lp .brand-name{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:.05em;white-space:nowrap;}
+.lp .btn-amber{background:#fbbf24;color:#0a0a0a;padding:10px 18px;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;white-space:nowrap;transition:background .15s ease;}
+.lp .btn-amber:hover{background:#fcd34d;}
+.lp .btn-ghost{border:1px solid rgba(255,255,255,.25);color:#fafafa;padding:10px 18px;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;white-space:nowrap;transition:border-color .15s ease,background .15s ease;}
+.lp .btn-ghost:hover{border-color:#fbbf24;background:rgba(251,191,36,.06);}
+
+.lp .hero{position:relative;padding-top:70px;padding-bottom:60px;border-bottom:1px solid rgba(255,255,255,.08);}
+.lp .hero-glow{position:absolute;inset:0;z-index:0;pointer-events:none;background:radial-gradient(60% 80% at 12% 85%,rgba(251,191,36,.13) 0%,transparent 60%);}
+.lp .hero>*{position:relative;z-index:1;}
+.lp .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:#fbbf24;margin-bottom:.9rem;}
+.lp h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,7vw,74px);line-height:.98;letter-spacing:.01em;margin-bottom:1rem;}
+.lp .hero-sub{font-size:15px;color:#d4d4d8;max-width:640px;margin-bottom:1.6rem;}
+.lp .hero-ctas{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:1.5rem;}
+.lp .statline{display:flex;gap:26px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#a1a1aa;border-top:1px solid rgba(255,255,255,.08);padding-top:16px;}
+.lp .statline strong{color:#fbbf24;font-weight:600;}
+
+.lp .section{padding-top:56px;padding-bottom:56px;border-bottom:1px solid rgba(255,255,255,.08);}
+.lp h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,4.4vw,42px);letter-spacing:.02em;margin-bottom:.7rem;}
+.lp h3{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:.03em;margin-bottom:.4rem;color:#fbbf24;}
+.lp p{color:#d4d4d8;margin-bottom:.95rem;max-width:720px;}
+.lp .lead{font-size:15px;color:#e4e4e7;}
+.lp strong{color:#fafafa;}
+
+.lp .corner{border-left:2px solid rgba(251,191,36,.35);padding:14px 0 14px 18px;margin-bottom:20px;}
+.lp .corner .cnum{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:#a1a1aa;margin-bottom:5px;}
+.lp .corner p{margin-bottom:0;}
+
+.lp .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px;}
+.lp .card{background:#111113;border:1px solid rgba(255,255,255,.09);padding:20px;}
+.lp .card p{font-size:13px;margin-bottom:0;}
+.lp .card .clabel{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#fbbf24;margin-bottom:7px;}
+
+.lp table{width:100%;border-collapse:collapse;margin-top:18px;font-size:13px;}
+.lp th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#a1a1aa;border-bottom:1px solid rgba(255,255,255,.14);padding:9px 10px 9px 0;font-weight:500;}
+.lp td{padding:11px 10px 11px 0;border-bottom:1px solid rgba(255,255,255,.06);color:#d4d4d8;vertical-align:top;}
+.lp td strong{color:#fafafa;}
+
+.lp ol.steps{counter-reset:s;list-style:none;margin-top:20px;}
+.lp ol.steps li{counter-increment:s;position:relative;padding-left:46px;margin-bottom:20px;max-width:720px;}
+.lp ol.steps li::before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:1px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#fbbf24;letter-spacing:.1em;}
+.lp ol.steps h3{margin-bottom:.25rem;}
+.lp ol.steps p{margin-bottom:0;color:#d4d4d8;}
+
+.lp .cta-band{background:linear-gradient(180deg,#111113,#0a0a0a);}
+.lp .cta-band .grid2{margin-top:26px;}
+.lp .cta-card{border:1px solid rgba(255,255,255,.12);padding:26px;display:flex;flex-direction:column;}
+.lp .cta-card.primary{border-color:rgba(251,191,36,.4);}
+.lp .cta-card h3{font-size:26px;}
+.lp .cta-card p{font-size:13px;flex-grow:1;margin-bottom:1.1rem;}
+
+.lp .note{font-size:12px;color:#a1a1aa;font-style:italic;border-top:1px solid rgba(255,255,255,.08);padding-top:14px;margin-top:24px;max-width:720px;}
+.lp .footer{padding-top:34px;padding-bottom:40px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#71717a;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;}
+.lp .footer a{color:#a1a1aa;text-decoration:none;}
+.lp .footer a:hover{color:#fbbf24;}
+.lp a:focus-visible,.lp button:focus-visible{outline:2px solid #fbbf24;outline-offset:3px;}
+.lp .media-band{padding-top:34px;padding-bottom:0;border-bottom:none;}
+.lp figure{margin:0;max-width:760px;}
+.lp figure.tall{max-width:460px;}
+.lp figure img{display:block;width:100%;height:auto;border:1px solid rgba(255,255,255,.1);background:#111113;}
+.lp figcaption{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#71717a;margin-top:9px;}
+.lp p a:not([class]):link,.lp p a:not([class]):visited,.lp li a:not([class]):link,.lp li a:not([class]):visited,.lp td a:not([class]):link,.lp td a:not([class]):visited{color:#fbbf24;text-decoration:underline;text-decoration-color:rgba(251,191,36,.45);text-underline-offset:2px;}
+.lp p a:not([class]):hover,.lp li a:not([class]):hover,.lp td a:not([class]):hover{color:#fcd34d;text-decoration-color:#fcd34d;}
+
+@media (max-width:760px){
+  .lp .grid2{grid-template-columns:1fr;}
+  .lp .nav .nav-phone{display:none;}
+  .lp .brand-name{font-size:18px;}
+}
+@media (prefers-reduced-motion:reduce){
+  *{scroll-behavior:auto!important;transition:none!important;}
+  .lp .brand-dot{animation:none!important;}
+}
+.lp .tablewrap{overflow-x:auto;margin-top:18px;}
+.lp .tablewrap table{min-width:640px;margin-top:0;}
+
+.lp .crumbs{padding-left:max(24px,calc(50% - 550px));padding-right:max(24px,calc(50% - 550px));padding-top:16px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#71717a;}
+.lp .crumbs a:link,.lp .crumbs a:visited{color:#a1a1aa;text-decoration:none;}
+.lp .crumbs a:hover{color:#fbbf24;}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "The Lounge",
+      "item": "https://lounge.academysim.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Car Classes",
+      "item": "https://lounge.academysim.com/cars/"
+    }
+  ]
+}
+</script>
+</head>
+<body class="lp">
+
+<nav class="nav">
+  <a class="brand-lockup" href="https://academysim.com" aria-label="Academy Sim Racing home">
+    <div class="brand-eyebrow"><span class="brand-dot"></span>CAR CLASSES</div>
+    <div class="brand-name">ACADEMY SIM RACING</div>
+  </a>
+  <div style="display:flex;gap:10px;align-items:center;">
+    <a class="btn-ghost nav-phone" href="/">The Lounge</a>
+    <a class="btn-amber" href="https://booking.academysim.com/?category=racing">BOOK A SESSION →</a>
+  </div>
+</nav>
+
+<main>
+<div class="crumbs"><a href="/">The Lounge</a> / Car Classes</div>
+
+<header class="hero">
+  <div class="hero-glow"></div>
+  <div class="eyebrow">Car Classes &middot; Academy Sim Racing, Tampa FL</div>
+  <h1>Race Car Classes<br>Explained</h1>
+  <p class="hero-sub">People book a session and then spend ten minutes deciding what to get in. This page is the shortcut. What actually separates the classes, which ones are forgiving, which ones are not, and what to pick depending on what you want out of the hour.</p>
+  <div class="hero-ctas">
+    <a class="btn-amber" href="https://booking.academysim.com/?category=racing">BOOK A SESSION &rarr;</a>
+    <a class="btn-ghost" href="/cars-and-tracks/">BROWSE THE LIBRARY</a>
+  </div>
+  <div class="statline">
+    <span><strong>7</strong> &nbsp;Classes covered</span>
+    <span><strong>170+</strong> &nbsp;Cars in the library</span>
+    <span><strong>8</strong> &nbsp;Racing simulators</span>
+    <span><strong>From $40</strong> &nbsp;Per hour</span>
+  </div>
+</header>
+
+<section class="section media-band">
+  <figure>
+    <img src="https://cdn.shopify.com/s/files/1/0644/3447/1128/files/VJKZ8462.jpg?width=1200&v=1778970448" alt="The Motion GT simulator on its motion platform, with triple curved screens and a direct drive wheel"
+         srcset="https://cdn.shopify.com/s/files/1/0644/3447/1128/files/VJKZ8462.jpg?width=800&v=1778970448 800w, https://cdn.shopify.com/s/files/1/0644/3447/1128/files/VJKZ8462.jpg?width=1200&v=1778970448 1200w, https://cdn.shopify.com/s/files/1/0644/3447/1128/files/VJKZ8462.jpg?width=1600&v=1778970448 1600w"
+         sizes="(max-width: 1100px) 100vw, 1100px"
+         width="1200" height="900" loading="lazy" decoding="async">
+    <figcaption>The Motion GT</figcaption>
+  </figure>
+</section>
+
+<section class="section">
+  <h2>The Short Answer</h2>
+  <p class="lead">If it is your first time, drive GT3. It has traction control and anti-lock brakes, it shifts with paddles so there is no gearbox to think about, and it has enough downforce to feel stable without being twitchy. That combination is what makes it the sensible first session.</p>
+  <p>If you already race, or you drive a manual road car and want to use a real gearbox, the rest of this page is the useful part.</p>
+</section>
+
+<section class="section">
+  <h2>How The Classes Compare</h2>
+  <div class="tablewrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Class</th>
+        <th>Gearbox</th>
+        <th>Driver aids</th>
+        <th>Downforce</th>
+        <th>Difficulty</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>GT3</strong></td>
+        <td>Paddle</td>
+        <td>Traction control, ABS</td>
+        <td>Moderate</td>
+        <td>Most forgiving</td>
+      </tr>
+      <tr>
+        <td><strong>Prototype</strong></td>
+        <td>Paddle</td>
+        <td>Varies by car</td>
+        <td>High</td>
+        <td>Very fast and demanding</td>
+      </tr>
+      <tr>
+        <td><strong>Formula</strong></td>
+        <td>Paddle</td>
+        <td>Little to none in most classes</td>
+        <td>High</td>
+        <td>Least forgiving</td>
+      </tr>
+      <tr>
+        <td><strong>Stock car</strong></td>
+        <td>Sequential in current Cup cars, H-pattern in many older ones</td>
+        <td>Little to none</td>
+        <td>Low to moderate, varies by package</td>
+        <td>Physical and loose</td>
+      </tr>
+      <tr>
+        <td><strong>Drift</strong></td>
+        <td>Manual or sequential</td>
+        <td>None</td>
+        <td>Low</td>
+        <td>A different technique entirely</td>
+      </tr>
+      <tr>
+        <td><strong>Rally</strong></td>
+        <td>Sequential</td>
+        <td>Varies by era</td>
+        <td>Low</td>
+        <td>Constant correction</td>
+      </tr>
+      <tr>
+        <td><strong>Classic</strong></td>
+        <td>Usually manual, varies by era</td>
+        <td>Few or none</td>
+        <td>None to high, depending on era</td>
+        <td>Often demanding</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="note">Driver aids, gearboxes and downforce vary between individual cars within every class, and between eras. This table describes the typical case, not every car in the library.</p>
+</section>
+
+<section class="section">
+  <h2>The Classes</h2>
+
+  <div class="corner">
+    <div class="cnum">GT3 &middot; Start Here</div>
+    <h3>Production-based cars built to a balanced ruleset</h3>
+    <p>GT3 cars are derived from road-going models and built to rules designed to keep very different cars competitive with each other. They carry traction control and anti-lock brakes, shift with paddles, and generate enough downforce to feel planted through quick corners without demanding perfect inputs. That combination is why almost every racing academy starts people here.</p>
+    <p><a href="/racing/gt3-simulator-tampa/">GT3 simulator sessions in Tampa</a></p>
+  </div>
+
+  <div class="corner">
+    <div class="cnum">Prototype &middot; Endurance</div>
+    <h3>Purpose-built cars that share the circuit with slower traffic</h3>
+    <p>A prototype is built from scratch to a ruleset rather than developed from a road car, and generates more downforce for its weight than a GT car does. In endurance racing the distinctive skill is multi-class awareness: knowing what is behind you, what class it is, and how to pass or be passed without ruining anyone&rsquo;s race.</p>
+    <p><a href="/racing/imsa-endurance-simulator-tampa/">Endurance simulator sessions in Tampa</a></p>
+  </div>
+
+  <div class="corner">
+    <div class="cnum">Formula &middot; Least Forgiving</div>
+    <h3>Open-wheel single seaters</h3>
+    <p>Very little weight, a great deal of aerodynamic grip, and in most classes no traction control to catch a mistake with the throttle. Formula cars reward precision and punish everything else. They are the steepest learning curve we offer, and the class most likely to end a first session in a gravel trap.</p>
+    <p><a href="/racing/formula-simulator-tampa/">Formula simulator sessions in Tampa</a></p>
+  </div>
+
+  <div class="corner">
+    <div class="cnum">Stock Car &middot; Oval</div>
+    <h3>Heavy cars with very little aerodynamic help</h3>
+    <p>Built for banked oval racing, stock cars are heavy, powerful and short on downforce. The driving is about managing a car that keeps moving around underneath you, and about running inches from other cars for a long time. It is a completely different discipline from road course racing rather than a variation on it.</p>
+    <p><a href="/racing/nascar-simulator-tampa/">Stock car simulator sessions in Tampa</a></p>
+  </div>
+
+  <div class="corner">
+    <div class="cnum">Drift &middot; Sideways</div>
+    <h3>Judged on angle and commitment rather than lap time</h3>
+    <p>Drift cars are set up to be held sideways deliberately. There is no lap time to chase, which makes it the class where getting it wrong costs you nothing, and the fastest way to learn what a car actually does once the rear tires let go. Drift cars use manual or sequential gearboxes depending on the car.</p>
+    <p><a href="/racing/drift-simulator-tampa/">Drift simulator sessions in Tampa</a></p>
+  </div>
+
+  <div class="corner">
+    <div class="cnum">Rally &middot; Against The Clock</div>
+    <h3>One car at a time on a road you do not know</h3>
+    <p>Rally is not wheel-to-wheel racing. You run alone against a clock on a loose surface, working from a co-driver&rsquo;s calls rather than from memory of the corner ahead. The car spends far more of the time slightly out of shape than it ever does on a circuit, and a handbrake is useful for the tighter corners, though technique varies with the car and the surface.</p>
+    <p><a href="/racing/rally-simulator-tampa/">Rally simulator sessions in Tampa</a></p>
+  </div>
+
+  <div class="corner">
+    <div class="cnum">Classic &middot; No Assistance</div>
+    <h3>Older machinery with nothing to help you</h3>
+    <p>Earlier historic cars tend to combine narrow tires, little aerodynamic downforce and an H-pattern gearbox that has to be used properly. Later classics vary a great deal. What they share is that the driver is given very little help, which is exactly why people who have driven everything else keep coming back to them.</p>
+    <p><a href="/cars/classic-race-cars/">Classic race cars explained</a></p>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Picking By What You Want</h2>
+  <ol class="steps">
+    <li>
+      <h3>You have never done this before</h3>
+      <p>GT3 on a circuit you have seen on television. Add Basic Coaching and you will be lapping properly inside the first twenty minutes instead of working it out alone.</p>
+    </li>
+    <li>
+      <h3>You want to use a real gearbox</h3>
+      <p>Drift or classic. Four of our eight rigs have an H-pattern shifter and a clutch pedal, including the flagship Motion GT, so mention it when you book and we will put you on the right one.</p>
+    </li>
+    <li>
+      <h3>You want the biggest challenge</h3>
+      <p>Formula. No traction control, very little weight, and aerodynamic load that rises sharply with speed, so the car has most grip exactly where it is least comfortable to trust it.</p>
+    </li>
+    <li>
+      <h3>You are booking for a group</h3>
+      <p>GT3 across the board. Everyone can drive it, the lap times end up close enough to be competitive, and nobody spends their session spinning while their friends watch.</p>
+    </li>
+    <li>
+      <h3>You have a real track day coming up</h3>
+      <p>Pick the circuit before the car. Our <a href="/tracks/">track guides</a> cover what each one asks of a driver.</p>
+    </li>
+  </ol>
+</section>
+
+<section class="section cta-band">
+  <h2>Book It</h2>
+  <div class="grid2">
+    <div class="cta-card primary">
+      <h3>Drive At Our Tampa Lounge</h3>
+      <p>Eight professional simulators at 1421 Massaro Blvd, Tampa. Sessions from $40 an hour, coaching optional, no experience needed. Not sure what to pick? Tell us at the desk.</p>
+      <a class="btn-amber" href="https://booking.academysim.com/?category=racing">BOOK A SESSION &rarr;</a>
+    </div>
+    <div class="cta-card">
+      <h3>Build One For Home</h3>
+      <p>Once you know which class you actually enjoy, a rig at home is the cheapest seat time there is. Try ours in Tampa first.</p>
+      <a class="btn-ghost" href="https://builds.academysim.com">EXPLORE BUILDS &rarr;</a>
+    </div>
+  </div>
+  <p>Browse everything you can drive on the <a href="/cars-and-tracks/">cars and tracks</a> page, or see all our <a href="/racing/">racing experiences</a>.</p>
+  <p>Need simulators brought to a corporate day, party or team event? See <a href="https://events.academysim.com">Academy Events</a>.</p>
+</section>
+</main>
+
+<footer class="footer">
+  <div>Academy Sim Racing · 1421 Massaro Blvd, Tampa FL 33619 · <a href="tel:+18133559071">(813) 355-9071</a></div>
+  <div>Fri &amp; Sat 2–10 PM · Mon, Wed, Thu 12–9 PM · Sun 12–6 PM · Tue Closed</div>
+  <div>Veteran Owned · <a href="/">The Lounge</a> · <a href="https://builds.academysim.com">Builds</a></div>
+</footer>
+
+<script>
+(function(){
+  function ev(name, extra){
+    if (typeof gtag === 'function') gtag('event', name, extra);
+  }
+  document.querySelectorAll('a[href*="booking.academysim.com"]').forEach(function(a){
+    a.addEventListener('click', function(){
+      ev('track_page_cta', { page_track: 'cars-hub', cta_location: a.textContent.trim().slice(0,40) || 'book' });
+    });
+  });
+  document.querySelectorAll('a[href*="builds.academysim.com"]').forEach(function(a){
+    a.addEventListener('click', function(){ ev('cross_domain_builds', { page_track: 'cars-hub' }); });
+  });
+  document.querySelectorAll('a[href*="events.academysim.com"]').forEach(function(a){
+    a.addEventListener('click', function(){ ev('cross_domain_events', { page_track: 'cars-hub' }); });
+  });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Race Car Classes Explained",
+  "description": "A comparison of GT3, prototype, formula, stock car, drift, rally and classic racing car classes, and guidance on which to pick for a simulator session in Tampa.",
+  "url": "https://lounge.academysim.com/cars/",
+  "isPartOf": { "@type": "WebSite", "name": "Academy Sim Racing Lounge", "url": "https://lounge.academysim.com/" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Academy Sim Racing",
+    "url": "https://academysim.com/",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1421 Massaro Blvd",
+      "addressLocality": "Tampa",
+      "addressRegion": "FL",
+      "postalCode": "33619",
+      "addressCountry": "US"
+    }
+  }
+}
+</script>
+
+<!-- content + cross-domain tracking -->
+<script>
+(function () {
+  if (typeof gtag !== 'function') return;
+  var p = location.pathname.replace(/\/+$/, '/') || '/';
+  var seg = p.split('/').filter(Boolean);
+  var type = 'page', id = seg[seg.length - 1] || 'home';
+  if (p === '/') { type = 'home'; id = 'home'; }
+  else if (seg[0] === 'racing') { type = seg.length > 1 ? 'experience' : 'experience_hub'; }
+  else if (seg[0] === 'tracks') { type = seg.length > 1 ? 'track' : 'track_hub'; }
+  else if (seg[0] === 'cars') { type = seg.length > 1 ? 'car_class' : 'car_class_hub'; }
+  else if (seg[0] === 'cars-and-tracks') { type = 'library'; }
+  else if (seg[0] === 'things-to-do-in-tampa') { type = 'local'; }
+  gtag('event', 'content_view', { content_type: type, content_id: id });
+  document.querySelectorAll('a[href*="booking.academysim.com"]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      gtag('event', 'booking_cta', { content_type: type, content_id: id,
+        cta_location: (a.textContent || '').trim().slice(0, 40) || 'book' });
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

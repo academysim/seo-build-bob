@@ -1,0 +1,887 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  /* ==========================================================
+     ACADEMY SIM RACING — Vehicle & Track Finder
+     Brand colors: Black (#000), Tan/Gold (#c9b17a), White (#fff)
+     All classes prefixed `asr-` to avoid site conflicts.
+     ========================================================== */
+  .asr-wrap * { box-sizing: border-box; }
+
+  .asr-wrap {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px 16px 32px;
+    color: #111;
+    background: #fff;
+    line-height: 1.5;
+  }
+
+  /* Header */
+  .asr-header {
+    margin-bottom: 18px;
+    padding-bottom: 14px;
+    border-bottom: 3px solid #c9b17a;
+  }
+
+  .asr-eyebrow {
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #c9b17a;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .asr-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(24px, 4vw, 32px);
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0;
+    color: #000;
+  }
+
+  .asr-subtitle {
+    font-size: 13px;
+    color: #666;
+    margin: 4px 0 0 0;
+  }
+
+  /* Main toggle */
+  .asr-toggle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin-bottom: 14px;
+    border: 2px solid #000;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .asr-toggle-btn {
+    padding: 12px 18px;
+    background: #fff;
+    border: none;
+    color: #000;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .asr-toggle-btn:first-child { border-right: 2px solid #000; }
+
+  .asr-toggle-btn:hover {
+    background: #f5f1e6;
+  }
+
+  .asr-toggle-btn.asr-active {
+    background: #000;
+    color: #c9b17a;
+  }
+
+  /* Search */
+  .asr-search-wrap {
+    position: relative;
+    margin-bottom: 14px;
+  }
+
+  .asr-wrap input.asr-search {
+    width: 100%;
+    padding: 11px 14px 11px 40px;
+    background: #fff;
+    border: 1.5px solid #d4d4d4;
+    border-radius: 4px;
+    color: #111;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.15s;
+  }
+
+  .asr-wrap input.asr-search::placeholder { color: #999; }
+
+  .asr-wrap input.asr-search:focus {
+    outline: none;
+    border-color: #c9b17a;
+    box-shadow: 0 0 0 3px rgba(201, 177, 122, 0.25);
+  }
+
+  .asr-search-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    pointer-events: none;
+  }
+
+  /* Filter rows */
+  .asr-filter-row { margin-bottom: 10px; }
+
+  .asr-filter-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #666;
+    margin-bottom: 6px;
+    display: block;
+  }
+
+  .asr-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .asr-chip {
+    padding: 5px 12px;
+    background: #fff;
+    border: 1.5px solid #d4d4d4;
+    border-radius: 999px;
+    color: #444;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.12s;
+  }
+
+  .asr-chip:hover {
+    border-color: #c9b17a;
+    color: #000;
+  }
+
+  .asr-chip.asr-active {
+    background: #000;
+    color: #c9b17a;
+    border-color: #000;
+  }
+
+  /* Meta bar */
+  .asr-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 14px 0 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .asr-count {
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #666;
+  }
+
+  .asr-count strong { color: #c9b17a; font-size: 14px; }
+
+  .asr-clear {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 12px;
+    font-family: inherit;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: color 0.15s;
+    text-decoration: underline;
+  }
+
+  .asr-clear:hover { color: #000; }
+
+  /* Scrollable list container */
+  .asr-scroll {
+    max-height: 520px;
+    overflow-y: auto;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    scrollbar-width: thin;
+    scrollbar-color: #c9b17a #f5f5f5;
+  }
+
+  .asr-scroll::-webkit-scrollbar { width: 10px; }
+  .asr-scroll::-webkit-scrollbar-track { background: #f5f5f5; }
+  .asr-scroll::-webkit-scrollbar-thumb { background: #c9b17a; border-radius: 4px; }
+  .asr-scroll::-webkit-scrollbar-thumb:hover { background: #a8925f; }
+
+  /* Group headers within the list */
+  .asr-group-header {
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fff;
+    background: #000;
+    padding: 8px 16px;
+    border-top: 2px solid #c9b17a;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
+  .asr-group-header:first-child { border-top: none; }
+
+  .asr-group-header .asr-group-count {
+    float: right;
+    color: #c9b17a;
+    font-size: 11px;
+  }
+
+  /* List items */
+  .asr-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .asr-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.1s;
+  }
+
+  .asr-item:last-child { border-bottom: none; }
+
+  .asr-item:hover {
+    background: #faf7ef;
+    border-left: 3px solid #c9b17a;
+    padding-left: 13px;
+  }
+
+  .asr-item-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #111;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .asr-item-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    flex-shrink: 0;
+  }
+
+  .asr-tag {
+    font-size: 10px;
+    font-weight: 600;
+    color: #666;
+    padding: 2px 7px;
+    background: #f5f5f5;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+  }
+
+  .asr-tag-gold {
+    background: #c9b17a;
+    color: #000;
+    border-color: #c9b17a;
+  }
+
+  /* Empty state */
+  .asr-empty {
+    padding: 40px 20px;
+    text-align: center;
+    color: #999;
+    font-size: 13px;
+  }
+
+  .asr-empty-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #666;
+    margin-bottom: 4px;
+  }
+
+  @media (max-width: 600px) {
+    .asr-wrap { padding: 18px 12px 24px; }
+    .asr-item {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+    }
+    .asr-item:hover { padding-left: 13px; }
+    .asr-scroll { max-height: 460px; }
+    .asr-meta { flex-direction: column; align-items: flex-start; gap: 6px; }
+  }
+
+  /* Intro / outro prose, from the Page body that the disabled
+     page-default-template never rendered. */
+  .asr-intro, .asr-outro { font-size: 14px; color: #333; }
+  .asr-intro p, .asr-outro p { margin: 0 0 12px; }
+  .asr-intro p:last-child, .asr-outro p:last-child { margin-bottom: 0; }
+  .asr-intro { margin: 16px 0 20px; }
+  .asr-outro {
+    margin: 20px 0 0;
+    padding-top: 16px;
+    border-top: 1px solid #e5e5e5;
+  }
+  .asr-intro a, .asr-outro a {
+    color: #000;
+    text-decoration: underline;
+    text-decoration-color: #c9b17a;
+    text-underline-offset: 2px;
+  }
+  .asr-intro a:hover, .asr-outro a:hover { color: #a8925f; }
+</style>
+
+
+
+<div class="asr-wrap">
+
+  <header class="asr-header">
+    <h1 class="asr-title">Find Your Race</h1>
+    <p class="asr-subtitle">Browse cars and tracks on our racing platform. New to sim racing? <a href="https://lounge.academysim.com/cars-and-tracks/">See which class suits you</a>.</p>
+  </header>
+
+  <div class="asr-intro">
+    <p><strong>Drive every car. Race every track.</strong></p>
+    <p>Academy Sim Racing runs the full iRacing catalog of licensed cars and laser-scanned circuits on pro-grade simulators with force-feedback steering, load-cell pedals and motion. Chase a checkered flag at Daytona, carve through Spa-Francorchamps, or run bumper-to-bumper on Bristol's short track.</p>
+    <p>Browse the selection below. Filter by discipline (Road, Oval, Dirt or Rallycross), by class (Formula, GT3, GT4, Prototype, NASCAR Cup, Trucks, Sports Cars, Touring or Dirt Sprint), or search by name. The Porsche 911 GT3 R, the Next Gen NASCAR Cup Camaro, the Dallara IndyCar and the Mercedes-AMG W12 are all here, along with the Nürburgring Nordschleife, Circuit of the Americas, Mount Panorama Bathurst, Talladega Superspeedway and Watkins Glen.</p>
+    <p>It works for a first-time driver, a lifelong motorsport fan, or someone training for a real track day. The lounge also handles group racing, birthday parties, corporate team-building and bachelor or bachelorette parties in Tampa.</p>
+  </div>
+
+  <!-- Main toggle -->
+  <div class="asr-toggle" role="tablist">
+    <button class="asr-toggle-btn asr-active" data-tab="vehicles">Vehicles</button>
+    <button class="asr-toggle-btn" data-tab="tracks">Tracks</button>
+  </div>
+
+  <!-- Search -->
+  <div class="asr-search-wrap">
+    <svg class="asr-search-icon" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="8"></circle>
+      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+    </svg>
+    <input type="text" id="asrSearch" class="asr-search" placeholder="Search... (e.g. Mustang, Daytona, GT3)">
+  </div>
+
+  <!-- Discipline filters -->
+  <div class="asr-filter-row">
+    <span class="asr-filter-label">Racing Discipline</span>
+    <div class="asr-chips">
+      <button class="asr-chip" data-filter="category" data-value="road">Road</button>
+      <button class="asr-chip" data-filter="category" data-value="oval">Oval</button>
+      <button class="asr-chip" data-filter="category" data-value="dirt">Dirt</button>
+      <button class="asr-chip" data-filter="category" data-value="rally">Rallycross</button>
+    </div>
+  </div>
+
+  <!-- Class filters (vehicles only) -->
+  <div class="asr-filter-row" id="asrClassGroup">
+    <span class="asr-filter-label">Vehicle Class</span>
+    <div class="asr-chips">
+      <button class="asr-chip" data-filter="class" data-value="Formula">Formula</button>
+      <button class="asr-chip" data-filter="class" data-value="GT">GT</button>
+      <button class="asr-chip" data-filter="class" data-value="Prototype">Prototype</button>
+      <button class="asr-chip" data-filter="class" data-value="Stock Car">NASCAR</button>
+      <button class="asr-chip" data-filter="class" data-value="Sports Car">Sports</button>
+      <button class="asr-chip" data-filter="class" data-value="Touring">Touring</button>
+      <button class="asr-chip" data-filter="class" data-value="Truck">Truck</button>
+      <button class="asr-chip" data-filter="class" data-value="Dirt">Dirt</button>
+    </div>
+  </div>
+
+  <!-- Meta -->
+  <div class="asr-meta">
+    <div class="asr-count">
+<strong id="asrCount">21</strong> results</div>
+    <button class="asr-clear" id="asrClearBtn">Clear filters</button>
+  </div>
+
+  <!-- Scrollable list -->
+  <div class="asr-scroll">
+    <div id="asrList">
+    <div class="asr-group-header">
+        Formula / Open-Wheel
+        <span class="asr-group-count">3</span>
+      </div>
+      <ul class="asr-list"><li class="asr-item">
+          <div class="asr-item-name">Dallara IR-18 IndyCar</div>
+          <div class="asr-item-tags"><span class="asr-tag asr-tag-gold">road + oval</span><span class="asr-tag">IndyCar</span></div>
+        </li><li class="asr-item">
+          <div class="asr-item-name">McLaren MP4-30</div>
+          <div class="asr-item-tags"><span class="asr-tag">F1</span></div>
+        </li><li class="asr-item">
+          <div class="asr-item-name">Mercedes-AMG W12</div>
+          <div class="asr-item-tags"><span class="asr-tag">F1</span></div>
+        </li></ul>
+    <div class="asr-group-header">
+        GT3 &amp; GT4
+        <span class="asr-group-count">4</span>
+      </div>
+      <ul class="asr-list"><li class="asr-item">
+          <div class="asr-item-name">Porsche 911 GT3 R</div>
+          <div class="asr-item-tags"><span class="asr-tag">GT3</span></div>
+        </li><li class="asr-item">
+          <div class="asr-item-name">Ferrari 296 GT3</div>
+          <div class="asr-item-tags"><span class="asr-tag">GT3</span></div>
+        </li><li class="asr-item">
+          <div class="asr-item-name">BMW M4 GT3</div>
+          <div class="asr-item-tags"><span class="asr-tag">GT3</span></div>
+        </li><li class="asr-item">
+          <div class="asr-item-name">Ford Mustang GT3</div>
+          <div class="asr-item-tags"><span class="asr-tag">GT3</span></div>
+        </li></ul>
+    <div class="asr-group-header">
+        Prototype
+        <span class="asr-group-count">3</span>
+      </div>
+      <ul class="asr-list"><li class="asr-item">
+          <div class="asr-item-name">Porsche 963 GTP</div>
+          <div class="asr-item-tags"><span class="asr-tag">GTP</span></div>
+        </li><li class="asr-item">
+          <div class="asr-item-name">Acura ARX-06 GTP</div>
+          <div class="asr-item-tags"><span class="asr-tag">GTP</span></div>
+        </li><li class="asr-item">
+          <div class="asr-item-name">BMW M Hybrid V8 GTP</div>
+          <div class="asr-item-tags"><span class="asr-tag">GTP</span></div>
+        </li></ul>
+    <div class="asr-group-header">
+        NASCAR / Stock Cars
+        <span class="asr-group-count">3</span>
+      </div>
+      <ul class="asr-list"><li class="asr-item">
+          <div class="asr-item-name">Next Gen Chevrolet Camaro ZL1</div>
+          <div class="asr-item-tags"><span class="asr-tag asr-tag-gold">oval + road</span><span class="asr-tag">Cup</span></div>
+        </li><li class="asr-item">
+          <div class="asr-item-name">Next Gen Ford Mustang</div>
+          <div class="asr-item-tags"><span class="asr-tag asr-tag-gold">oval + road</span><span class="asr-tag">Cup</span></div>
+        </li><li class="asr-item">
+          <div class="asr-item-name">Next Gen Toyota Camry</div>
+          <div class="asr-item-tags"><span class="asr-tag asr-tag-gold">oval + road</span><span class="asr-tag">Cup</span></div>
+        </li></ul>
+    <div class="asr-group-header">
+        Road Courses
+        <span class="asr-group-count">5</span>
+      </div>
+      <ul class="asr-list"><li class="asr-item">
+          <div class="asr-item-name">Nürburgring Nordschleife</div>
+          <div class="asr-item-tags"><span class="asr-tag">Germany</span></div>
+        </li><li class="asr-item">
+          <div class="asr-item-name">Watkins Glen</div>
+          <div class="asr-item-tags"><span class="asr-tag">USA</span></div>
+        </li><li class="asr-item">
+          <div class="asr-item-name">Sebring</div>
+          <div class="asr-item-tags"><span class="asr-tag">Florida</span></div>
+        </li><li class="asr-item">
+          <div class="asr-item-name">Circuit of the Americas</div>
+          <div class="asr-item-tags"><span class="asr-tag">Texas</span></div>
+        </li><li class="asr-item">
+          <div class="asr-item-name">Mount Panorama (Bathurst)</div>
+          <div class="asr-item-tags"><span class="asr-tag">Australia</span></div>
+        </li></ul>
+    <div class="asr-group-header">
+        Ovals
+        <span class="asr-group-count">3</span>
+      </div>
+      <ul class="asr-list"><li class="asr-item">
+          <div class="asr-item-name">Daytona International Speedway</div>
+          <div class="asr-item-tags"><span class="asr-tag">Superspeedway</span></div>
+        </li><li class="asr-item">
+          <div class="asr-item-name">Talladega Superspeedway</div>
+          <div class="asr-item-tags"><span class="asr-tag">Superspeedway</span></div>
+        </li><li class="asr-item">
+          <div class="asr-item-name">Indianapolis Motor Speedway</div>
+          <div class="asr-item-tags"><span class="asr-tag asr-tag-gold">oval + road</span><span class="asr-tag">USA</span></div>
+        </li></ul>
+  </div>
+  </div>
+
+  <div class="asr-outro">
+    <p><strong>Can't find what you're looking for?</strong> iRacing adds cars and tracks every season and we can load anything on the platform on request. <a href="https://academysim.com/pages/contact-us">Contact us</a> and we'll set it up, or <a href="https://booking.academysim.com/">book a session</a> and get behind the wheel.</p>
+  </div>
+
+</div>
+
+<script>
+/* ==========================================================
+   DATA — iRacing content library
+========================================================== */
+const DATA = [
+  // ---- FORMULA ----
+  { name: "Dallara F3", type: "car", category: ["road"], class: "Formula", meta: ["Open-Wheel"] },
+  { name: "Formula Vee", type: "car", category: ["road"], class: "Formula", meta: ["Rookie"] },
+  { name: "Skip Barber F2000", type: "car", category: ["road"], class: "Formula", meta: ["Open-Wheel"] },
+  { name: "Dallara IR-18 IndyCar", type: "car", category: ["road", "oval"], class: "Formula", meta: ["IndyCar"] },
+  { name: "McLaren MP4-30", type: "car", category: ["road"], class: "Formula", meta: ["F1"] },
+  { name: "Mercedes-AMG W12", type: "car", category: ["road"], class: "Formula", meta: ["F1"] },
+  { name: "Super Formula SF23", type: "car", category: ["road"], class: "Formula", meta: ["Open-Wheel"] },
+  { name: "Formula Renault 3.5", type: "car", category: ["road"], class: "Formula", meta: ["Open-Wheel"] },
+  { name: "Ray FF1600", type: "car", category: ["road"], class: "Formula", meta: ["Open-Wheel"] },
+
+  // ---- GT ----
+  { name: "Ferrari 296 GT3", type: "car", category: ["road"], class: "GT", meta: ["GT3"] },
+  { name: "Porsche 911 GT3 R", type: "car", category: ["road"], class: "GT", meta: ["GT3"] },
+  { name: "BMW M4 GT3", type: "car", category: ["road"], class: "GT", meta: ["GT3"] },
+  { name: "Mercedes-AMG GT3", type: "car", category: ["road"], class: "GT", meta: ["GT3"] },
+  { name: "Audi R8 LMS EVO II", type: "car", category: ["road"], class: "GT", meta: ["GT3"] },
+  { name: "Lamborghini Huracán GT3", type: "car", category: ["road"], class: "GT", meta: ["GT3"] },
+  { name: "McLaren 720S GT3", type: "car", category: ["road"], class: "GT", meta: ["GT3"] },
+  { name: "Ford Mustang GT3", type: "car", category: ["road"], class: "GT", meta: ["GT3"] },
+  { name: "Corvette Z06 GT3.R", type: "car", category: ["road"], class: "GT", meta: ["GT3"] },
+  { name: "Aston Martin Vantage GT4", type: "car", category: ["road"], class: "GT", meta: ["GT4"] },
+  { name: "BMW M4 GT4", type: "car", category: ["road"], class: "GT", meta: ["GT4"] },
+  { name: "McLaren 570S GT4", type: "car", category: ["road"], class: "GT", meta: ["GT4"] },
+  { name: "Porsche 718 Cayman GT4", type: "car", category: ["road"], class: "GT", meta: ["GT4"] },
+  { name: "Mercedes-AMG GT4", type: "car", category: ["road"], class: "GT", meta: ["GT4"] },
+
+  // ---- PROTOTYPE ----
+  { name: "Acura ARX-06 GTP", type: "car", category: ["road"], class: "Prototype", meta: ["GTP"] },
+  { name: "BMW M Hybrid V8 GTP", type: "car", category: ["road"], class: "Prototype", meta: ["GTP"] },
+  { name: "Porsche 963 GTP", type: "car", category: ["road"], class: "Prototype", meta: ["GTP"] },
+  { name: "Cadillac V-Series.R GTP", type: "car", category: ["road"], class: "Prototype", meta: ["GTP"] },
+  { name: "Dallara P217 LMP2", type: "car", category: ["road"], class: "Prototype", meta: ["LMP2"] },
+  { name: "Ligier JS P320 LMP3", type: "car", category: ["road"], class: "Prototype", meta: ["LMP3"] },
+  { name: "Audi R18", type: "car", category: ["road"], class: "Prototype", meta: ["LMP1"] },
+  { name: "Radical SR10", type: "car", category: ["road"], class: "Prototype", meta: ["Club Racer"] },
+
+  // ---- STOCK CAR / NASCAR ----
+  { name: "Next Gen Chevrolet Camaro ZL1", type: "car", category: ["oval", "road"], class: "Stock Car", meta: ["Cup"] },
+  { name: "Next Gen Ford Mustang", type: "car", category: ["oval", "road"], class: "Stock Car", meta: ["Cup"] },
+  { name: "Next Gen Toyota Camry", type: "car", category: ["oval", "road"], class: "Stock Car", meta: ["Cup"] },
+  { name: "Xfinity Chevrolet Camaro", type: "car", category: ["oval", "road"], class: "Stock Car", meta: ["Xfinity"] },
+  { name: "Xfinity Ford Mustang", type: "car", category: ["oval", "road"], class: "Stock Car", meta: ["Xfinity"] },
+  { name: "Xfinity Toyota Supra", type: "car", category: ["oval", "road"], class: "Stock Car", meta: ["Xfinity"] },
+  { name: "ARCA Chevrolet Impala", type: "car", category: ["oval"], class: "Stock Car", meta: ["ARCA"] },
+  { name: "Legends Ford '34 Coupe", type: "car", category: ["oval", "dirt"], class: "Stock Car", meta: ["Rookie"] },
+  { name: "SK Modified", type: "car", category: ["oval"], class: "Stock Car", meta: ["Short Track"] },
+  { name: "Super Late Model", type: "car", category: ["oval"], class: "Stock Car", meta: ["Short Track"] },
+
+  // ---- TRUCK ----
+  { name: "NASCAR Truck Chevrolet Silverado", type: "car", category: ["oval"], class: "Truck", meta: ["NASCAR"] },
+  { name: "NASCAR Truck Ford F-150", type: "car", category: ["oval"], class: "Truck", meta: ["NASCAR"] },
+  { name: "NASCAR Truck Toyota Tundra", type: "car", category: ["oval"], class: "Truck", meta: ["NASCAR"] },
+
+  // ---- SPORTS CAR ----
+  { name: "Porsche 911 GT3 Cup", type: "car", category: ["road"], class: "Sports Car", meta: ["One-Make"] },
+  { name: "Ferrari 296 Challenge", type: "car", category: ["road"], class: "Sports Car", meta: ["One-Make"] },
+  { name: "Mazda MX-5 Cup", type: "car", category: ["road"], class: "Sports Car", meta: ["Rookie"] },
+  { name: "Global Mazda MX-5", type: "car", category: ["road"], class: "Sports Car", meta: ["Rookie"] },
+  { name: "Lamborghini Super Trofeo", type: "car", category: ["road"], class: "Sports Car", meta: ["One-Make"] },
+
+  // ---- TOURING ----
+  { name: "BMW M2 CS Racing", type: "car", category: ["road"], class: "Touring", meta: ["TCR-style"] },
+  { name: "Audi RS 3 LMS TCR", type: "car", category: ["road"], class: "Touring", meta: ["TCR"] },
+  { name: "Hyundai Elantra N TCR", type: "car", category: ["road"], class: "Touring", meta: ["TCR"] },
+  { name: "Honda Civic Type R TCR", type: "car", category: ["road"], class: "Touring", meta: ["TCR"] },
+  { name: "Toyota GR86", type: "car", category: ["road"], class: "Touring", meta: ["Entry"] },
+
+  // ---- DIRT ----
+  { name: "Dirt Sprint Car 360", type: "car", category: ["dirt"], class: "Dirt", meta: ["Sprint"] },
+  { name: "Dirt Sprint Car 410", type: "car", category: ["dirt"], class: "Dirt", meta: ["Sprint"] },
+  { name: "Dirt Midget", type: "car", category: ["dirt"], class: "Dirt", meta: ["Midget"] },
+  { name: "Dirt Late Model Super", type: "car", category: ["dirt"], class: "Dirt", meta: ["Late Model"] },
+  { name: "Dirt Late Model Limited", type: "car", category: ["dirt"], class: "Dirt", meta: ["Late Model"] },
+  { name: "Dirt UMP Modified", type: "car", category: ["dirt"], class: "Dirt", meta: ["Modified"] },
+  { name: "Dirt Street Stock", type: "car", category: ["dirt"], class: "Dirt", meta: ["Entry"] },
+
+  // ---- RALLYCROSS ----
+  { name: "VW Beetle Lite RX", type: "car", category: ["rally"], class: "Rally", meta: ["Rallycross"] },
+  { name: "Subaru WRX STI RX", type: "car", category: ["rally"], class: "Rally", meta: ["Rallycross"] },
+
+  /* ======== TRACKS ======== */
+  // ---- ROAD (International) ----
+  { name: "Spa-Francorchamps", type: "track", category: ["road"], meta: ["Belgium"] },
+  { name: "Nürburgring Nordschleife", type: "track", category: ["road"], meta: ["Germany"] },
+  { name: "Nürburgring GP", type: "track", category: ["road"], meta: ["Germany"] },
+  { name: "Circuit de la Sarthe (Le Mans)", type: "track", category: ["road"], meta: ["France"] },
+  { name: "Suzuka Circuit", type: "track", category: ["road"], meta: ["Japan"] },
+  { name: "Mount Panorama (Bathurst)", type: "track", category: ["road"], meta: ["Australia"] },
+  { name: "Silverstone Circuit", type: "track", category: ["road"], meta: ["UK"] },
+  { name: "Monza", type: "track", category: ["road"], meta: ["Italy"] },
+  { name: "Barcelona-Catalunya", type: "track", category: ["road"], meta: ["Spain"] },
+  { name: "Imola", type: "track", category: ["road"], meta: ["Italy"] },
+  { name: "Zandvoort", type: "track", category: ["road"], meta: ["Netherlands"] },
+  { name: "Hockenheimring", type: "track", category: ["road"], meta: ["Germany"] },
+  { name: "Brands Hatch", type: "track", category: ["road"], meta: ["UK"] },
+  { name: "Donington Park", type: "track", category: ["road"], meta: ["UK"] },
+  { name: "Oulton Park", type: "track", category: ["road"], meta: ["UK"] },
+  { name: "Snetterton", type: "track", category: ["road"], meta: ["UK"] },
+  { name: "Knockhill", type: "track", category: ["road", "rally"], meta: ["UK"] },
+  { name: "Red Bull Ring", type: "track", category: ["road"], meta: ["Austria"] },
+  { name: "Interlagos", type: "track", category: ["road"], meta: ["Brazil"] },
+  { name: "Autódromo Hermanos Rodríguez", type: "track", category: ["road", "oval"], meta: ["Mexico"] },
+  { name: "Fuji Speedway", type: "track", category: ["road"], meta: ["Japan"] },
+  { name: "Okayama", type: "track", category: ["road"], meta: ["Japan"] },
+  { name: "Sugo", type: "track", category: ["road"], meta: ["Japan"] },
+  { name: "Autodromo Algarve", type: "track", category: ["road"], meta: ["Portugal"] },
+  { name: "Bahrain International Circuit", type: "track", category: ["road"], meta: ["Bahrain"] },
+
+  // ---- USA ROAD ----
+  { name: "Watkins Glen", type: "track", category: ["road"], meta: ["USA"] },
+  { name: "Road America", type: "track", category: ["road"], meta: ["USA"] },
+  { name: "Laguna Seca", type: "track", category: ["road"], meta: ["California"] },
+  { name: "Sebring", type: "track", category: ["road"], meta: ["Florida"] },
+  { name: "Road Atlanta", type: "track", category: ["road"], meta: ["Georgia"] },
+  { name: "Virginia International", type: "track", category: ["road"], meta: ["USA"] },
+  { name: "Circuit of the Americas", type: "track", category: ["road"], meta: ["Texas"] },
+  { name: "Mid-Ohio", type: "track", category: ["road"], meta: ["USA"] },
+  { name: "Lime Rock Park", type: "track", category: ["road"], meta: ["Connecticut"] },
+  { name: "Sonoma Raceway", type: "track", category: ["road"], meta: ["California"] },
+  { name: "Summit Point", type: "track", category: ["road"], meta: ["USA"] },
+  { name: "Long Beach Street", type: "track", category: ["road"], meta: ["Street"] },
+  { name: "Belle Isle (Detroit)", type: "track", category: ["road"], meta: ["Street"] },
+  { name: "Canadian Tire Motorsport Park", type: "track", category: ["road"], meta: ["Canada"] },
+  { name: "Circuit Gilles Villeneuve", type: "track", category: ["road"], meta: ["Canada"] },
+  { name: "Homestead-Miami Road", type: "track", category: ["road", "oval"], meta: ["Florida"] },
+  { name: "Daytona Road Course", type: "track", category: ["road", "oval"], meta: ["Florida"] },
+
+  // ---- OVAL ----
+  { name: "Daytona International Speedway", type: "track", category: ["oval"], meta: ["Superspeedway"] },
+  { name: "Talladega Superspeedway", type: "track", category: ["oval"], meta: ["Superspeedway"] },
+  { name: "Indianapolis Motor Speedway", type: "track", category: ["oval", "road"], meta: ["USA"] },
+  { name: "Charlotte Motor Speedway", type: "track", category: ["oval", "road"], meta: ["1.5 mi"] },
+  { name: "Texas Motor Speedway", type: "track", category: ["oval"], meta: ["1.5 mi"] },
+  { name: "Kansas Speedway", type: "track", category: ["oval"], meta: ["1.5 mi"] },
+  { name: "Atlanta Motor Speedway", type: "track", category: ["oval"], meta: ["1.5 mi"] },
+  { name: "Las Vegas Motor Speedway", type: "track", category: ["oval"], meta: ["1.5 mi"] },
+  { name: "Homestead-Miami Speedway", type: "track", category: ["oval"], meta: ["1.5 mi"] },
+  { name: "Auto Club Speedway", type: "track", category: ["oval"], meta: ["2.0 mi"] },
+  { name: "Michigan International", type: "track", category: ["oval"], meta: ["2.0 mi"] },
+  { name: "Pocono Raceway", type: "track", category: ["oval"], meta: ["Tri-oval"] },
+  { name: "Darlington Raceway", type: "track", category: ["oval"], meta: ["1.366 mi"] },
+  { name: "Phoenix Raceway", type: "track", category: ["oval"], meta: ["1.0 mi"] },
+  { name: "Dover Motor Speedway", type: "track", category: ["oval"], meta: ["1.0 mi"] },
+  { name: "New Hampshire", type: "track", category: ["oval"], meta: ["1.058 mi"] },
+  { name: "Nashville Superspeedway", type: "track", category: ["oval"], meta: ["1.33 mi"] },
+  { name: "Chicagoland Speedway", type: "track", category: ["oval"], meta: ["1.5 mi"] },
+  { name: "Kentucky Speedway", type: "track", category: ["oval"], meta: ["1.5 mi"] },
+  { name: "Richmond Raceway", type: "track", category: ["oval"], meta: ["Short Track"] },
+  { name: "Martinsville Speedway", type: "track", category: ["oval"], meta: ["Short Track"] },
+  { name: "Bristol Motor Speedway", type: "track", category: ["oval", "dirt"], meta: ["Short Track"] },
+  { name: "Iowa Speedway", type: "track", category: ["oval"], meta: ["0.875 mi"] },
+  { name: "World Wide Technology Raceway", type: "track", category: ["oval"], meta: ["Gateway"] },
+  { name: "Milwaukee Mile", type: "track", category: ["oval"], meta: ["1.015 mi"] },
+  { name: "Lucas Oil Raceway", type: "track", category: ["oval"], meta: ["0.686 mi"] },
+  { name: "North Wilkesboro Speedway", type: "track", category: ["oval"], meta: ["Short Track"] },
+  { name: "Rockingham Speedway", type: "track", category: ["oval"], meta: ["1.017 mi"] },
+  { name: "Oxford Plains Speedway", type: "track", category: ["oval"], meta: ["Short Track"] },
+  { name: "Langley Speedway", type: "track", category: ["oval"], meta: ["Short Track"] },
+  { name: "South Boston Speedway", type: "track", category: ["oval"], meta: ["Short Track"] },
+  { name: "Hickory Motor Speedway", type: "track", category: ["oval"], meta: ["Short Track"] },
+  { name: "Slinger Super Speedway", type: "track", category: ["oval"], meta: ["Short Track"] },
+  { name: "Thompson Speedway", type: "track", category: ["oval"], meta: ["Short Track"] },
+  { name: "Stafford Motor Speedway", type: "track", category: ["oval"], meta: ["Short Track"] },
+  { name: "Five Flags Speedway", type: "track", category: ["oval"], meta: ["Short Track"] },
+  { name: "Irwindale Speedway", type: "track", category: ["oval"], meta: ["Short Track"] },
+
+  // ---- DIRT ----
+  { name: "Eldora Speedway", type: "track", category: ["dirt"], meta: ["Dirt Oval"] },
+  { name: "Knoxville Raceway", type: "track", category: ["dirt"], meta: ["Dirt Oval"] },
+  { name: "Williams Grove", type: "track", category: ["dirt"], meta: ["Dirt Oval"] },
+  { name: "Dirt Track at Charlotte", type: "track", category: ["dirt"], meta: ["Dirt Oval"] },
+  { name: "Lernerville Speedway", type: "track", category: ["dirt"], meta: ["Dirt Oval"] },
+  { name: "Volusia Speedway Park", type: "track", category: ["dirt"], meta: ["Florida"] },
+  { name: "Limaland Motorsports", type: "track", category: ["dirt"], meta: ["Dirt Oval"] },
+  { name: "Kokomo Speedway", type: "track", category: ["dirt"], meta: ["Dirt Oval"] },
+  { name: "Federated Auto Parts I-55", type: "track", category: ["dirt"], meta: ["Dirt Oval"] },
+  { name: "Cedar Lake Speedway", type: "track", category: ["dirt"], meta: ["Dirt Oval"] },
+
+  // ---- RALLYCROSS ----
+  { name: "Daytona Rallycross", type: "track", category: ["rally"], meta: ["Rallycross"] },
+  { name: "Phoenix Rallycross", type: "track", category: ["rally"], meta: ["Rallycross"] },
+  { name: "Lucas Oil Rallycross", type: "track", category: ["rally"], meta: ["Rallycross"] },
+];
+
+/* ==========================================================
+   STATE + LOGIC
+========================================================== */
+const state = {
+  search: '',
+  tab: 'vehicles',
+  categories: new Set(),
+  classes: new Set(),
+};
+
+const list = document.getElementById('asrList');
+const count = document.getElementById('asrCount');
+const searchInput = document.getElementById('asrSearch');
+const clearBtn = document.getElementById('asrClearBtn');
+const classGroup = document.getElementById('asrClassGroup');
+
+function matches(item) {
+  if (state.tab === 'vehicles' && item.type !== 'car') return false;
+  if (state.tab === 'tracks' && item.type !== 'track') return false;
+
+  if (state.categories.size > 0) {
+    const overlap = item.category.some(c => state.categories.has(c));
+    if (!overlap) return false;
+  }
+
+  if (state.classes.size > 0) {
+    if (item.type !== 'car') return false;
+    if (!state.classes.has(item.class)) return false;
+  }
+
+  if (state.search) {
+    const q = state.search.toLowerCase();
+    const haystack = [item.name, item.class || '', ...(item.meta || []), ...(item.category || [])].join(' ').toLowerCase();
+    if (!haystack.includes(q)) return false;
+  }
+
+  return true;
+}
+
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+
+/* Group items into logical sections */
+function groupItems(results) {
+  if (state.tab === 'vehicles') {
+    // Group vehicles by class, in a preferred order
+    const order = ['Formula', 'GT', 'Prototype', 'Stock Car', 'Truck', 'Sports Car', 'Touring', 'Dirt', 'Rally'];
+    const labels = {
+      'Formula': 'Formula / Open-Wheel',
+      'GT': 'GT3 & GT4',
+      'Prototype': 'Prototype',
+      'Stock Car': 'NASCAR / Stock Cars',
+      'Truck': 'Trucks',
+      'Sports Car': 'Sports Cars',
+      'Touring': 'Touring Cars',
+      'Dirt': 'Dirt Racing',
+      'Rally': 'Rallycross'
+    };
+    const groups = {};
+    results.forEach(item => {
+      const key = item.class || 'Other';
+      if (!groups[key]) groups[key] = [];
+      groups[key].push(item);
+    });
+    return order
+      .filter(k => groups[k] && groups[k].length)
+      .map(k => ({ label: labels[k] || k, items: groups[k] }));
+  } else {
+    // Group tracks by discipline
+    const order = ['road', 'oval', 'dirt', 'rally'];
+    const labels = {
+      'road': 'Road Courses',
+      'oval': 'Ovals',
+      'dirt': 'Dirt Ovals',
+      'rally': 'Rallycross'
+    };
+    const groups = { road: [], oval: [], dirt: [], rally: [] };
+    results.forEach(item => {
+      // Place into primary category; prefer road if both road+oval
+      const primary = item.category[0];
+      if (groups[primary]) groups[primary].push(item);
+    });
+    return order
+      .filter(k => groups[k].length)
+      .map(k => ({ label: labels[k], items: groups[k] }));
+  }
+}
+
+function render() {
+  const results = DATA.filter(matches);
+  count.textContent = results.length;
+
+  classGroup.style.display = state.tab === 'tracks' ? 'none' : 'block';
+
+  if (results.length === 0) {
+    list.innerHTML = `<div class="asr-empty"><div class="asr-empty-title">No Results</div>Try different filters or clear your search.</div>`;
+    return;
+  }
+
+  const groups = groupItems(results);
+
+  list.innerHTML = groups.map(group => {
+    const items = group.items.map(item => {
+      const metaTags = (item.meta || []).map(m =>
+        `<span class="asr-tag">${escapeHtml(m)}</span>`
+      ).join('');
+      // Add category tag for items that span multiple categories
+      const catTag = item.category.length > 1
+        ? `<span class="asr-tag asr-tag-gold">${item.category.join(' + ')}</span>`
+        : '';
+      return `
+        <li class="asr-item">
+          <div class="asr-item-name">${escapeHtml(item.name)}</div>
+          <div class="asr-item-tags">${catTag}${metaTags}</div>
+        </li>
+      `;
+    }).join('');
+
+    return `
+      <div class="asr-group-header">
+        ${escapeHtml(group.label)}
+        <span class="asr-group-count">${group.items.length}</span>
+      </div>
+      <ul class="asr-list">${items}</ul>
+    `;
+  }).join('');
+}
+
+/* Event listeners */
+searchInput.addEventListener('input', (e) => {
+  state.search = e.target.value.trim();
+  render();
+});
+
+document.querySelectorAll('.asr-toggle-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.asr-toggle-btn').forEach(b => b.classList.remove('asr-active'));
+    btn.classList.add('asr-active');
+    state.tab = btn.dataset.tab;
+    if (state.tab === 'tracks') {
+      state.classes.clear();
+      document.querySelectorAll('[data-filter="class"]').forEach(c => c.classList.remove('asr-active'));
+    }
+    render();
+  });
+});
+
+document.querySelectorAll('.asr-chip').forEach(chip => {
+  chip.addEventListener('click', () => {
+    const filter = chip.dataset.filter;
+    const value = chip.dataset.value;
+    const set = filter === 'category' ? state.categories : state.classes;
+    if (set.has(value)) {
+      set.delete(value);
+      chip.classList.remove('asr-active');
+    } else {
+      set.add(value);
+      chip.classList.add('asr-active');
+    }
+    render();
+  });
+});
+
+clearBtn.addEventListener('click', () => {
+  state.search = '';
+  state.categories.clear();
+  state.classes.clear();
+  searchInput.value = '';
+  document.querySelectorAll('.asr-chip').forEach(c => c.classList.remove('asr-active'));
+  render();
+});
+
+render();
+</script>

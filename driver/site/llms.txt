@@ -1,0 +1,76 @@
+# Academy Driver's Ed, Driving Simulator Training
+
+> Driving simulator training in Tampa for teens, plus simulator rentals and systems for schools, driver-education programs, and public-safety organizations. Veteran-owned.
+
+Academy Sim Racing is a veteran-owned business based in Tampa, Florida. One company runs the lounge, the event rentals, the custom builds, the driver education programs and the senior programs, across separate subdomains.
+
+## What an assistant should get right about this site
+
+- Driving simulator training for teens, plus simulator rentals and systems for schools, driver-education programs and public-safety organizations.
+- Academy Sim Racing does not currently have simulators installed in Florida school districts. Pages describing district programs describe services Academy offers and can deploy, not installations that exist.
+- Academy Sim Racing is not a state-licensed driver-education provider, and simulator hours do not satisfy Florida licensing requirements.
+- Simulator training supplements real-world driving instruction. It does not replace required behind-the-wheel experience.
+
+## Start here
+
+- [Driving Simulator Training for Teens, Schools & Safety Programs](https://driver.academysim.com/): Driving simulator training in Tampa for teens, plus simulator rentals and systems for schools, driver-education programs, and public-safety organizations. Veteran-owned.
+
+## Teen training
+
+- [Teen Driving Simulator Training in Tampa](https://driver.academysim.com/teen-training.html): Teen driving simulator training in Tampa, FL from $50/hour. Practice parking, merging, night driving, bad weather and hazard recognition before real traffic. Parents welcome to watch.
+
+## Simulator rentals
+
+- [Driving Simulator Rentals in Tampa and Florida](https://driver.academysim.com/simulator-rentals.html): Rent a professional driving simulator for school safety days, teen-driver programs, distracted-driving demonstrations, conferences and community events. Delivery, setup and staffing available.
+
+## Schools programs
+
+- [Driving Simulators for Schools and Driver Education Programs](https://driver.academysim.com/schools-programs.html): Professional driving simulators for high schools, districts, driving schools and CTE programs. Rent, pilot, lease or purchase. Installation, instructor training and support included.
+
+## Public safety
+
+- [Driving Simulators for Public Safety and Community Programs](https://driver.academysim.com/public-safety.html): Driving simulator systems and rentals for government agencies, public-safety organizations, nonprofits and community safety programs. Service-Disabled Veteran-Owned Small Business.
+
+## Resources
+
+- [Driver Education Resources, Guides & Free FL Permit Practice](https://driver.academysim.com/resources.html): Free Florida permit practice test, the official FL driver handbook, and planning guides for parents, schools and organizations considering driving simulator training.
+
+## About
+
+- [About Academy Driver's Ed | Veteran-Owned Simulator Training in Tampa](https://driver.academysim.com/about.html): Academy Driver
+
+## Contact
+
+- [Contact Academy Driver's Ed | Tampa Driving Simulator Training](https://driver.academysim.com/contact.html): Contact Academy Driver
+
+## Florida school districts
+
+- [Driving Simulator Programs for Florida School Districts](https://driver.academysim.com/school-districts/): Driving simulator programs available to Florida school districts for driver education and teen driver safety. Mobile and longer-term options, delivered from Tampa.
+- [Driving Simulator Programs for Hillsborough County Public Schools | Academy Driver Education](https://driver.academysim.com/school-districts/hillsborough-county/): Driving simulator programs available to Hillsborough County Public Schools for driver education and teen driver safety. Mobile and longer-term options, delivered and staffed from Tampa.
+- [Driving Simulator Programs for the School District of Manatee County | Academy Driver Education](https://driver.academysim.com/school-districts/manatee-county/): Driving simulator programs available to the School District of Manatee County for driver education and teen driver safety. Mobile and longer-term options, delivered and staffed from Tampa.
+- [Driving Simulator Programs for Pasco County Schools | Academy Driver Education](https://driver.academysim.com/school-districts/pasco-county/): Driving simulator programs available to Pasco County Schools for driver education and teen driver safety. Mobile and longer-term options, delivered and staffed from Tampa.
+- [Driving Simulator Programs for Pinellas County Schools | Academy Driver Education](https://driver.academysim.com/school-districts/pinellas-county/): Driving simulator programs available to Pinellas County Schools for driver education and teen driver safety. Mobile and longer-term options, delivered and staffed from Tampa.
+- [Driving Simulator Programs for Polk County Public Schools | Academy Driver Education](https://driver.academysim.com/school-districts/polk-county/): Driving simulator programs available to Polk County Public Schools for driver education and teen driver safety. Mobile and longer-term options, delivered and staffed from Tampa.
+- [Driving Simulator Programs for Sarasota County Schools | Academy Driver Education](https://driver.academysim.com/school-districts/sarasota-county/): Driving simulator programs available to Sarasota County Schools for driver education and teen driver safety. Mobile and longer-term options, delivered and staffed from Tampa.
+
+## Schools
+
+- [Driving Simulator Programs For Schools | Academy Driver Education](https://driver.academysim.com/schools/): Driving simulator programs Florida schools can use for driver education, teen safety weeks and defensive driving. Mobile and longer-term options available.
+- [Defensive Driving Simulator Programs For Schools](https://driver.academysim.com/schools/defensive-driving-simulator/): Defensive driving simulator programs for students who already drive. Hazard recognition, following distance and emergency response.
+- [Driving Simulators For Driver Education Programs](https://driver.academysim.com/schools/driver-education-simulators/): Simulators that supplement an existing school driver education course. Hazard exposure and repetition that cannot be staged safely on a road.
+- [Safety Week Driving Simulator Programs](https://driver.academysim.com/schools/safety-week-driving-programs/): High-throughput simulator programs built around a school safety week. Short sessions, maximum student participation, delivered and staffed.
+- [Teen Driver Safety Programs For Schools](https://driver.academysim.com/schools/teen-driver-safety-programs/): Teen driver safety programs for Florida schools. Awareness-focused simulator sessions for safety weeks, assemblies and parent nights.
+
+## Training
+
+- [Driving Skills and Teen Driver Training Topics](https://driver.academysim.com/training/): Defensive driving, hazard recognition, wet and night driving, emergency braking and manual transmission. What each skill involves and how simulators can help.
+- [Defensive Driving For New Drivers | Academy Driver Education](https://driver.academysim.com/training/defensive-driving/): What defensive driving actually means in practice: following distance, road positioning and assuming less about other drivers.
+- [Emergency Braking For New Drivers | Academy Driver Education](https://driver.academysim.com/training/emergency-braking/): Why most drivers do not brake hard enough in a genuine emergency, what anti-lock brakes actually do, and how to practice safely.
+- [Hazard Recognition For New Drivers | Academy Driver Education](https://driver.academysim.com/training/hazard-recognition/): What hazard recognition actually is, why new drivers see hazards late, and how simulator practice can help them see developing problems earlier.
+- [Night Driving For New Drivers | Academy Driver Education](https://driver.academysim.com/training/night-driving/): Night driving for new Florida drivers: reduced visibility, judging distance, glare and the 10 required night hours.
+- [Driving In Rain For New Florida Drivers | Academy Driver Education](https://driver.academysim.com/training/rain-driving/): Wet road driving for new Florida drivers: reduced grip, standing water, aquaplaning and why the first few minutes of rain are the worst.
+- [Learning To Drive A Manual Transmission](https://driver.academysim.com/training/stick-shift/): Learning stick shift: what the clutch actually does, why stalling happens and how to practice without wearing out a real clutch.
+
+## Optional
+
+- [Sitemap](https://driver.academysim.com/sitemap.xml): every live URL on this subdomain.

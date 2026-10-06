@@ -1,0 +1,28 @@
+# The estate serves LF. Netlify stores what we upload, byte for byte, and
+# release_check.py compares local bytes against the live sha, so a CRLF file
+# is a content difference on five revenue subdomains, not a cosmetic one.
+#
+# Without this file and with core.autocrlf=true (the default on this box), a
+# fresh clone checked out 375 CRLF files against 7 LF, and building from that
+# clone produced a deploy artefact differing from the validated one in 109 of
+# 136 files -- 59,196 bytes of pure line-ending churn. The build was therefore
+# reproducible only inside one working directory. Found by audit 2026-09-09.
+#
+# eol=lf pins the WORKING TREE, not just the stored blob, so it holds no
+# matter what core.autocrlf is set to on the machine doing the clone.
+* text=auto eol=lf
+
+# Binary: never touch these, and never diff them as text.
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.webp binary
+*.gif  binary
+*.ico  binary
+*.avif binary
+*.pdf  binary
+*.mp4  binary
+*.webm binary
+*.woff  binary
+*.woff2 binary
+*.ttf  binary

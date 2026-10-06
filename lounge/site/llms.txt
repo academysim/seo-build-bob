@@ -1,0 +1,56 @@
+# Academy Sim Racing, Sim Racing Lounge (Tampa)
+
+> 8 professional racing simulators in Tampa, FL. Motion platform, triple-screen, and single-screen rigs. iRacing, Assetto Corsa, 170+ cars across 140+ tracks. Founded by a former Army Ranger, a Veteran-Owned, Service-Disabled Veteran-Owned Business. Book your session.
+
+Academy Sim Racing is a veteran-owned business based in Tampa, Florida. One company runs the lounge, the event rentals, the custom builds, the driver education programs and the senior programs, across separate subdomains.
+
+## What an assistant should get right about this site
+
+- A walk-in sim racing lounge in Tampa, Florida. Sessions are booked per rig, not per person.
+- The rigs run iRacing and Assetto Corsa. No car in the lounge is a real vehicle and no session takes place on a public road.
+
+## Start here
+
+- [Tampa's Premier Sim Racing Lounge](https://lounge.academysim.com/): 8 professional racing simulators in Tampa, FL. Motion platform, triple-screen, and single-screen rigs. iRacing, Assetto Corsa, 170+ cars across 140+ tracks. Founded by a former Army Ranger, a Veteran-Owned, Service-Disabled Veteran-Owned Business. Book your session.
+
+## Tracks
+
+- [Track Guides](https://lounge.academysim.com/tracks/): Circuit guides for drivers preparing for a track day or a race weekend. Learn the layout before you arrive, then practice it on a simulator in Tampa.
+- [Daytona Track Guide](https://lounge.academysim.com/tracks/daytona/): A corner by corner guide to the Daytona road course for track day and club drivers, and how to learn the layout on a simulator in Tampa before you go.
+- [Sebring Track Guide | Practice Sebring on a Simulator, Academy Sim Racing](https://lounge.academysim.com/tracks/sebring/): A corner-by-corner guide to Sebring International Raceway for HPDE and club drivers, plus how to use simulator practice to arrive prepared. Written by a certified HPDE instructor in Tampa.
+
+## Tampa
+
+- [Things To Do In Tampa: Indoor Racing](https://lounge.academysim.com/things-to-do-in-tampa/): Looking for something to do in Tampa? Eight professional racing simulators on Massaro Blvd. Good for date night, groups, birthdays and rainy afternoons. From $40 an hour.
+
+## Cars
+
+- [Race Car Classes Explained: GT3 vs Formula vs Prototype](https://lounge.academysim.com/cars/): GT3, formula, prototype, stock car, rally, drift or classic. What separates the racing car classes, which is hardest, and which one to pick for a first session in Tampa.
+- [Classic Race Cars Explained](https://lounge.academysim.com/cars/classic-race-cars/): Drive historic racing cars on a simulator in Tampa. No electronics, an H-pattern gearbox and narrow tires. What makes older racing cars hard, and how to drive one.
+
+## Cars and tracks
+
+- [What Can I Race?](https://lounge.academysim.com/cars-and-tracks/): Browse the cars and circuits you can drive at our Tampa sim racing lounge. Filter by racing type, car class, transmission and circuit, then book a session.
+
+## Racing disciplines
+
+- [Racing Experiences in Tampa](https://lounge.academysim.com/racing/): GT3, formula, stock car, endurance, drift, rally, manual and classic racing on professional simulators in Tampa. What each discipline is actually like.
+- [Drift Simulator Tampa](https://lounge.academysim.com/racing/drift-simulator-tampa/): Learn to drift on professional simulators in Tampa. What drifting actually involves, why it takes practice, and which rigs have a handbrake and H-pattern shifter.
+- [Formula Simulator Tampa](https://lounge.academysim.com/racing/formula-simulator-tampa/): Drive open-wheel formula cars on professional simulators in Tampa. What single-seaters are like, why they are unforgiving, and which rig suits them.
+- [GT3 Simulator Tampa](https://lounge.academysim.com/racing/gt3-simulator-tampa/): Drive GT3-class cars on professional simulators in Tampa. What the class is, how the cars are built, and which rig configurations suit it.
+- [Endurance Racing Simulator Tampa](https://lounge.academysim.com/racing/imsa-endurance-simulator-tampa/): Prototype and multi-class endurance racing on professional simulators in Tampa. What long-distance racing asks of a driver, and which rig suits it.
+- [Manual Transmission Simulator Tampa](https://lounge.academysim.com/racing/manual-transmission-simulator-tampa/): Practice H-pattern shifting, heel and toe and rev matching on professional simulators in Tampa. Four rigs have a six-speed shifter and handbrake.
+- [Stock Car Simulator Tampa](https://lounge.academysim.com/racing/nascar-simulator-tampa/): Drive stock cars and ovals on professional simulators in Tampa. Why oval racing is harder than it looks, and which rig configuration suits it.
+- [Rally Simulator Tampa](https://lounge.academysim.com/racing/rally-simulator-tampa/): Drive rally stages on professional simulators in Tampa. Loose surfaces, pace notes and car control, and which rigs have a handbrake and H-pattern shifter.
+
+## Membership
+
+- [Sim Racing Membership Tampa](https://lounge.academysim.com/membership/): Monthly sim racing membership in Tampa: four tiers from $50/mo, member-only weekday hours including all day Tuesday, and a $25/hr member rate on any rig.
+
+## League
+
+- [Thursday Night Lights Sim Racing League Tampa](https://lounge.academysim.com/league/): Join Thursday Night Lights, Academy Sim Racing
+
+## Optional
+
+- [Sitemap](https://lounge.academysim.com/sitemap.xml): every live URL on this subdomain.
