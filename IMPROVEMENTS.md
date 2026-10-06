@@ -97,7 +97,7 @@ OK
 
 **`paths.py` refactor (P2-D)** — every tool builds its own absolute paths with `os.path.join(ROOT, ...)` boilerplate repeated across ~18 files. Centralising that in `shared/tools/paths.py` would be a clean improvement but the blast radius is every single pipeline script. With ~19 commits already in the window and all checks green, touching that many call-sites this late introduced unacceptable risk of a subtle path regression. Left as a tracked item in `MODERNIZATION-PLAN.md`.
 
-**Network and deploy tools left untouched by design** — `deploy.py`, `release_check.py` (runtime), `audit_discovery.py` (live-fetch mode), `gsc_monitor.py`, and the Netlify library were explicitly out of scope. The hackathon constraint is "modernize without disrupting core functionality"; those tools are the deployment surface, and any regression there is invisible until a deploy runs against the real CDN.
+**Network and deploy tools kept out of scope** — `deploy.py`, `gsc_monitor.py` and the Netlify library were not refactored. `release_check.py` and `audit_discovery.py` received only the P2-C change (hostnames read from `constants.HOSTS`); they were import-checked and their host values compared, but not run end to end, because they talk to the live sites. The hackathon constraint is "modernize without disrupting core functionality"; those tools are the deployment surface, and any regression there is invisible until a deploy runs against the real CDN.
 
 ---
 
