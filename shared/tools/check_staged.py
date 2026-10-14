@@ -48,8 +48,8 @@ def record(keys):
         paths = staged(key)
         if not paths:
             raise SystemExit('  !! %s: refusing to record an empty inventory' % key)
-        io.open(inventory_path(key), 'w', encoding='utf-8', newline='\n').write(
-            json.dumps(paths, indent=1) + '\n')
+        with io.open(inventory_path(key), 'w', encoding='utf-8', newline='\n') as f:
+            f.write(json.dumps(paths, indent=1) + '\n')
         print('%-7s recorded %d paths' % (key, len(paths)))
 
 
@@ -61,7 +61,8 @@ def verify(keys):
             print('%-7s !! no inventory at %s; run --record' % (key, p))
             bad += 1
             continue
-        expected = json.loads(io.open(p, encoding='utf-8').read())
+        with io.open(p, encoding='utf-8') as f:
+            expected = json.loads(f.read())
         if not expected:
             print('%-7s !! inventory is empty, so it can never fail' % key)
             bad += 1

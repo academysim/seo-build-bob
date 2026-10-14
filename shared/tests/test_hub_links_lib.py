@@ -63,7 +63,8 @@ class TestPatchHomepage(unittest.TestCase):
     def _make_tree(self, content):
         """Write content to index.html in a temp dir, return the dir path."""
         d = tempfile.mkdtemp()
-        io.open(os.path.join(d, 'index.html'), 'w', encoding='utf-8', newline='').write(content)
+        with io.open(os.path.join(d, 'index.html'), 'w', encoding='utf-8', newline='') as f:
+            f.write(content)
         return d
 
     def test_first_call_inserts_section(self):
@@ -113,13 +114,14 @@ class TestPatchFooter(unittest.TestCase):
     def _make_subpage(self, tree_dir, rel_dir, content):
         d = os.path.join(tree_dir, *rel_dir.split('/'))
         os.makedirs(d, exist_ok=True)
-        io.open(os.path.join(d, 'index.html'), 'w', encoding='utf-8', newline='').write(content)
+        with io.open(os.path.join(d, 'index.html'), 'w', encoding='utf-8', newline='') as f:
+            f.write(content)
 
     def test_subpage_is_patched(self):
         d = tempfile.mkdtemp()
         # Write a homepage (must be skipped) and a subpage (must be patched)
-        io.open(os.path.join(d, 'index.html'), 'w', encoding='utf-8', newline='').write(
-            '<body>' + self.OLD + '</body>')
+        with io.open(os.path.join(d, 'index.html'), 'w', encoding='utf-8', newline='') as f:
+            f.write('<body>' + self.OLD + '</body>')
         self._make_subpage(d, 'sub', '<body>' + self.OLD + '</body>')
         touched, present, unmatched = patch_footer(d, self.OLD, self.NEW)
         self.assertIn('sub/index.html', touched)
@@ -151,8 +153,9 @@ class TestPatchFooter(unittest.TestCase):
                      + '</body>\r\n')
         d = tempfile.mkdtemp()
         self._make_subpage(d, 'sub', crlf_page)
-        io.open(os.path.join(d, 'sub', 'index.html'),
-                'w', encoding='utf-8', newline='').write(crlf_page)
+        with io.open(os.path.join(d, 'sub', 'index.html'),
+                     'w', encoding='utf-8', newline='') as f:
+            f.write(crlf_page)
         patch_footer(d, old_lf, new_lf)
         result = rd(os.path.join(d, 'sub', 'index.html'))
         self.assertIn(new_lf.replace('\n', '\r\n'), result)

@@ -22,12 +22,14 @@ import sys
 
 def rd(p):
     """Read a file as a UTF-8 string, preserving its native line endings."""
-    return io.open(p, encoding='utf-8', newline='').read()
+    with io.open(p, encoding='utf-8', newline='') as f:
+        return f.read()
 
 
 def wr(p, s):
     """Write a UTF-8 string to a file, preserving whatever endings are in s."""
-    io.open(p, 'w', encoding='utf-8', newline='').write(s)
+    with io.open(p, 'w', encoding='utf-8', newline='') as f:
+        f.write(s)
 
 
 def adapt(pattern, s):

@@ -196,7 +196,8 @@ class TestRecord(_Base):
 
         inv_path = CS.inventory_path('lounge')
         self.assertTrue(os.path.isfile(inv_path), 'inventory file should exist after record()')
-        recorded = json.loads(io.open(inv_path, encoding='utf-8').read())
+        with io.open(inv_path, encoding='utf-8') as f:
+            recorded = json.loads(f.read())
         self.assertEqual(sorted(recorded), sorted(paths))
 
     def test_record_refuses_empty_upload(self):

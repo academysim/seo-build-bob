@@ -34,7 +34,8 @@ _RC_PATH = os.path.join(_ROOT, 'shared', 'tools', 'release_check.py')
 def _load_form_rewrite_fn():
     """Return netlify_form_rewrite_only extracted from release_check.py source
     without executing the file (and thus without calling main())."""
-    src = open(_RC_PATH, encoding='utf-8').read()
+    with open(_RC_PATH, encoding='utf-8') as f:
+        src = f.read()
     tree = ast.parse(src, filename=_RC_PATH)
 
     # Collect top-level nodes that netlify_form_rewrite_only needs:

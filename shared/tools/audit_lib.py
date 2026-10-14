@@ -122,7 +122,8 @@ def check_sitemap_coverage(pages, sitemap_path, fail_count=0):
         print('     Coverage NOT verified. Refusing to call that a pass.')
         return fail_count + 1
 
-    xml = io.open(sitemap_path, encoding='utf-8').read()
+    with io.open(sitemap_path, encoding='utf-8') as f:
+        xml = f.read()
     live = set()
     for loc in re.findall(r'<loc>\s*(.*?)\s*</loc>', xml):
         live.add(re.sub(r'^https?://[^/]+', '', loc) or '/')
@@ -150,7 +151,8 @@ def parse_sitemap(path):
     """
     if not os.path.exists(path):
         return []
-    xml = io.open(path, encoding='utf-8').read()
+    with io.open(path, encoding='utf-8') as f:
+        xml = f.read()
     return re.findall(r'<loc>\s*(.*?)\s*</loc>', xml)
 
 
@@ -162,3 +164,26 @@ def print_final(pages, fail):
 def exit_audit(fail):
     """sys.exit(1) on any failure, 0 on clean."""
     sys.exit(1 if fail else 0)
+
+
+def check_canonical(html):
+    """Return ['NO-CANONICAL'] if no rel="canonical" link is present in *html*.
+
+    Matches the inline check used by all five per-property audits:
+        if 'rel="canonical"' not in s: probs.append('no-canonical')
+    """
+    if 'rel="canonical"' in html:
+        return []
+    return ['NO-CANONICAL']
+
+
+def check_h1(html):
+    """Return ['h1=N'] if the page does not contain exactly one <h1 element.
+
+    Matches the inline check used by the lounge audit (and equivalents):
+        if s.count('<h1') != 1: probs.append('h1=%d' % s.count('<h1'))
+    """
+    count = html.count('<h1')
+    if count == 1:
+        return []
+    return ['h1=%d' % count]
