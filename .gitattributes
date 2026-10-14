@@ -12,6 +12,13 @@
 # matter what core.autocrlf is set to on the machine doing the clone.
 * text=auto eol=lf
 
+# Deployed output trees: never let git touch bytes in these directories.
+# verify_baseline.py compares SHA-256 hashes of these files against a
+# recorded baseline; any line-ending conversion — even on Linux — would
+# produce a different hash and fail the gate.
+*/site/**    -text
+*/upload/**  -text
+
 # Binary: never touch these, and never diff them as text.
 *.png  binary
 *.jpg  binary

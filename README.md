@@ -66,6 +66,13 @@ Each property has non-negotiables baked into its audit rather than left to care:
 
 ## Verify
 
+### CI
+
+Every push and pull request runs all seven safety gates on `ubuntu-latest` (Python 3.12) via
+[`.github/workflows/gates.yml`](.github/workflows/gates.yml). The job has seven named steps — one per gate —
+so a failure identifies exactly which check broke. No secrets, credentials, or network calls are used beyond
+`actions/checkout` and `actions/setup-python`.
+
 Run offline (no network required):
 
 ```bash
