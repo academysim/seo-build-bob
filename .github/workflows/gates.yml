@@ -17,6 +17,11 @@ jobs:
         with:
           python-version: "3.12"
 
+      # upload/ is build output and is not committed; rebuild it from site/ so
+      # Gate 1 proves the build reproduces the pre-Bob bytes exactly.
+      - name: Build upload/ from source
+        run: python shared/tools/build_all.py
+
       - name: Gate 1 – verify baseline hashes
         run: python shared/tools/verify_baseline.py
 
