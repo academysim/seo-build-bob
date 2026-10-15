@@ -17,7 +17,7 @@ of the deployed output**.
 ```bash
 python shared/tools/build_all.py              # rebuild every property, exit 0
 python shared/tools/verify_baseline.py        # 263 deployed files byte-identical to the pre-Bob baseline
-python -m unittest discover -s shared/tests   # 171 tests, OK
+python -m unittest discover -s shared/tests   # 202 tests, OK
 ```
 
 Deploy scripts exist for completeness but need credentials that are not in this repo; nothing here can
@@ -87,7 +87,7 @@ Run the full test suite:
 python -m unittest discover -s shared/tests
 ```
 
-171 tests across 10 files covering `audit_lib`, `hub_links_lib`, `constants`, `verify_baseline`, `stage`, `check_staged`, `gen_llms`, `netlify_form_rewrite`, `add_breadcrumbs`, and `build_all --dry-run`. All exit 0.
+202 tests across 12 files covering `audit_lib`, `hub_links_lib`, `constants`, `verify_baseline`, `stage`, `check_staged`, `gen_llms`, `netlify_form_rewrite`, `add_breadcrumbs`, `build_all --dry-run`, `release_check` (HTTP fetch), and `audit_discovery` (HTTP fetch + sitemap + audit). All exit 0.
 
 See [`IMPROVEMENTS.md`](IMPROVEMENTS.md) for the full audit trail and one-command verification of all checks.
 

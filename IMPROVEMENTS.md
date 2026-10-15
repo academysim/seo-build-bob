@@ -37,8 +37,7 @@ Baseline commit: `8e5768e` — *"Hackathon fork: disable Netlify deploy credenti
 | `b4d48db` | test — `test_netlify_form_rewrite.py`: AST-extracted copy of `netlify_form_rewrite_only()`, `main()` never executed |
 | `3e65996` | test — `test_add_breadcrumbs.py`: `trail()` with linked, unlinked and mixed crumbs |
 | `92501b5` | feat — `build_all.py --dry-run`: prints STEPS without clearing or executing; `test_build_all_dry_run.py` included |
-
-*Source: `git log 8e5768e..HEAD --oneline` — 19 commits, 36 files changed, 4 020 insertions, 569 deletions (including this document).*
+| *(this)* | test — `test_release_check.py` + `test_audit_discovery.py`: offline HTTP mocks (healthy, 404, redirect, timeout) for both live-site tools |
 
 ---
 
@@ -78,16 +77,16 @@ $ python health/tools/health_audit.py
 
 `shared/tests/test_audits.py` runs each audit against a fixture with a known defect (missing disclaimer, wrong GA4 tag, etc.) and asserts exit code 1. The same fixture *without* the defect asserts exit code 0. This confirms that porting to `audit_lib` did not accidentally relax any check.
 
-### Test count: 13 ad-hoc cases → 171 unittest tests
+### Test count: 13 ad-hoc cases → 202 unittest tests
 
 | State | Test files | Test count | Runner |
 |---|---|---|---|
 | Baseline (`8e5768e`) | 1 (ad-hoc script) | 13 hand-rolled cases | `python shared/tools/test_discovery_gate.py` |
-| After Bob | 10 | **171** | `python -m unittest discover -s shared/tests` |
+| After Bob | 12 | **202** | `python -m unittest discover -s shared/tests` |
 
 ```
 $ python -m unittest discover -s shared/tests
-Ran 171 tests in 32s
+Ran 202 tests in 26s
 OK
 ```
 
@@ -97,7 +96,7 @@ OK
 
 **`paths.py` refactor (P2-D)** — every tool builds its own absolute paths with `os.path.join(ROOT, ...)` boilerplate repeated across ~18 files. Centralising that in `shared/tools/paths.py` would be a clean improvement but the blast radius is every single pipeline script. With ~19 commits already in the window and all checks green, touching that many call-sites this late introduced unacceptable risk of a subtle path regression. Left as a tracked item in `MODERNIZATION-PLAN.md`.
 
-**Network and deploy tools kept out of scope** — `deploy.py`, `gsc_monitor.py` and the Netlify library were not refactored. `release_check.py` and `audit_discovery.py` received only the P2-C change (hostnames read from `constants.HOSTS`); they were import-checked and their host values compared, but not run end to end, because they talk to the live sites. The hackathon constraint is "modernize without disrupting core functionality"; those tools are the deployment surface, and any regression there is invisible until a deploy runs against the real CDN.
+**Network and deploy tools kept out of scope** — `deploy.py`, `gsc_monitor.py` and the Netlify library were not refactored. `release_check.py` and `audit_discovery.py` received only the P2-C change (hostnames read from `constants.HOSTS`); their HTTP logic is now covered by offline mock tests (`test_release_check.py` and `test_audit_discovery.py`) but they are not run end to end, because they talk to the live sites. The hackathon constraint is "modernize without disrupting core functionality"; those tools are the deployment surface, and any regression there is invisible until a deploy runs against the real CDN.
 
 ---
 
