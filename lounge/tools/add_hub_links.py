@@ -26,9 +26,10 @@ Usage: python add_hub_links.py [--tree site|upload] [--fetch-missing]
 import io, os, sys
 sys.path.insert(0, os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..')))
 from shared.tools.constants import ADDRESS_LOUNGE, PHONE_E164, PHONE, EMAIL, HOSTS
+from shared.tools.paths import prop_root
 from shared.tools.hub_links_lib import rd, wr, parse_tree_arg, patch_homepage, patch_footer
 
-ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+ROOT = prop_root('lounge')
 TREE = parse_tree_arg(valid=('site', 'upload'))
 UP = os.path.join(ROOT, TREE)
 if not os.path.isdir(UP):

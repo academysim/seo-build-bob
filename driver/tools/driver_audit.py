@@ -7,6 +7,7 @@ school, and the brief lists the exact phrasings that must never appear.
 import io, os, re, sys
 sys.path.insert(0, os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..')))
 from shared.tools.constants import GA4_TAG
+from shared.tools.paths import prop_root
 from shared.tools.audit_lib import (
     walk_pages, check_zero_pages, check_ai_phrases, check_british,
     check_tag_balance, check_json_ld, check_ga4,
@@ -17,9 +18,8 @@ from shared.tools.audit_lib import (
 # scratchpad name from the build session (driver_new), which no longer exists, and
 # os.walk over a missing directory yields nothing - so the audit printed
 # '0 pages, ALL OK' and exited 0. A gate that checks nothing must never pass.
-_HERE = os.path.dirname(os.path.abspath(__file__))
-_ROOT = os.path.normpath(os.path.join(_HERE, '..', '..'))
-D = sys.argv[1] if len(sys.argv) > 1 else os.path.join(_ROOT, 'driver', 'upload')
+_ROOT = prop_root('driver')
+D = sys.argv[1] if len(sys.argv) > 1 else os.path.join(_ROOT, 'upload')
 
 FORBIDDEN = [
     r'currently used in (florida )?schools',
@@ -149,7 +149,7 @@ check_zero_pages(pages, D)
 # (HTTP 200, in the sitemap) and exists only in driver/source/, never in
 # driver/upload/ - so it was invisible to this audit even after it was widened
 # to every .html. It carries neither disclosure.
-_sm = os.path.join(_ROOT, 'driver', 'site', 'sitemap.xml')
+_sm = os.path.join(_ROOT, 'site', 'sitemap.xml')
 fail = check_sitemap_coverage(pages, _sm, fail)
 
 print_final(pages, fail)

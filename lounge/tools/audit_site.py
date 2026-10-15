@@ -3,6 +3,7 @@
 import io, os, re, json, sys
 sys.path.insert(0, os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..')))
 from shared.tools.constants import GA4_TAG
+from shared.tools.paths import prop_root
 from shared.tools.audit_lib import (
     walk_pages, check_zero_pages, check_ai_phrases, check_ga4,
 )
@@ -16,9 +17,7 @@ from shared.tools.audit_lib import (
 # this audit cross-checks every sitemap URL against a file on disk. Note the
 # consequence: patches that fix_*.py writes only into upload/ are NOT seen
 # here. Pass the directory explicitly to audit something else.
-_HERE = os.path.dirname(os.path.abspath(__file__))
-_ROOT = os.path.normpath(os.path.join(_HERE, '..', '..'))
-D = sys.argv[1] if len(sys.argv) > 1 else os.path.join(_ROOT, 'lounge', 'site')
+D = sys.argv[1] if len(sys.argv) > 1 else os.path.join(prop_root('lounge'), 'site')
 
 AI = ['delve', 'testament to', 'seamless', 'elevate your', 'cutting-edge',
       'state-of-the-art', 'game-changer', 'in today', 'it is worth noting',

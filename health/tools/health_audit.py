@@ -9,6 +9,7 @@ disclaimer.
 import io, os, re, sys
 sys.path.insert(0, os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..')))
 from shared.tools.constants import GA4_TAG
+from shared.tools.paths import prop_root
 from shared.tools.audit_lib import (
     walk_pages, check_zero_pages, check_ai_phrases, check_british,
     check_tag_balance, check_json_ld, check_ga4, check_internal_links,
@@ -19,9 +20,8 @@ from shared.tools.audit_lib import (
 # scratchpad name from the build session (health_new), which no longer exists, and
 # os.walk over a missing directory yields nothing - so the audit printed
 # '0 pages, ALL OK' and exited 0. A gate that checks nothing must never pass.
-_HERE = os.path.dirname(os.path.abspath(__file__))
-_ROOT = os.path.normpath(os.path.join(_HERE, '..', '..'))
-D = sys.argv[1] if len(sys.argv) > 1 else os.path.join(_ROOT, 'health', 'upload')
+_ROOT = prop_root('health')
+D = sys.argv[1] if len(sys.argv) > 1 else os.path.join(_ROOT, 'upload')
 
 OUTCOME_VERB = r'(improve|improves|improving|boost|boosts|enhance|enhances|restore|restores|reverse|reverses|sharpen|sharpens)'
 HEALTH_NOUN = r'(cognition|cognitive|memory|brain|neurological|mobility|balance|reaction time|health|wellbeing)'
@@ -137,7 +137,7 @@ check_zero_pages(pages, D)
 # matched the live sitemap by discipline, not by construction, so a URL added
 # live and never added locally would have been audited by nothing and no gate
 # would have said so. Same family as the 0-pages guard above, one level out.
-_sm = os.path.join(_ROOT, 'health', 'site', 'sitemap.xml')
+_sm = os.path.join(_ROOT, 'site', 'sitemap.xml')
 fail = check_sitemap_coverage(pages, _sm, fail)
 
 print_final(pages, fail)
