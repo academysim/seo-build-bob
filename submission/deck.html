@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Academy Sim Racing x IBM Bob</title>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+@page{size:1600px 900px;margin:0}
+:root{--asphalt:#0e0e0e;--ink:#efede8;--soft:#9a968e;--line:#2a2a2a;--neon:#ffd21f;--ok:#4ade80;--bad:#ff5a5a}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--asphalt);color:var(--ink);font:26px/1.45 Barlow,sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.s{width:1600px;height:900px;position:relative;overflow:hidden;padding:84px 110px 0;page-break-after:always;break-after:page;background:var(--asphalt)}
+.s::after{content:"";position:absolute;left:0;right:0;bottom:0;height:12px;background:repeating-conic-gradient(#efede8 0 25%,#0e0e0e 0 50%) 0 0/12px 12px}
+.foot{position:absolute;left:110px;right:110px;bottom:34px;display:flex;justify-content:space-between;font:600 17px "Barlow Condensed";letter-spacing:.14em;text-transform:uppercase;color:#5f5c57}
+.k{font:600 21px "Barlow Condensed";letter-spacing:.16em;text-transform:uppercase;color:var(--neon);margin-bottom:16px}
+h1{font:900 112px/.9 "Big Shoulders Display";text-transform:uppercase}
+h2{font:900 72px/.95 "Big Shoulders Display";text-transform:uppercase;margin-bottom:36px;max-width:22ch}
+p{max-width:44ch;margin-bottom:18px}
+.soft{color:var(--soft)}
+code{font:500 .82em "IBM Plex Mono",monospace;color:#fff}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:64px}
+ul{list-style:none}
+li{padding:12px 0 12px 26px;border-bottom:1px solid var(--line);position:relative;font-size:24px}
+li::before{content:"";position:absolute;left:0;top:25px;width:10px;height:10px;background:var(--neon)}
+.big{font:900 120px/1 "Big Shoulders Display";color:var(--neon)}
+.stat{border-top:3px solid var(--neon);padding-top:14px}
+.stat span{display:block;font-size:22px;color:var(--soft);margin-top:6px;max-width:16ch}
+.term{background:#050505;border:1px solid var(--line);font:20px/1.6 "IBM Plex Mono",monospace;color:#d6d6d6;padding:22px 26px;white-space:pre}
+.term .g{color:var(--ok)}.term .r{color:var(--bad)}.term .w{color:#fff;font-weight:500}
+table{border-collapse:collapse;width:100%;font-size:22px}
+td{padding:11px 14px 11px 0;border-bottom:1px solid var(--line);vertical-align:top}
+td.p{font:600 22px "Barlow Condensed";color:var(--neon);width:90px}
+td.d{font:18px "IBM Plex Mono";color:var(--soft);width:120px;white-space:nowrap}
+</style>
+</head>
+<body>
+
+<!-- 1 -->
+<section class="s" style="padding:0">
+  <img src="lounge.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 12%;opacity:.5" alt="">
+  <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,14,14,.95) 0%,rgba(14,14,14,.6) 55%,rgba(14,14,14,.2) 100%)"></div>
+  <div style="position:relative;padding:150px 110px 0">
+    <p class="k">IBM Bob Hackathon &middot; Theme 2: Modernize What Matters</p>
+    <h1>Five years of<br>copy and paste,<br>cleaned up<br>by IBM Bob</h1>
+    <p style="margin-top:34px;font-size:28px">Academy Sim Racing, Tampa FL</p>
+  </div>
+  <div class="foot" style="color:#8a867f"><span>Malikai Madray</span><span>github.com/academysim/seo-build-bob</span></div>
+</section>
+
+<!-- 2 -->
+<section class="s">
+  <p class="k">01 &nbsp;Team and project</p>
+  <div class="cols" style="grid-template-columns:1.5fr 1fr;align-items:start">
+    <div>
+      <h2>A team of one, and five live websites</h2>
+      <p>I'm Malikai, owner of Academy Sim Racing, a sim racing lounge in Tampa. I'm not a developer. About five years ago I built our five websites from YouTube guides: lounge, events, builds, driver school and health.</p>
+      <p>Most of our customers now find us through those sites, so they can't go down while being fixed.</p>
+      <p class="soft">The project: modernize the Python code that builds all five sites, using IBM Bob, without changing anything a visitor sees.</p>
+    </div>
+    <img src="malik.jpg" style="width:100%;max-width:400px;justify-self:end" alt="">
+  </div>
+  <div class="foot"><span>Academy Sim Racing x IBM Bob</span><span>2</span></div>
+</section>
+
+<!-- 3 -->
+<section class="s">
+  <p class="k">02 &nbsp;The problem</p>
+  <h2>Every fix had to be made five times</h2>
+  <div class="cols">
+    <ul>
+      <li>Five audit scripts, 129 to 194 lines each, each with its own copy of the same checks</li>
+      <li>Four near-identical scripts for linking the sites together</li>
+      <li>Tracking tag, site addresses and phone number typed out in many files</li>
+    </ul>
+    <ul>
+      <li>13 hand-written test cases and no test runner</li>
+      <li>136 shipped files that nothing checked at all</li>
+      <li>One wrong byte can break a booking form, a tracking tag or a search ranking</li>
+    </ul>
+  </div>
+  <div class="foot"><span>Academy Sim Racing x IBM Bob</span><span>3</span></div>
+</section>
+
+<!-- 4 -->
+<section class="s">
+  <p class="k">03 &nbsp;The approach</p>
+  <h2>Build the safety net first</h2>
+  <div class="cols" style="align-items:start">
+    <div>
+      <p>Before any code changed, every file the sites ship got a SHA-256 fingerprint: 263 of them.</p>
+      <p>Every step after that had to end with the fingerprints matching and the tests passing. Bob worked from a written plan, one phase per commit, with deploy credentials switched off.</p>
+      <p class="soft">The demo proves the net works: one added character in the live homepage is caught, undone, and everything matches again.</p>
+    </div>
+<div class="term"><span class="r">Edited lounge/upload/index.html: added one '!'</span>
+<span class="w">&gt; python shared/tools/verify_baseline.py</span>
+OK  127 files match BASELINE-site-hashes.txt
+CHANGED : lounge/upload/index.html
+
+<span class="w">1/263 files FAILED</span>
+<span class="r">exit 1</span>
+<span class="g">Change undone.</span>
+OK  127 files match BASELINE-site-hashes.txt
+OK  136 files match BASELINE-upload-hashes.txt
+<span class="g">exit 0</span></div>
+  </div>
+  <div class="foot"><span>Academy Sim Racing x IBM Bob</span><span>4</span></div>
+</section>
+
+<!-- 5 -->
+<section class="s">
+  <p class="k">04 &nbsp;How Bob was used</p>
+  <h2>Bob did the work, phase by phase</h2>
+  <table>
+    <tr><td class="p">Plan</td><td class="d">Oct 5</td><td>Read the legacy code and wrote <code>MODERNIZATION-PLAN.md</code>: phases P0 to P3</td></tr>
+    <tr><td class="p">P0&ndash;P1</td><td class="d">Oct 5</td><td>Fingerprint check, test scaffold, <code>constants.py</code>, fingerprints extended to all 136 shipped files</td></tr>
+    <tr><td class="p">P2</td><td class="d">Oct 5</td><td>Tests that lock in old behaviour first, then one shared <code>audit_lib.py</code>; all five audits moved onto it, one commit each</td></tr>
+    <tr><td class="p">P3</td><td class="d">Oct 5</td><td>Tests for page generation, form handling, breadcrumbs; dry-run mode for the full build</td></tr>
+    <tr><td class="p">CI</td><td class="d">Oct 14</td><td>GitHub runs every check on every push; read-only audit of the live sites (115 pages, 0 failures)</td></tr>
+    <tr><td class="p">More</td><td class="d">Oct 15</td><td>Offline tests for the network tools; shared <code>paths.py</code> for 9 scripts; architecture diagram</td></tr>
+  </table>
+  <p class="soft" style="margin-top:22px;max-width:none">Every commit is listed in the repo (<code>BOB-COMMITS.txt</code> and the git history) and on the demo page.</p>
+  <div class="foot"><span>Academy Sim Racing x IBM Bob</span><span>5</span></div>
+</section>
+
+<!-- 6 -->
+<section class="s">
+  <p class="k">05 &nbsp;Results</p>
+  <h2>Cleaner code, same websites</h2>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin-top:20px">
+    <div class="stat"><div class="big">263</div><span>shipped files still byte-identical</span></div>
+    <div class="stat"><div class="big">202</div><span>automated tests, up from 13</span></div>
+    <div class="stat"><div class="big">5&rarr;1</div><span>copies of the audit checks</span></div>
+    <div class="stat"><div class="big">115</div><span>live pages audited, 0 failures</span></div>
+  </div>
+  <p style="margin-top:56px;max-width:60ch">A fresh clone rebuilds all five sites and passes every check on GitHub. The five site audits print the same results they did before the refactor.</p>
+  <div class="foot"><span>Academy Sim Racing x IBM Bob</span><span>6</span></div>
+</section>
+
+<!-- 7 -->
+<section class="s">
+  <p class="k">06 &nbsp;Learnings and next steps</p>
+  <h2>What we learned, what comes next</h2>
+  <div class="cols" style="align-items:start">
+    <div>
+      <p class="k" style="color:var(--soft)">Learned</p>
+      <ul>
+        <li>Write the safety check before the refactor. It's what made it safe to let an AI agent touch live code.</li>
+        <li>Lock in old behaviour with tests before moving it. "It still runs" isn't proof.</li>
+        <li>Start Bob in the right folder. Twice it ran in the wrong one and built from scratch instead.</li>
+        <li>Check the write-up like the code. One summary called a partial refactor done; we corrected it.</li>
+      </ul>
+    </div>
+    <div>
+      <p class="k" style="color:var(--soft)">Next</p>
+      <ul>
+        <li>Move the remaining 42 older scripts onto <code>paths.py</code></li>
+        <li>Bring the deploy tools under tests against a staging site</li>
+        <li>Make the fingerprint check a required step before every deploy</li>
+        <li>Run the live-site audit on a schedule</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot"><span>Academy Sim Racing x IBM Bob</span><span>7</span></div>
+</section>
+
+<!-- 8 -->
+<section class="s">
+  <p class="k">Links</p>
+  <h2>See it for yourself</h2>
+  <table style="font-size:28px;max-width:1100px">
+    <tr><td class="p" style="width:170px">Demo video</td><td>youtu.be/fh56qSFPcsE</td></tr>
+    <tr><td class="p">Demo page</td><td>seo-bob-build.netlify.app</td></tr>
+    <tr><td class="p">Code</td><td>github.com/academysim/seo-build-bob</td></tr>
+  </table>
+<div class="term" style="margin-top:40px;max-width:1100px">git clone https://github.com/academysim/seo-build-bob
+cd seo-build-bob
+python shared/tools/build_all.py
+python shared/tools/verify_baseline.py
+python -m unittest discover -s shared/tests</div>
+  <div class="foot"><span>Academy Sim Racing x IBM Bob</span><span>8</span></div>
+</section>
+
+</body>
+</html>

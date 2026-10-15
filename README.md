@@ -5,7 +5,7 @@ Submission for **Building with IBM Bob** (AngelHack x IBM, track: *Modernize Wha
 This is the static-site build system behind five live marketing subdomains of Academy Sim Racing
 (lounge, events, builds, driver, health). It started as a pile of one-off generator scripts with copy-pasted
 audits and hard-coded URLs. During the hackathon, IBM Bob refactored it into shared libraries, added a
-one-command build, a byte-for-byte regression gate and a 171-test suite, **without changing a single byte
+one-command build, a byte-for-byte regression gate and a test suite (now 202 tests), **without changing a single byte
 of the deployed output**.
 
 - What Bob changed, commit by commit: [`BOB-COMMITS.txt`](BOB-COMMITS.txt)
