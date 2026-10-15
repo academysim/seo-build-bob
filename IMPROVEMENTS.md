@@ -38,7 +38,7 @@ Baseline commit: `8e5768e` — *"Hackathon fork: disable Netlify deploy credenti
 | `3e65996` | test — `test_add_breadcrumbs.py`: `trail()` with linked, unlinked and mixed crumbs |
 | `92501b5` | feat — `build_all.py --dry-run`: prints STEPS without clearing or executing; `test_build_all_dry_run.py` included |
 | *(this)* | test — `test_release_check.py` + `test_audit_discovery.py`: offline HTTP mocks (healthy, 404, redirect, timeout) for both live-site tools |
-| *(this)* | P2-D — `shared/tools/paths.py` (`repo_root()` / `prop_root(key)`); 9 pipeline scripts ported (5 audits + 4 `add_hub_links.py`); 26 ins / 23 del across 9 files; 263 baseline files byte-identical after full rebuild |
+| *(this)* | P2-D — `shared/tools/paths.py` (`repo_root()` / `prop_root(key)`); **partial**: 9 pipeline scripts ported (5 audits + 4 `add_hub_links.py`), 42 remain on old pattern; 26 ins / 23 del across 9 files; 263 baseline files byte-identical after full rebuild |
 
 ---
 
@@ -94,6 +94,8 @@ OK
 ---
 
 ## Deliberately not done
+
+**P2-D `paths.py` refactor — partial** — 9 pipeline scripts (the 5 site audits and 4 `add_hub_links.py` hub patchers) were ported to `prop_root(key)`. The remaining 42 scripts in `*/tools/` still derive their root with the old `os.path.dirname(os.path.abspath(__file__))` pattern. These are content-generation, fix, deploy, and utility scripts; touching 42 call-sites in a single pass before the deadline introduced more risk than the improvement warranted. Left for a follow-up sweep.
 
 **Network and deploy tools kept out of scope** — `deploy.py`, `gsc_monitor.py` and the Netlify library were not refactored. `release_check.py` and `audit_discovery.py` received only the P2-C change (hostnames read from `constants.HOSTS`); their HTTP logic is now covered by offline mock tests (`test_release_check.py` and `test_audit_discovery.py`) but they are not run end to end, because they talk to the live sites. The hackathon constraint is "modernize without disrupting core functionality"; those tools are the deployment surface, and any regression there is invisible until a deploy runs against the real CDN.
 
