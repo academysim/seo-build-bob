@@ -5,7 +5,7 @@ Submission for **Building with IBM Bob** (AngelHack x IBM, track: *Modernize Wha
 This is the static-site build system behind five live marketing subdomains of Academy Sim Racing
 (lounge, events, builds, driver, health). It started as a pile of one-off generator scripts with copy-pasted
 audits and hard-coded URLs. During the hackathon, IBM Bob refactored it into shared libraries, added a
-dry-run mode to the existing build, a byte-for-byte regression gate and a test suite (now 202 tests), **without changing a single byte
+dry-run mode to the existing build, a byte-for-byte regression gate and a test suite (now 204 tests), **without changing a single byte
 of the deployed output**.
 
 - What Bob changed, commit by commit: [`BOB-COMMITS.txt`](BOB-COMMITS.txt)
@@ -17,7 +17,7 @@ of the deployed output**.
 ```bash
 python shared/tools/build_all.py              # rebuild every property, exit 0
 python shared/tools/verify_baseline.py        # 263 files (127 source, 136 deployed) byte-identical to the pre-Bob baseline
-python -m unittest discover -s shared/tests   # 202 tests, OK
+python -m unittest discover -s shared/tests   # 204 tests, OK
 ```
 
 Deploy scripts exist for completeness but need credentials that are not in this repo; nothing here can
@@ -87,7 +87,7 @@ Run the full test suite:
 python -m unittest discover -s shared/tests
 ```
 
-202 tests across 13 files covering `audit_lib`, `hub_links_lib`, `live_audit`, `verify_baseline`, `stage`, `check_staged`, `gen_llms`, `netlify_form_rewrite`, `add_breadcrumbs`, `build_all --dry-run`, `release_check` (HTTP fetch), and `audit_discovery` (HTTP fetch + sitemap + audit). All exit 0.
+204 tests across 13 files covering `audit_lib`, `hub_links_lib`, `live_audit`, `verify_baseline`, `stage`, `check_staged`, `gen_llms`, `netlify_form_rewrite`, `add_breadcrumbs`, `build_all --dry-run`, `release_check` (HTTP fetch), and `audit_discovery` (HTTP fetch + sitemap + audit). All exit 0.
 
 See [`IMPROVEMENTS.md`](IMPROVEMENTS.md) for the full audit trail and one-command verification of all checks.
 

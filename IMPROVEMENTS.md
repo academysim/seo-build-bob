@@ -78,16 +78,16 @@ $ python health/tools/health_audit.py
 
 `shared/tests/test_audits.py` runs each audit against a fixture with a known defect (missing disclaimer, wrong GA4 tag, etc.) and asserts exit code 1. The same fixture *without* the defect asserts exit code 0. This confirms that porting to `audit_lib` did not accidentally relax any check.
 
-### Test count: 13 ad-hoc cases → 202 unittest tests
+### Test count: 13 ad-hoc cases → 204 unittest tests
 
 | State | Test files | Test count | Runner |
 |---|---|---|---|
 | Baseline (`8e5768e`) | 1 (ad-hoc script) | 13 hand-rolled cases | `python shared/tools/test_discovery_gate.py` |
-| After Bob | 13 | **202** | `python -m unittest discover -s shared/tests` |
+| After Bob | 13 | **204** | `python -m unittest discover -s shared/tests` |
 
 ```
 $ python -m unittest discover -s shared/tests
-Ran 202 tests in 26s
+Ran 204 tests in 24s
 OK
 ```
 

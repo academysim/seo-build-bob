@@ -47,10 +47,11 @@ This is an existing project: the code that builds the five live Academy Sim Raci
 - Offline tests for the two tools that talk to the live sites (185 to 202 tests)
 - Shared `paths.py`, with 9 scripts moved onto it (about 40 older scripts left on the old pattern, on purpose)
 - Architecture diagram in the README
+- `verify_baseline.py` now also fails if `upload/` holds a file that isn't in the fingerprint list (202 to 204 tests, commit 6366251)
 
 Full details and counts: [IMPROVEMENTS.md](../IMPROVEMENTS.md).
 
-Which commits are Bob's: the Oct 5 commits are listed in [BOB-COMMITS.txt](../BOB-COMMITS.txt) (that work ran in a separate working copy). After Oct 5, Bob made these commits in this repo: f3b2752, 151430c, 7703426, baabde4, 3d85d48, 8f26a27, c706882. The other commits (repo setup, the CI fix 14af365, the demo script and the submission files) were made by hand or with Claude Code.
+Which commits are Bob's: the Oct 5 commits are listed in [BOB-COMMITS.txt](../BOB-COMMITS.txt) (that work ran in a separate working copy). After Oct 5, Bob made these commits in this repo: f3b2752, 151430c, 7703426, baabde4, 3d85d48, 8f26a27, c706882, 6366251. The other commits (repo setup, the CI fix 14af365, the demo script and the submission files) were made by hand or with Claude Code.
 
 Note on the video: the live Bob run shown at 1:51 to 2:16 was started in the wrong folder, so the test it wrote there is not in this repo. It's included because it shows Bob working in real time; the lesson is on slide 7 of the deck.
 
@@ -64,4 +65,6 @@ python shared/tools/verify_baseline.py
 python -m unittest discover -s shared/tests
 ```
 
-Expected: both fingerprint lines print `OK` (127 + 136 files) and `Ran 202 tests ... OK`.
+Expected: both fingerprint lines print `OK` (127 + 136 files) and `Ran 204 tests ... OK`.
+
+The video, deck and demo page say 202 tests: they were made before the last Bob commit (6366251), which added 2 tests.
