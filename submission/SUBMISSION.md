@@ -24,7 +24,7 @@ Academy Sim Racing runs five live websites that I built five years ago with no c
 - GitHub Actions (`.github/workflows/gates.yml`)
 - Netlify (hosting for the five live sites and the demo page)
 - Google Analytics 4 (tag presence checked by the audits)
-- Claude Code (used to review Bob's commits and check its numbers, not to write the refactor)
+- Claude Code: reviewed Bob's commits and numbers, fixed one CI step, and helped prepare the video and submission materials. The modernization itself was done by Bob.
 
 ## Improvements made during the hackathon
 
