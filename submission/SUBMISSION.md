@@ -39,7 +39,7 @@ This is an existing project: the code that builds the five live Academy Sim Raci
 - Added tests for staging, page generation, form handling and breadcrumbs, plus a dry-run mode for the full build
 
 **Oct 14**
-- GitHub Actions runs the fingerprint check, the test suite and all five audits on every push
+- GitHub Actions runs the fingerprint check, the test suite and all five audits on every push. Bob's first version failed on GitHub because built files aren't stored in the repo; one CI step was fixed by hand (14af365) to build them first.
 - Fixed files that were being left open
 - Added a read-only audit of the live sites (115 pages, 0 failures)
 
@@ -48,7 +48,11 @@ This is an existing project: the code that builds the five live Academy Sim Raci
 - Shared `paths.py`, with 9 scripts moved onto it (42 older scripts left on the old pattern, on purpose)
 - Architecture diagram in the README
 
-Full details and counts: [IMPROVEMENTS.md](../IMPROVEMENTS.md). Every Bob commit: [BOB-COMMITS.txt](../BOB-COMMITS.txt) and the git history.
+Full details and counts: [IMPROVEMENTS.md](../IMPROVEMENTS.md).
+
+Which commits are Bob's: the Oct 5 commits are listed in [BOB-COMMITS.txt](../BOB-COMMITS.txt) (that work ran in a separate working copy). After Oct 5, Bob made these commits in this repo: f3b2752, 151430c, 7703426, baabde4, 3d85d48, 8f26a27, c706882. The other commits (repo setup, the CI fix 14af365, the demo script and the submission files) were made by hand or with Claude Code.
+
+Note on the video: the live Bob run shown at 1:51 to 2:16 was started in the wrong folder, so the test it wrote there is not in this repo. It's included because it shows Bob working in real time; the lesson is on slide 7 of the deck.
 
 ## Testing instructions
 

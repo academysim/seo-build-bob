@@ -87,9 +87,9 @@ td.d{font:18px "IBM Plex Mono";color:var(--soft);width:120px;white-space:nowrap}
   <h2>Build the safety net first</h2>
   <div class="cols" style="align-items:start">
     <div>
-      <p>Before any code changed, every file the sites ship got a SHA-256 fingerprint: 263 of them.</p>
+      <p>Every file the sites ship got a SHA-256 fingerprint from the pre-Bob code: 263 of them. 127 were recorded before Bob started; Bob added the other 136 from a pre-Bob build.</p>
       <p>Every step after that had to end with the fingerprints matching and the tests passing. Bob worked from a written plan, one phase per commit, with deploy credentials switched off.</p>
-      <p class="soft">The demo proves the net works: one added character in the live homepage is caught, undone, and everything matches again.</p>
+      <p class="soft">The demo proves the net works: one added character in the lounge homepage file is caught, undone, and everything matches again.</p>
     </div>
 <div class="term"><span class="r">Edited lounge/upload/index.html: added one '!'</span>
 <span class="w">&gt; python shared/tools/verify_baseline.py</span>
@@ -112,10 +112,10 @@ OK  136 files match BASELINE-upload-hashes.txt
   <h2>Bob did the work, phase by phase</h2>
   <table>
     <tr><td class="p">Plan</td><td class="d">Oct 5</td><td>Read the legacy code and wrote <code>MODERNIZATION-PLAN.md</code>: phases P0 to P3</td></tr>
-    <tr><td class="p">P0&ndash;P1</td><td class="d">Oct 5</td><td>Fingerprint check, test scaffold, <code>constants.py</code>, fingerprints extended to all 136 shipped files</td></tr>
+    <tr><td class="p">P0-P1</td><td class="d">Oct 5</td><td>Fingerprint check, test scaffold, <code>constants.py</code>, fingerprints extended to all 136 shipped files</td></tr>
     <tr><td class="p">P2</td><td class="d">Oct 5</td><td>Tests that lock in old behaviour first, then one shared <code>audit_lib.py</code>; all five audits moved onto it, one commit each</td></tr>
     <tr><td class="p">P3</td><td class="d">Oct 5</td><td>Tests for page generation, form handling, breadcrumbs; dry-run mode for the full build</td></tr>
-    <tr><td class="p">CI</td><td class="d">Oct 14</td><td>GitHub runs every check on every push; read-only audit of the live sites (115 pages, 0 failures)</td></tr>
+    <tr><td class="p">CI</td><td class="d">Oct 14</td><td>GitHub runs every check on every push (one CI step later fixed by hand); read-only audit of the live sites (115 pages, 0 failures)</td></tr>
     <tr><td class="p">More</td><td class="d">Oct 15</td><td>Offline tests for the network tools; shared <code>paths.py</code> for 9 scripts; architecture diagram</td></tr>
   </table>
   <p class="soft" style="margin-top:22px;max-width:none">Every commit is listed in the repo (<code>BOB-COMMITS.txt</code> and the git history) and on the demo page.</p>

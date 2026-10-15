@@ -57,19 +57,19 @@ None are stored here. Deploy scripts read `NETLIFY_AUTH_TOKEN` from a local env 
 
 Each property has non-negotiables baked into its audit rather than left to care:
 
-- **all** — no em dashes in authored copy, no AI-tell phrasing, American spelling, GA4 present, one `<h1>`, canonical matching path, valid JSON-LD, balanced tags, no broken internal links
-- **lounge** — no class on `<body>` that sets `overflow:hidden`; it propagates to the viewport and kills scrolling while leaving scripted scrolling working, so only a human with a mouse finds it
-- **events** — an "official Formula 1/NASCAR/IMSA simulator" phrase must be followed by a denial; every city page must state it is not a branch
-- **builds** — no price outside the five published builds
-- **driver** — banned phrasings around school installations, and every page must carry the explicit "no simulators installed in any school" disclosure
-- **health** — no outcome verb applied to a health noun, and every page must carry the "not a medical provider" scope disclaimer
+- **all**, no em dashes in authored copy, no AI-tell phrasing, American spelling, GA4 present, one `<h1>`, canonical matching path, valid JSON-LD, balanced tags, no broken internal links
+- **lounge**, no class on `<body>` that sets `overflow:hidden`; it propagates to the viewport and kills scrolling while leaving scripted scrolling working, so only a human with a mouse finds it
+- **events**, an "official Formula 1/NASCAR/IMSA simulator" phrase must be followed by a denial; every city page must state it is not a branch
+- **builds**, no price outside the five published builds
+- **driver**, banned phrasings around school installations, and every page must carry the explicit "no simulators installed in any school" disclosure
+- **health**, no outcome verb applied to a health noun, and every page must carry the "not a medical provider" scope disclaimer
 
 ## Verify
 
 ### CI
 
 Every push and pull request runs all seven safety gates on `ubuntu-latest` (Python 3.12) via
-[`.github/workflows/gates.yml`](.github/workflows/gates.yml). The job has seven named steps — one per gate —
+[`.github/workflows/gates.yml`](.github/workflows/gates.yml). The job has seven named steps, one per gate -
 so a failure identifies exactly which check broke. No secrets, credentials, or network calls are used beyond
 `actions/checkout` and `actions/setup-python`.
 
@@ -87,7 +87,7 @@ Run the full test suite:
 python -m unittest discover -s shared/tests
 ```
 
-202 tests across 12 files covering `audit_lib`, `hub_links_lib`, `constants`, `verify_baseline`, `stage`, `check_staged`, `gen_llms`, `netlify_form_rewrite`, `add_breadcrumbs`, `build_all --dry-run`, `release_check` (HTTP fetch), and `audit_discovery` (HTTP fetch + sitemap + audit). All exit 0.
+202 tests across 13 files covering `audit_lib`, `hub_links_lib`, `live_audit`, `verify_baseline`, `stage`, `check_staged`, `gen_llms`, `netlify_form_rewrite`, `add_breadcrumbs`, `build_all --dry-run`, `release_check` (HTTP fetch), and `audit_discovery` (HTTP fetch + sitemap + audit). All exit 0.
 
 See [`IMPROVEMENTS.md`](IMPROVEMENTS.md) for the full audit trail and one-command verification of all checks.
 
@@ -105,7 +105,7 @@ flowchart LR
 
     P --> U["&lt;property&gt;/upload/\n(lounge · events · builds\ndriver · health)"]
 
-    U --> V["shared/tools/verify_baseline.py\n(fingerprint gate — 263 files\nbyte-identical to pre-Bob baseline)"]
+    U --> V["shared/tools/verify_baseline.py\n(fingerprint gate, 263 files\nbyte-identical to pre-Bob baseline)"]
 
     V --> CI[".github/workflows/gates.yml\n(7 safety gates on ubuntu-latest)"]
 
