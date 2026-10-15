@@ -13,7 +13,7 @@ Theme 2: Modernize What Matters
 
 ## Project description
 
-Academy Sim Racing runs five live websites that I built five years ago with no coding background, from copy-pasted Python scripts. Every fix had to be made five times, and nothing caught mistakes. With IBM Bob, we modernized the code without changing what visitors see: one shared audit engine instead of five copies, business details defined once, a one-command build, and 202 automated tests where there were 13. Every one of the 263 shipped files is still byte-identical to the pre-Bob version, and GitHub runs every check on each push.
+Academy Sim Racing runs five live websites that I built five years ago with no coding background, from copy-pasted Python scripts. Every fix had to be made five times, and there was no test suite to catch mistakes. With IBM Bob, we modernized the code without changing what visitors see: one shared audit engine instead of five copies, shared constants for business details, a dry-run mode for the build, and 202 automated tests where there were 13 hand-written checks. All 263 fingerprinted files (136 deployed, 127 source) are still byte-identical to the pre-Bob version, and GitHub checks every push.
 
 ## Tech stack
 
@@ -32,7 +32,7 @@ This is an existing project: the code that builds the five live Academy Sim Raci
 
 **Oct 5**
 - Wrote `MODERNIZATION-PLAN.md` from a read of the legacy code
-- Added `verify_baseline.py`: every shipped file checked against its pre-Bob fingerprint (263 files)
+- Added `verify_baseline.py`: 263 files (127 source, 136 deployed) checked against their pre-Bob fingerprints
 - Added `constants.py` for the tracking tag, site addresses, phone and email
 - Wrote tests that lock in the five audits' behaviour, then replaced the five copies with one shared `audit_lib.py`
 - Replaced four near-identical link scripts with `hub_links_lib.py`
@@ -45,7 +45,7 @@ This is an existing project: the code that builds the five live Academy Sim Raci
 
 **Oct 15**
 - Offline tests for the two tools that talk to the live sites (185 to 202 tests)
-- Shared `paths.py`, with 9 scripts moved onto it (42 older scripts left on the old pattern, on purpose)
+- Shared `paths.py`, with 9 scripts moved onto it (about 40 older scripts left on the old pattern, on purpose)
 - Architecture diagram in the README
 
 Full details and counts: [IMPROVEMENTS.md](../IMPROVEMENTS.md).

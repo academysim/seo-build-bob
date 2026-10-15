@@ -5,7 +5,7 @@ Submission for **Building with IBM Bob** (AngelHack x IBM, track: *Modernize Wha
 This is the static-site build system behind five live marketing subdomains of Academy Sim Racing
 (lounge, events, builds, driver, health). It started as a pile of one-off generator scripts with copy-pasted
 audits and hard-coded URLs. During the hackathon, IBM Bob refactored it into shared libraries, added a
-one-command build, a byte-for-byte regression gate and a test suite (now 202 tests), **without changing a single byte
+dry-run mode to the existing build, a byte-for-byte regression gate and a test suite (now 202 tests), **without changing a single byte
 of the deployed output**.
 
 - What Bob changed, commit by commit: [`BOB-COMMITS.txt`](BOB-COMMITS.txt)
@@ -16,7 +16,7 @@ of the deployed output**.
 
 ```bash
 python shared/tools/build_all.py              # rebuild every property, exit 0
-python shared/tools/verify_baseline.py        # 263 deployed files byte-identical to the pre-Bob baseline
+python shared/tools/verify_baseline.py        # 263 files (127 source, 136 deployed) byte-identical to the pre-Bob baseline
 python -m unittest discover -s shared/tests   # 202 tests, OK
 ```
 
@@ -79,7 +79,7 @@ Run offline (no network required):
 python shared/tools/verify_baseline.py
 ```
 
-Checks that all 263 deployed files (127 in `site/` + 136 in `upload/`) are byte-identical to the pre-Bob baseline. Exits 0 on a clean repo, non-zero on any mismatch.
+Checks that all 263 fingerprinted files (127 source files in `site/` + 136 deployed files in `upload/`) are byte-identical to the pre-Bob baseline. Exits 0 on a clean repo, non-zero on any mismatch.
 
 Run the full test suite:
 
@@ -109,6 +109,6 @@ flowchart LR
 
     V --> CI[".github/workflows/gates.yml\n(7 safety gates on ubuntu-latest)"]
 
-    CI --> L["shared/tools/live_audit.py\n(fetch live sitemaps,\nrun per-page checks)"]
+    P -.-> L["shared/tools/live_audit.py\n(fetch live sitemaps,\nrun per-page checks;\nrun by hand, not part of CI)"]
 ```
 

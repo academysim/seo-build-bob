@@ -24,7 +24,7 @@ Baseline commit: `8e5768e`, *"Hackathon fork: disable Netlify deploy credentials
 | `e360df8` | P0, `verify_baseline.py` + `shared/tests/` scaffold; `test_verify_baseline.py` (first proper unittest file) |
 | `b28ccb5` | P1-A, `shared/tools/constants.py`: `GA4_TAG`, `HOSTS`, `ADDRESS`, `PHONE`, `EMAIL` extracted once |
 | `89952c3` | P1-B(i), `BASELINE-upload-hashes.txt` (136 files); `verify_baseline.py` extended to cover both baselines |
-| `84e096b` | P1-C, `test_stage.py` (60 cases) and `test_check_staged.py` (37 cases) |
+| `84e096b` | P1-C, `test_stage.py` (32 cases) and `test_check_staged.py` (8 cases) |
 | `d19360a` | P2-A0, `test_audits.py`: characterization tests that run a real audit against a defect-injected fixture and assert it catches the injected fault |
 | `963607e` | P2-A, `audit_lib.py` (164 lines, shared audit engine); events audit ported, 151 → 107 lines |
 | `0cb41c5` | P2-A, builds audit ported, 181 → 148 lines |
@@ -38,7 +38,7 @@ Baseline commit: `8e5768e`, *"Hackathon fork: disable Netlify deploy credentials
 | `3e65996` | test, `test_add_breadcrumbs.py`: `trail()` with linked, unlinked and mixed crumbs |
 | `92501b5` | feat, `build_all.py --dry-run`: prints STEPS without clearing or executing; `test_build_all_dry_run.py` included |
 | *(this)* | test, `test_release_check.py` + `test_audit_discovery.py`: offline HTTP mocks (healthy, 404, redirect, timeout) for both live-site tools |
-| *(this)* | P2-D, `shared/tools/paths.py` (`repo_root()` / `prop_root(key)`); **partial**: 9 pipeline scripts ported (5 audits + 4 `add_hub_links.py`), 42 remain on old pattern; 26 ins / 23 del across 9 files; 263 baseline files byte-identical after full rebuild |
+| *(this)* | P2-D, `shared/tools/paths.py` (`repo_root()` / `prop_root(key)`); **partial**: 9 pipeline scripts ported (5 audits + 4 `add_hub_links.py`), the rest (about 40) remain on the old pattern; 26 ins / 23 del across 9 files; 263 baseline files byte-identical after full rebuild |
 
 ---
 
@@ -83,7 +83,7 @@ $ python health/tools/health_audit.py
 | State | Test files | Test count | Runner |
 |---|---|---|---|
 | Baseline (`8e5768e`) | 1 (ad-hoc script) | 13 hand-rolled cases | `python shared/tools/test_discovery_gate.py` |
-| After Bob | 12 | **202** | `python -m unittest discover -s shared/tests` |
+| After Bob | 13 | **202** | `python -m unittest discover -s shared/tests` |
 
 ```
 $ python -m unittest discover -s shared/tests
@@ -95,7 +95,7 @@ OK
 
 ## Deliberately not done
 
-**P2-D `paths.py` refactor, partial**, 9 pipeline scripts (the 5 site audits and 4 `add_hub_links.py` hub patchers) were ported to `prop_root(key)`. The remaining 42 scripts in `*/tools/` still derive their root with the old `os.path.dirname(os.path.abspath(__file__))` pattern. These are content-generation, fix, deploy, and utility scripts; touching 42 call-sites in a single pass before the deadline introduced more risk than the improvement warranted. Left for a follow-up sweep.
+**P2-D `paths.py` refactor, partial**, 9 pipeline scripts (the 5 site audits and 4 `add_hub_links.py` hub patchers) were ported to `prop_root(key)`. The remaining scripts (about 40) in `*/tools/` still derive their root with the old `os.path.dirname(os.path.abspath(__file__))` pattern. These are content-generation, fix, deploy, and utility scripts; touching 42 call-sites in a single pass before the deadline introduced more risk than the improvement warranted. Left for a follow-up sweep.
 
 **Network and deploy tools kept out of scope**, `deploy.py`, `gsc_monitor.py` and the Netlify library were not refactored. `release_check.py` and `audit_discovery.py` received only the P2-C change (hostnames read from `constants.HOSTS`); their HTTP logic is now covered by offline mock tests (`test_release_check.py` and `test_audit_discovery.py`) but they are not run end to end, because they talk to the live sites. The hackathon constraint is "modernize without disrupting core functionality"; those tools are the deployment surface, and any regression there is invisible until a deploy runs against the real CDN.
 
@@ -111,11 +111,12 @@ python builds/tools/builds_audit.py && \
 python driver/tools/driver_audit.py && \
 python health/tools/health_audit.py && \
 python shared/tools/build_all.py --dry-run && \
+python shared/tools/build_all.py && \
 python shared/tools/verify_baseline.py && \
 python -m unittest discover -s shared/tests
 ```
 
-All eight commands exit 0 on a clean checkout with no network access required.
+All nine commands exit 0 on a clean checkout with no network access required.
 
 ### Independent check (outside Bob)
 

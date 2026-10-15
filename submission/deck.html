@@ -87,7 +87,7 @@ td.d{font:18px "IBM Plex Mono";color:var(--soft);width:120px;white-space:nowrap}
   <h2>Build the safety net first</h2>
   <div class="cols" style="align-items:start">
     <div>
-      <p>Every file the sites ship got a SHA-256 fingerprint from the pre-Bob code: 263 of them. 127 were recorded before Bob started; Bob added the other 136 from a pre-Bob build.</p>
+      <p>Every source and deployed file got a SHA-256 fingerprint from the pre-Bob code: 263 in all. The 127 source files were recorded before Bob started; Bob added the 136 deployed files from a pre-Bob build.</p>
       <p>Every step after that had to end with the fingerprints matching and the tests passing. Bob worked from a written plan, one phase per commit, with deploy credentials switched off.</p>
       <p class="soft">The demo proves the net works: one added character in the lounge homepage file is caught, undone, and everything matches again.</p>
     </div>
@@ -115,10 +115,10 @@ OK  136 files match BASELINE-upload-hashes.txt
     <tr><td class="p">P0-P1</td><td class="d">Oct 5</td><td>Fingerprint check, test scaffold, <code>constants.py</code>, fingerprints extended to all 136 shipped files</td></tr>
     <tr><td class="p">P2</td><td class="d">Oct 5</td><td>Tests that lock in old behaviour first, then one shared <code>audit_lib.py</code>; all five audits moved onto it, one commit each</td></tr>
     <tr><td class="p">P3</td><td class="d">Oct 5</td><td>Tests for page generation, form handling, breadcrumbs; dry-run mode for the full build</td></tr>
-    <tr><td class="p">CI</td><td class="d">Oct 14</td><td>GitHub runs every check on every push (one CI step later fixed by hand); read-only audit of the live sites (115 pages, 0 failures)</td></tr>
+    <tr><td class="p">CI</td><td class="d">Oct 14</td><td>GitHub runs the build, fingerprints, tests and five audits on every push (one CI step later fixed by hand); read-only audit of the live sites (115 pages, 0 failures)</td></tr>
     <tr><td class="p">More</td><td class="d">Oct 15</td><td>Offline tests for the network tools; shared <code>paths.py</code> for 9 scripts; architecture diagram</td></tr>
   </table>
-  <p class="soft" style="margin-top:22px;max-width:none">Every commit is listed in the repo (<code>BOB-COMMITS.txt</code> and the git history) and on the demo page.</p>
+  <p class="soft" style="margin-top:22px;max-width:none">Every commit is listed in the repo (<code>BOB-COMMITS.txt</code> and the git history); the main ones are on the demo page.</p>
   <div class="foot"><span>Academy Sim Racing x IBM Bob</span><span>5</span></div>
 </section>
 
@@ -127,12 +127,12 @@ OK  136 files match BASELINE-upload-hashes.txt
   <p class="k">05 &nbsp;Results</p>
   <h2>Cleaner code, same websites</h2>
   <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin-top:20px">
-    <div class="stat"><div class="big">263</div><span>shipped files still byte-identical</span></div>
+    <div class="stat"><div class="big">263</div><span>fingerprinted files still byte-identical</span></div>
     <div class="stat"><div class="big">202</div><span>automated tests, up from 13</span></div>
     <div class="stat"><div class="big">5&rarr;1</div><span>copies of the audit checks</span></div>
     <div class="stat"><div class="big">115</div><span>live pages audited, 0 failures</span></div>
   </div>
-  <p style="margin-top:56px;max-width:60ch">A fresh clone rebuilds all five sites and passes every check on GitHub. The five site audits print the same results they did before the refactor.</p>
+  <p style="margin-top:56px;max-width:60ch">A fresh clone rebuilds all five sites and passes all seven gates on GitHub. The five site audits print the same results they did before the refactor.</p>
   <div class="foot"><span>Academy Sim Racing x IBM Bob</span><span>6</span></div>
 </section>
 
@@ -153,7 +153,7 @@ OK  136 files match BASELINE-upload-hashes.txt
     <div>
       <p class="k" style="color:var(--soft)">Next</p>
       <ul>
-        <li>Move the remaining 42 older scripts onto <code>paths.py</code></li>
+        <li>Move the remaining older scripts (about 40) onto <code>paths.py</code></li>
         <li>Bring the deploy tools under tests against a staging site</li>
         <li>Make the fingerprint check a required step before every deploy</li>
         <li>Run the live-site audit on a schedule</li>
