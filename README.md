@@ -90,3 +90,25 @@ python -m unittest discover -s shared/tests
 171 tests across 10 files covering `audit_lib`, `hub_links_lib`, `constants`, `verify_baseline`, `stage`, `check_staged`, `gen_llms`, `netlify_form_rewrite`, `add_breadcrumbs`, and `build_all --dry-run`. All exit 0.
 
 See [`IMPROVEMENTS.md`](IMPROVEMENTS.md) for the full audit trail and one-command verification of all checks.
+
+## How it fits together
+
+```mermaid
+flowchart LR
+    A["lounge/site/"]   --> P
+    B["events/site/"]   --> P
+    C["builds/site/"]   --> P
+    D["driver/site/"]   --> P
+    E["health/site/"]   --> P
+
+    P["shared/tools/\n(build_all.py · audit_lib.py\nhub_links_lib · constants)"]
+
+    P --> U["&lt;property&gt;/upload/\n(lounge · events · builds\ndriver · health)"]
+
+    U --> V["shared/tools/verify_baseline.py\n(fingerprint gate — 263 files\nbyte-identical to pre-Bob baseline)"]
+
+    V --> CI[".github/workflows/gates.yml\n(7 safety gates on ubuntu-latest)"]
+
+    CI --> L["shared/tools/live_audit.py\n(fetch live sitemaps,\nrun per-page checks)"]
+```
+
