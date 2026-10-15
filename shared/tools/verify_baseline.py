@@ -13,7 +13,7 @@ Run after every refactor step to confirm no output changed.
 
 Exit codes:
   0   all hashes match (both baselines)
-  1   one or more files CHANGED or MISSING
+  1   one or more files CHANGED, MISSING, or EXTRA (unlisted in upload/)
   2   zero files checked (empty baseline or baseline not found)
 """
 import hashlib
@@ -29,10 +29,15 @@ BASELINE_UPLOAD = os.path.join(ROOT, 'BASELINE-upload-hashes.txt')
 QUIET = '--quiet' in sys.argv
 
 
-def check(baseline_path):
+def check(baseline_path, check_extra=False):
     """Check all entries in one baseline file. Returns (checked, failures).
 
-    failures is a list of (status, path) where status is 'CHANGED' or 'MISSING'.
+    failures is a list of (status, path) where status is 'CHANGED', 'MISSING',
+    or 'EXTRA' (only when check_extra=True).
+
+    When check_extra is True every upload/ directory tree referenced by the
+    baseline is also walked; any file present on disk but not listed in the
+    baseline is reported as EXTRA and counts as a failure.
     """
     if not os.path.isfile(baseline_path):
         print('!! baseline file not found: %s' % baseline_path)
@@ -58,8 +63,10 @@ def check(baseline_path):
         raise SystemExit(2)
 
     failures = []
+    listed_abs = set()
     for sha_expected, rel_path in entries:
         abs_path = os.path.normpath(os.path.join(ROOT, rel_path.replace('/', os.sep)))
+        listed_abs.add(abs_path)
         if not os.path.isfile(abs_path):
             failures.append(('MISSING', rel_path))
             if not QUIET:
@@ -71,6 +78,32 @@ def check(baseline_path):
             failures.append(('CHANGED', rel_path))
             if not QUIET:
                 print('CHANGED : %s' % rel_path)
+
+    if check_extra:
+        # Collect every upload/ root referenced by the baseline, then walk
+        # them to find files that are not listed.
+        upload_roots = set()
+        for _, rel_path in entries:
+            parts = rel_path.replace('\\', '/').split('/')
+            # Find the 'upload' segment and take everything up to and including it
+            if 'upload' in parts:
+                idx = parts.index('upload')
+                upload_root = os.path.normpath(
+                    os.path.join(ROOT, os.sep.join(parts[:idx + 1]))
+                )
+                upload_roots.add(upload_root)
+
+        for upload_root in sorted(upload_roots):
+            if not os.path.isdir(upload_root):
+                continue
+            for dirpath, _dirnames, filenames in os.walk(upload_root):
+                for fname in filenames:
+                    abs_file = os.path.normpath(os.path.join(dirpath, fname))
+                    if abs_file not in listed_abs:
+                        rel = os.path.relpath(abs_file, ROOT).replace(os.sep, '/')
+                        failures.append(('EXTRA', rel))
+                        if not QUIET:
+                            print('EXTRA   : %s' % rel)
 
     return len(entries), failures
 
@@ -87,7 +120,7 @@ def main():
         print('OK  %d files match BASELINE-site-hashes.txt' % checked)
 
     # --- upload baseline ---
-    checked2, failures2 = check(BASELINE_UPLOAD)
+    checked2, failures2 = check(BASELINE_UPLOAD, check_extra=True)
     all_checked += checked2
     all_failures.extend(failures2)
     if not failures2 and not QUIET:

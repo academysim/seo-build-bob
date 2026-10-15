@@ -9,6 +9,8 @@ Covers:
   - Malformed/blank lines are skipped, valid entries still checked
   - upload/ baseline: main() checks BOTH baselines; a mutation in upload/
     that passes the site baseline still exits 1 (regression gate for F8 class)
+  - Extra file in upload/: a file not listed in the baseline → EXTRA failure
+    and main() exits 1
 
 Run:
   python -m unittest shared/tests/test_verify_baseline.py
@@ -290,6 +292,62 @@ class TestVerifyBaseline(unittest.TestCase):
         # check() against site baseline alone sees no failures — the gap
         checked, failures = self._check(site_baseline)
         self.assertEqual(failures, [], 'site-only check missed the upload mutation (expected)')
+
+    # ------------------------------------------------------------------
+    # Extra file in upload/ → EXTRA failure and main() exits 1
+    # ------------------------------------------------------------------
+
+    def test_extra_file_in_upload_reported(self):
+        """A file present in upload/ but absent from the baseline → EXTRA failure."""
+        upload_content = {'lounge/upload/index.html': b'<html/>'}
+        self._make_files(upload_content)
+        baseline = self._make_baseline(upload_content)
+
+        # Drop an extra file into upload/ that is NOT in the baseline
+        extra_path = os.path.join(self.tmpdir, 'lounge', 'upload', 'stowaway.html')
+        with open(extra_path, 'wb') as fh:
+            fh.write(b'<html>extra</html>')
+
+        original_root = VB.ROOT
+        try:
+            VB.ROOT = self.tmpdir
+            checked, failures = VB.check(baseline, check_extra=True)
+        finally:
+            VB.ROOT = original_root
+
+        self.assertEqual(checked, 1)
+        self.assertEqual(len(failures), 1)
+        status, path = failures[0]
+        self.assertEqual(status, 'EXTRA')
+        self.assertIn('stowaway.html', path)
+
+    def test_extra_file_in_upload_exits_1(self):
+        """main() exits 1 when upload/ contains a file not listed in the baseline."""
+        site_content = {'lounge/site/index.html': b'<html>site</html>'}
+        upload_content = {'lounge/upload/index.html': b'<html>upload</html>'}
+        self._make_files(site_content)
+        self._make_files(upload_content)
+        site_baseline = self._make_baseline(site_content)
+        upload_baseline = self._make_baseline(upload_content, name='BASELINE-upload.txt')
+
+        # Add an extra file to upload/ that is NOT recorded in upload_baseline
+        extra_path = os.path.join(self.tmpdir, 'lounge', 'upload', 'intruder.html')
+        with open(extra_path, 'wb') as fh:
+            fh.write(b'<html>intruder</html>')
+
+        original_root, original_baseline, original_upload = (
+            VB.ROOT, VB.BASELINE, VB.BASELINE_UPLOAD)
+        try:
+            VB.ROOT = self.tmpdir
+            VB.BASELINE = site_baseline
+            VB.BASELINE_UPLOAD = upload_baseline
+            with self.assertRaises(SystemExit) as ctx:
+                VB.main()
+            self.assertEqual(ctx.exception.code, 1)
+        finally:
+            VB.ROOT = original_root
+            VB.BASELINE = original_baseline
+            VB.BASELINE_UPLOAD = original_upload
 
 
 if __name__ == '__main__':
